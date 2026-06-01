@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screening autism spectrum disorder in children using machine learning on speech transcripts.</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #1c1c1e;
+  background: #f2f2f7;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #2563eb; }
+.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+
+/* Nav */
+.top-nav {
+  background: #1e40af;
+  padding: 14px 0;
+}
+.top-nav a {
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.top-nav a:hover { color: #fff; }
+
+/* Main */
+main { padding: 32px 0 56px; }
+.article-wrapper {
+  background: #fff;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  padding: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+}
+
+/* Title + meta */
+h1.article-title {
+  font-size: clamp(19px, 4vw, 25px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+  color: #111827;
+}
+.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #374151; }
+
+/* Tags */
+.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tag {
+  display: inline-block;
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+/* Summary */
+.summary-section { margin-bottom: 28px; }
+.section-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #6b7280;
+  margin-bottom: 12px;
+}
+.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+
+/* Relevance */
+.relevance-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+.score-badge {
+  flex-shrink: 0;
+  font-size: 18px;
+  font-weight: 800;
+  color: #059669;
+}
+.score-badge.mid { color: #d97706; }
+.score-badge.low { color: #dc2626; }
+.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+
+/* Expandable sections */
+.expand-section { margin-bottom: 12px; }
+details {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+details summary {
+  padding: 14px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #f9fafb;
+  color: #374151;
+  user-select: none;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
+details[open] summary::after { content: "－"; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+.section-body p + p { margin-top: 12px; }
+
+/* CTA button */
+.view-paper-btn {
+  display: inline-block;
+  margin-top: 28px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  padding: 14px 24px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+}
+.view-paper-btn:hover { background: #1d4ed8; }
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 12px;
+  color: #9ca3af;
+}
+
+@media (max-width: 480px) {
+  .article-wrapper { padding: 20px; border-radius: 10px; }
+}
+</style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container">
+      <a href="../index.html">&#x2190; Back to digest</a>
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="article-wrapper">
+        <h1 class="article-title">Screening autism spectrum disorder in children using machine learning on speech transcripts.</h1>
+        <div class="article-meta"><strong>Assaf, Rida, Shehabeddine, Zein, Ramesh, Vikram</strong> &nbsp;·&nbsp; Scientific reports &nbsp;·&nbsp; 2025</div>
+        
+        
+      <div class="relevance-row">
+        <span class="score-badge">75/100</span>
+        <span class="relevance-reason">This article directly aligns with the profile&#x27;s interest in AI-based technology interventions for children with autism, specifically focusing on machine learning applications for speech and communication assessment in pediatric populations rather than adults or theoretical work.</span>
+      </div>
+        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This study evaluated machine learning models for detecting Autism Spectrum Disorder (ASD) in children using speech transcripts as a privacy-preserving alternative to traditional methods. The researchers analyzed linguistic features from 86 children (ages 3-6) across two TalkBank datasets, comparing typically developing children, those with ASD, and children with developmental delays using logistic regression, random forest, and TabNet models. The models achieved accuracy above 86% across datasets, with key linguistic features including Mean Length of Utterance and Mean Length of Turn Ratio proving most predictive. The text-based approach demonstrated strong performance while avoiding privacy concerns associated with audio or visual biometric data, though the researchers noted limitations in dataset size and the potential loss of prosodic speech features that may be clinically relevant.</p></div>
+        
+        <div class="expand-section">
+          <details>
+            <summary>Abstract</summary>
+            <div class="section-body"><p>Early detection of Autism Spectrum Disorder (ASD) in children is crucial for timely interventions that can improve developmental outcomes. Traditional diagnostic methods are often resource-intensive, time-consuming, and may raise ethical concerns regarding privacy, particularly for minors. In this study, we evaluate the feasibility of privacy-preserving machine learning models for ASD detection using children’s speech transcripts. By exclusively leveraging structured text-based inputs, our method inherently avoids the direct use of identifiable biometric data, such as raw audio or video, thus significantly reducing privacy risks. Although we have not implemented explicit cryptographic privacy measures (e.g., differential privacy, encryption), our approach minimizes privacy concerns inherently associated with sensitive biometric data. We conducted experiments on two datasets from the TalkBank repository, focusing on linguistic features such as Mean Length of Utterance (MLU) and Mean Length of Turn Ratio (MLT Ratio). Our results demonstrate strong predictive performance, with models achieving accuracy above 86% across both datasets. Notably, we found that a small, focused subset of features was sufficient to maintain this level of performance, reducing the need for extensive data collection, thereby enhancing privacy. These findings highlight the promise of computational linguistics in advancing non-invasive, ethical approaches to ASD detection, providing a foundation for future applications in clinical and educational contexts.</p></div>
+          </details>
+        </div>
+        <div class="expand-section">
+          <details>
+            <summary>Introduction</summary>
+            <div class="section-body"><p>Autism Spectrum Disorder (ASD) is a neurodevelopmental condition characterized by challenges in social interaction, communication, and repetitive behaviors. About 1% of the world population1 and an estimated 5.4M people in the US have ASD2, affecting 1 in 54 children. Roughly 25% of children with ASD go undiagnosed. ASD can be detected by early surveillance and developmental monitoring, but the process is long, elaborate, and tedious3 with multiple screening stages at various ages of the child, with parents completing a series of checklists and questionnaires and children’s development monitored regularly. This is followed by more intensive questioning of parents and screening to conclusively diagnose and develop treatment plans. Early symptoms of ADHD often overlap with those of ASD, which can lead to misdiagnosis and delayed interventions for ASD.</p><p>Early diagnosis of ASD is crucial as it allows timely intervention, which can significantly improve developmental outcomes4. For milder forms of ASD like Asperger’s syndrome5, early diagnosis and treatment can help children develop healthy social and communication skills. However, accurate diagnosis is often delayed because ASD characteristics may not emerge until the disorder is well established.</p><p>Several non-invasive, early-detection technologies using artificial intelligence and machine learning6 are being attempted to accurately and timely diagnose ASD in children7. For example, facial features recorded during social interactions8 at the onset of the disease display unique and differential characteristics9. Researchers have successfully used computer vision to train machine learning models that can detect ASD using facial images of impacted children with a reasonable degree of accuracy10. However, one of the major drawbacks of using facial images is the invasion of privacy, especially for minors, and the need to collect their images over prolonged periods of their childhood. Attempts have also been made to diagnose ASD using retinal image11 and brain image12 analysis as objective screening methods. Recent approaches for ASD detection frequently rely on multimodal deep learning frameworks, notably transformer-based models such as BERT, CNN-based models like Xception, and LSTM-based models such as WS-BiTM and Bat-PSO-LSTM. These methods predominantly employ structural Magnetic Resonance Imaging (sMRI) data, achieving high accuracy13–16. However, they present significant drawbacks: they are computationally expensive, require substantial data volumes, and rely on invasive data collection methods like MRI scanning, raising ethical and privacy concerns17. Other studies employing short-time Fourier transforms have shown that audio-based analysis can detect subtle variations in speech that are challenging to encode in text form. For instance, features such as voice pitch modulation or spectral irregularities could be particularly useful for distinguishing ASD-related speech patterns18.</p><p>Unlike images, audio recordings and MRI scans, speech data can be leveraged to detect language disorders19 and ASD20 while maintaining privacy. Like fingerprints, every child’s linguistic patterns are unique. Studies have shown that speech patterns in ASD children change abnormally with varying levels of their voice pitch and spectral content. One of the characteristics of Autistic children is that they tend to repeat certain words and phrases over and over. These words and phrases are regular and simple, typical of the vocabulary of children in their age group. These speech abnormalities provide an excellent opportunity to use computational linguistics and machine learning21–24 for early detection of ASD.</p><p>With privacy and ethics in AI becoming increasingly pressing concerns, developing methods that protect the privacy of minors is of utmost importance. In this study, we evaluate the feasibility of privacy-preserving machine learning models for the early detection of ASD in children, focusing on the predictive power of linguistic features extracted from speech transcripts. It is important to note that in this study, ’privacy-preserving’ specifically refers to the method’s inherent protection of personal identity by avoiding the collection and use of audio or visual biometric data. By analyzing structured, text-based inputs, our work highlights the potential of non-invasive and privacy-respecting approaches for ASD detection. Our findings provide foundational insights into key linguistic features and their role in ASD detection, paving the way for future development of scalable, ethical, and effective diagnostic systems.</p></div>
+          </details>
+        </div>
+        <div class="expand-section">
+          <details>
+            <summary>Methods</summary>
+            <div class="section-body"><p>Spoken language, particularly among children, represents a critical yet underexplored domain in data collection and analysis compared to the extensive focus on written language and digital images. In recent years, efforts to compile and study natural speech datasets have gained traction, driven by advancements in machine learning and the growing recognition of spoken language’s diagnostic potential. For this study, we utilized the TalkBank system as the primary data source. TalkBank is the world’s largest open-access repository of spoken language data, widely used across disciplines such as education, medicine, linguistics, and psychology25. It provides a vast collection of multimedia language corpora, including data on children and adolescents. We leveraged two subsets from TalkBank: the CHILDES database and the ASDBank English corpus. These datasets were selected due to their relevance for our task of predicting autism spectrum disorder, as they include comparable methods and analyses26,27.</p><p>The dataset from Eigsti et al.28 included children aged 3-6 years, divided into three groups: typically developing (TD) children, children with non-ASD developmental delays, and children with ASD. The dataset comprised 48 participants, each engaged in a 30-minute free-play session. The cohort’s ethnic composition was as follows: 39 White, 3 LatinX, and 6 African-American children. The average participant age was 51 months, with a mean utterance length of 3.08 words and a median of 2.6 words per utterance.</p><p>The datasets from Nadig and Bang29,30 featured 38 children, including both ASD and TD participants, from English-speaking families. Natural language samples were collected over a year during three-time points in parent-child interactions. The children with ASD were aged 36-74 months, while the TD children were younger, aged 12-57 months, reflecting the significant language delays typically observed in children with ASD as compared to their TD counterparts.</p><p>These datasets were chosen for their relevance and quality based on several criteria: the inclusion of participants from the appropriate age groups for both ASD and TD cohorts, the satisfactory sample size compared to other available datasets, and the availability of data for both ASD and TD children within the corpus. The datasets utilized in this study (Eigsti and Nadig) are publicly accessible via TalkBank and are linked in the data availability section. TalkBank ensures compliance with ethical standards for data collection and explicitly requires researchers who contribute data to obtain informed consent from participants or their guardians and obtain necessary ethical approvals before data sharing. Data retrieval was facilitated through TalkBank’s APIs, enabling the extraction of participant details, word tokens, utterances, and transcript information. The raw data from both datasets were cleansed and prepared for analysis. Linguistic features, including stem words and parts of speech, were extracted and incorporated as features. The final datasets contained 52 features, encompassing participant demographics and linguistic attributes. An overview of the class distribution and some relevant statistics are presented in Table 1.</p><p>Table 1ASDBank Participant Profiles and Key Linguistic Features. This table summarizes demographic and speech transcript characteristics from the Eigsti and Nadig datasets used for ASD screening. The table includes participant counts and key linguistic measures-Total Words, Mean, and Median utterance lengths. Definitions: TD: Typical Development; DD: Delayed Development; ASD: Autism Spectrum Disorder; Age: age in months; Total Words: total words spoken; Mean: average number of words per utterance; Median: median number of words per utterance.TalkBankGroupSexParticipantsAgeTotal wordsMeanMedianEigstiTDM13405183.42.8F3453832.61.75DDM14575203.53F2545083.62.5ASDM12561652.63F4551452.93NadigTDM15291612.42F11342332.82.3 ASDM106112022F253681.61.5</p><p>ASDBank Participant Profiles and Key Linguistic Features. This table summarizes demographic and speech transcript characteristics from the Eigsti and Nadig datasets used for ASD screening. The table includes participant counts and key linguistic measures-Total Words, Mean, and Median utterance lengths. Definitions: TD: Typical Development; DD: Delayed Development; ASD: Autism Spectrum Disorder; Age: age in months; Total Words: total words spoken; Mean: average number of words per utterance; Median: median number of words per utterance.</p><p>To perform our experiments, we selected three machine learning models with varying order of complexity and a high degree of explainability.</p><p>Data preprocessing included cleansing, handling missing values by imputing means, and encoding categorical features as integers. To address class imbalance, we applied Synthetic Minority Oversampling Technique (SMOTE), which synthesizes new instances of minority classes to balance the dataset. SMOTE was configured to re-sample all classes except the majority class. This resampling led to an improvement in our models’ performance by up to 3%.</p><p>To ensure that the synthetic samples did not introduce bias or unrealistic data patterns, we evaluated the distributions of the features before and after SMOTE using the Kolmogorov-Smirnov (KS) test. The KS test is a nonparametric method that compares the cumulative distribution functions of two samples; a high p-value (typically above 0.05) indicates that there is no significant difference between the distributions, while a low KS statistic suggests that the maximum deviation between the distributions is small31,32. In our study, we obtained KS statistics below 0.15 with corresponding p-values of around 0.99 for all features. These results indicate that the distributions of the original minority class and the SMOTE-generated samples are nearly identical, implying that the oversampling has not introduced any bias or unrealistic data patterns.</p><p>Hyperparameter tuning was performed for each model using grid search combined with 5-fold stratified cross-validation. Specifically, for the Logistic Regression model, the number of iterations was found to be optimal at 750 iterations. For the Random Forest classifier, the number of trees and maximum depth were tuned, resulting in the best performance with 200 trees and a maximum depth of 2. For TabNet, hyperparameters including batch size and learning rate were systematically explored, with optimal performance achieved at a batch size of 8. This approach ensured robustness and maximized accuracy within the constraints of the available datasets.</p><p>The 3 classifiers used in our analysis are detailed below:Logistic Regression (LR): a widely used algorithm for binary classification problems. It models a linear relationship between independent variables and a binary dependent variable, offering interpretable results for categorical predictions33.Random Forest (RF): an ensemble learning method that combines multiple decision trees to enhance classification accuracy and reduce overfitting. By sub-sampling the dataset during training, RF ensures robustness and reduces variance in predictions34.Tabular Neural Network (TabNet): TabNet is designed for tabular data and employs sequential attention to prioritize relevant features during learning. This approach improves interpretability and computational efficiency35.</p><p>Logistic Regression (LR): a widely used algorithm for binary classification problems. It models a linear relationship between independent variables and a binary dependent variable, offering interpretable results for categorical predictions33.</p><p>Random Forest (RF): an ensemble learning method that combines multiple decision trees to enhance classification accuracy and reduce overfitting. By sub-sampling the dataset during training, RF ensures robustness and reduces variance in predictions34.</p><p>Tabular Neural Network (TabNet): TabNet is designed for tabular data and employs sequential attention to prioritize relevant features during learning. This approach improves interpretability and computational efficiency35.</p></div>
+          </details>
+        </div>
+        <div class="expand-section">
+          <details>
+            <summary>Results</summary>
+            <div class="section-body"><p>To evaluate our models, we applied 5-fold stratified cross-validation on two datasets from ASD TalkBank. The Nadig dataset had a total of 38 participants who were primarily children with ASD and TD children. SMOTE was used only on the Nadig dataset due to the imbalance in its classes (ASD vs TD). The Eigsti data is more comprehensive and includes data of children with Delayed Development (DD). This is important to consider, since in many instances, ASD and DD characteristics overlap leading to misdiagnosis. A summary of the number of participants and their characteristics is provided in Table 2.</p><p>Table 2Dataset Composition from TalkBank. This table provides a breakdown of the Eigsti and Nadig datasets, detailing the number of participants in each group (ASD: Autism Spectrum Disorder, TD: Typical Development, and DD: Delayed Development).DatasetParticipantsTDASDDDNadig382612NoneEigsti48161616</p><p>Dataset Composition from TalkBank. This table provides a breakdown of the Eigsti and Nadig datasets, detailing the number of participants in each group (ASD: Autism Spectrum Disorder, TD: Typical Development, and DD: Delayed Development).</p><p>We used 6 different metrics to evaluate the performance of our models and establish their effectiveness. Precision and Recall are highly relevant in medical evaluation and are consolidated using the F1 score to make performance comparison easier. Together, along with the Receiver Operating Characteristic - Area Under the Curve (ROC-AUC) score, are also highly used to evaluate skewed datasets. Accuracy is a general metric used to evaluate classifier performance. P-values are also used in medical research to determine whether the sample estimate significantly differs from a hypothesized value. Below is a more detailed description of the metrics we used along with the formulas to compute them.</p><p>Precision: is the ratio that measures the effectiveness of the model in predicting positive labels out of all positive predictions made. High precision ensures that when the model predicts a child has ASD, it is likely to be correct36.\documentclass[12pt]{minimal} 				\usepackage{amsmath} 				\usepackage{wasysym}  				\usepackage{amsfonts}  				\usepackage{amssymb}  				\usepackage{amsbsy} 				\usepackage{mathrsfs} 				\usepackage{upgreek} 				\setlength{\oddsidemargin}{-69pt} 				\begin{document}$$\begin{aligned} Precision = \frac{TP}{TP + FP} \end{aligned}$$\end{document}Precision=TPTP+FPRecall: Measures the proportion of true positives that were identified correctly. Having a high recall for the model is important since we want to ensure that ASD kids are identified accurately, minimizing the risk of undiagnosed cases and enabling timely interventions36.\documentclass[12pt]{minimal} 				\usepackage{amsmath} 				\usepackage{wasysym}  				\usepackage{amsfonts}  				\usepackage{amssymb}  				\usepackage{amsbsy} 				\usepackage{mathrsfs} 				\usepackage{upgreek} 				\setlength{\oddsidemargin}{-69pt} 				\begin{document}$$\begin{aligned} Recall = \frac{TP}{TP + FN} \end{aligned}$$\end{document}Recall=TPTP+FNF1 Score: The F1 score balances Precision and Recall to evaluate classification performance, particularly in imbalanced datasets, by accounting for both false positives and false negatives.\documentclass[12pt]{minimal} 				\usepackage{amsmath} 				\usepackage{wasysym}  				\usepackage{amsfonts}  				\usepackage{amssymb}  				\usepackage{amsbsy} 				\usepackage{mathrsfs} 				\usepackage{upgreek} 				\setlength{\oddsidemargin}{-69pt} 				\begin{document}$$\begin{aligned} F1\ Score = \frac{2* Precision Score * Recall Score}{Precision Score + Recall Score} \end{aligned}$$\end{document}F1Score=2∗PrecisionScore∗RecallScorePrecisionScore+RecallScoreAccuracy: Measures the total number of model outcomes that were predicted correctly36.\documentclass[12pt]{minimal} 				\usepackage{amsmath} 				\usepackage{wasysym}  				\usepackage{amsfonts}  				\usepackage{amssymb}  				\usepackage{amsbsy} 				\usepackage{mathrsfs} 				\usepackage{upgreek} 				\setlength{\oddsidemargin}{-69pt} 				\begin{document}$$\begin{aligned} Accuracy = \frac{TP + TN}{ TP + FN + TN + FP} \end{aligned}$$\end{document}Accuracy=TP+TNTP+FN+TN+FPP-Value: Represents the probability that the observed performance of the model-such as its accuracy or ROC-AUC-would have occurred purely by chance, assuming that there is no true effect (i.e., the model is performing at chance level). A p-value below conventional thresholds (e.g., p &lt; 0.05 or p &lt; 0.01) indicates that the model’s performance is statistically significant, meaning that it is very unlikely that the observed results are due to random variation alone31.</p><p>Area under the Receiver Operating Characteristic Curve (ROC-AUC): ROC is a probability curve and AUC represents the degree or measure of separability. It indicates how much the model is capable of distinguishing between classes. The higher the AUC, the better the model is at distinguishing between patients with ASD and no ASD37–39.</p><p>We used the following definitions to compute the evaluation metrics:True Positives (TP): Is the number of children with ASD correctly predicted by the model.False Positives (FP): Is the number of children without ASD incorrectly predicted by the model to have ASD.True Negatives (TN): Is the number of children without ASD correctly predicted by the model.False Negatives (FN): Is the number of children with ASD that the model fails to identify.Results from our experiments for each of the classifiers using the 6 performance metrics are captured in Table 3. Of particular significance is the consistency of results achieved for each of these models across the various performance measures.</p><p>True Positives (TP): Is the number of children with ASD correctly predicted by the model.</p><p>False Positives (FP): Is the number of children without ASD incorrectly predicted by the model to have ASD.</p><p>True Negatives (TN): Is the number of children without ASD correctly predicted by the model.</p><p>False Negatives (FN): Is the number of children with ASD that the model fails to identify.</p><p>Logistic regression achieved strong performance on the smaller binary datasets (Nadig and Eigsti), with ROC-AUC scores of 0.93 and 0.87, respectively, suggesting that the model was effective at distinguishing between ASD and TD cases in these datasets. When the datasets were merged, TabNet outperformed the other models, achieving a ROC-AUC score of approximately 0.96, which aligns with the tendency of deep learning models to benefit from larger datasets. For the multi-class Eigsti dataset, Random Forest attained the highest ROC-AUC score of 0.71, indicating its ability to capture more nuanced relationships between ASD, TD, and DD classes despite the smaller sample size per class. As shown in Table 3, the p-values for all models are less than conventional thresholds (p &lt; 0.05), indicating the reliability and statistical significance of the observed model results.</p><p>Given the limited sizes of the Eigsti (48 participants) and Nadig (38 participants) datasets, there is a potential risk of overfitting, which could limit the generalizability of our models. However, when we compared our training accuracy to the validation accuracy we found a difference of no more than 4% indicating that our model isn’t overfitting.</p><p>Table 3Performance Metrics Across ASD Datasets: Summary of Precision, Recall, F1 Score, Accuracy, ROC-AUC, and P-value for Logistic Regression, Random Forest, and TabNet models evaluated using 5-Fold Stratified Cross-Validation on the Nadig, Eigsti, Eigsti Multi, and Merged datasets. Metrics were calculated with standard formulas and validated through cross-validation to ensure reliability. Bold values indicate the highest score for each metric within the corresponding dataset.DatasetsMetricLogistic regressionRandom forestTabNetNadigPrecision 0.933 0.8330.933Recall 0.933 0.7670.867F1 0.920 0.7600.860Accuracy 0.946 0.8640.921ROC-AUC 0.933 0.9270.860P-value 0.00017 0.00370.0011EigstiPrecision 0.867 0.8000.760Recall0.7670.750 0.933 F10.8070.729 0.835 Accuracy 0.824 0.7480.819ROC-AUC0.8780.817 0.889 P-value0.0170.020 0.009 Eigsti MultiPrecision0.692 0.802 0.647Recall0.577 0.753 0.588F1 (weighted)0.584 0.763 0.596Accuracy0.577 0.753 0.588ROC-AUC0.553 0.710 0.578P-value0.121 0.002 0.258MergedPrecision0.8690.844 0.880 Recall0.8570.827 0.869 F10.8560.823 0.869 Accuracy0.8570.827 0.869 ROC-AUC0.9460.860 0.963 P-value 0.0013 0.0030.0014</p><p>Performance Metrics Across ASD Datasets: Summary of Precision, Recall, F1 Score, Accuracy, ROC-AUC, and P-value for Logistic Regression, Random Forest, and TabNet models evaluated using 5-Fold Stratified Cross-Validation on the Nadig, Eigsti, Eigsti Multi, and Merged datasets. Metrics were calculated with standard formulas and validated through cross-validation to ensure reliability. Bold values indicate the highest score for each metric within the corresponding dataset.</p><p>Given Logistic Regression’s strong performance across both individual and merged datasets, we leveraged its interpretability to analyze the relationship between key features and ASD classification. During the 5-fold cross-validation process on the merged dataset, we recorded the feature coefficients obtained from each fold and stored them in an accumulator. After completing all folds, we computed the average of these coefficients to obtain a final estimate. By examining the coefficients with the largest magnitudes, we identified the most influential features and their potential association with ASD.</p><p>We analyzed the top features that were identified by the Logistic Regression model and observed that while certain parts of speech (POS) features were among the highest-ranking, they were excluded to minimize the overall feature set. POS features contribute a large number of variables, and their removal did not lead to a significant drop in performance. To further validate the importance of the remaining top features, we trained a model using only the top four non-POS features and achieved nearly the same accuracy of 86%, reinforcing their relevance in distinguishing ASD cases. These features are:MLU (Mean Length of Utterance): Measures the average number of morphemes per utterance spoken by the child. A morpheme is the smallest meaningful unit in a language (e.g., “in,” “come,” “-ing,” forming “incoming”)40,41. A lower MLU is associated with a higher likelihood of ASD, indicating that children with ASD may use shorter and simpler utterances.MLT Ratio (Mean Length of Turn Ratio): Represents the ratio of the mean length of a child’s turn to that of the mother or investigator. A lower MLT ratio is correlated with ASD, suggesting that children with ASD contribute less in conversational exchanges compared to their counterparts.Age: A positive coefficient suggests that younger children are more likely to exhibit characteristics associated with ASD.Sex: A positive coefficient for this feature indicates that male children are more likely to be classified with ASD, consistent with broader epidemiological trends.</p><p>MLU (Mean Length of Utterance): Measures the average number of morphemes per utterance spoken by the child. A morpheme is the smallest meaningful unit in a language (e.g., “in,” “come,” “-ing,” forming “incoming”)40,41. A lower MLU is associated with a higher likelihood of ASD, indicating that children with ASD may use shorter and simpler utterances.</p><p>MLT Ratio (Mean Length of Turn Ratio): Represents the ratio of the mean length of a child’s turn to that of the mother or investigator. A lower MLT ratio is correlated with ASD, suggesting that children with ASD contribute less in conversational exchanges compared to their counterparts.</p><p>Age: A positive coefficient suggests that younger children are more likely to exhibit characteristics associated with ASD.</p><p>Sex: A positive coefficient for this feature indicates that male children are more likely to be classified with ASD, consistent with broader epidemiological trends.</p><p>Fig. 1Feature Importance in ASD Prediction: Averaged Logistic Regression Coefficients from 5-Fold Stratified Cross-Validation on the Merged Dataset. This figure was generated using Python’s Matplotlib library, which visualized the relative contributions of key features (e.g., Mean Length of Utterance, Mean Length of Turn Ratio, Age, Sex) to ASD classification.</p><p>Feature Importance in ASD Prediction: Averaged Logistic Regression Coefficients from 5-Fold Stratified Cross-Validation on the Merged Dataset. This figure was generated using Python’s Matplotlib library, which visualized the relative contributions of key features (e.g., Mean Length of Utterance, Mean Length of Turn Ratio, Age, Sex) to ASD classification.</p><p>As shown in Fig. 1, our analysis of these features suggests that a decrease in the MLU and the MLT_ratio of the child is likely suggestive of ASD. The importance of the MLU and the MLT_ratio aligns with prior research showing that children with ASD tend to have shorter and less reciprocal conversational patterns. On the other hand, older children and male children are also likely to be diagnosed with ASD, consistent with broader epidemiological trends.</p></div>
+          </details>
+        </div>
+        <div class="expand-section">
+          <details>
+            <summary>Discussion</summary>
+            <div class="section-body"><p>In this study, we evaluated the effectiveness of privacy-centered machine learning models for ASD detection using children’s speech transcripts. Our approach demonstrated strong predictive performance, with accuracy exceeding 86%, and provided valuable insights into the importance of key linguistic features for distinguishing ASD characteristics. By using structured, text-based inputs, our study highlights the potential of speech transcripts as a non-invasive and privacy-preserving alternative for ASD detection, addressing the ethical challenges associated with sensitive audio or visual data.</p><p>A survey of current ASD detection methods highlighted that traditional machine learning models such as Logistic Regression and Random Forests still outperform more complex models, particularly when applied to structured data17,42. Our study reinforces these findings by reporting comparable performance while explicitly enhancing interpretability through feature importance analysis. A key aspect highlighted in the existing literature is the need for explainability, as models used for clinical decisions must provide insights into their reasoning17. Interpretability remains a challenge in many current deep learning approaches, including the multimodal transformer and CNN-based models, which operate as “black-box” methods and do not elucidate decision-making processes effectively limiting their clinical adoption13,14,17.</p><p>A central contribution of this study is the identification of a concise set of linguistic features that have the potential to aid in ASD detection while minimizing the need for extensive data collection. By isolating key features, such as Mean Length of Utterance (MLU) and Mean Length of Turn Ratio (MLT Ratio), our findings suggest that a more privacy-conscious approach to ASD screening could be feasible. This approach reduces the amount of sensitive information required, aligning with ethical considerations while maintaining the potential for meaningful insights into linguistic patterns associated with ASD.</p><p>Using speech transcripts as input provides a structured, text-based approach that inherently reduces privacy concerns. Transcripts avoid potential exposure of sensitive or identifiable audio data, ensuring a higher level of confidentiality. However, they may lack some critical acoustic details, such as prosodic features, which are often indicative of atypical speech characteristics in individuals with ASD18. These features include variations in pitch, rhythm, and intonation, which are difficult to capture solely through textual representation.</p><p>One of the limitations of our study was the size and diversity of the datasets, particularly the limited age range (3-6 years) of the children included. Expanding the dataset to include a broader age group and more diverse environments and dialects or performing transfer learning from larger speech-based datasets would improve the generalizability and performance of the models17. Additionally, the lower performance observed for the Eigsti (multi) dataset underscores the need to identify and integrate features that capture nuances specific to developmental delays (DD) to reduce the risk of misdiagnosis.</p><p>Future research could explore how the identified linguistic features can be leveraged in practical applications, such as the development of interactive conversational systems for early ASD screening. For instance, chatbots or robotic assistants equipped with conversational AI could enable scalable, non-invasive diagnostic assessments, while simultaneously offering personalized recommendations for follow-up or intervention. In addition, multi-modal approaches combining linguistic features with limited prosodic cues could be explored to try and find a balance between the valuable information prosodic features provide while at the same maintaining the privacy that text-based data provides.</p></div>
+          </details>
+        </div>
+        <a href="https://doi.org/10.1038/s41598-025-01500-6" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <p><a href="../index.html">&#x2190; Back to digest</a></p>
+  </footer>
+</body>
+</html>

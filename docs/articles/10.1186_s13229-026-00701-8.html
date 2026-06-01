@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,100 +56,84 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
@@ -164,43 +141,37 @@ footer {
         <h1 class="article-title">Sub-groups of spoken language and broader communication skills in a large heterogenous cohort of minimally verbal school-age children: evidence of discrepant profiles.</h1>
         <div class="article-meta"><strong>Saul, Jo, Cooke, Mollie, Munaweera, Supipi et al.</strong> &nbsp;·&nbsp; Molecular autism &nbsp;·&nbsp; 2026</div>
         
+        <div class="relevance-row"><span class="score-badge mid">75/100</span><span class="relevance-reason">This article directly addresses communication outcomes in school-age children with autism and mentions AAC devices, which are core interests in the profile, though it focuses more on assessment and profiling rather than technology-based interventions.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This study aimed to identify subgroups of minimally verbal (MV) school-age children and test the hypothesis that a cluster with discrepant communication profiles (strong receptive but poor expressive skills) would emerge. Researchers used a multi-method approach with 193 children (mean age 7.6 years, 77% with autism) involving play-based interactions, parent questionnaires, and assessments of motor, imitative, and receptive language skills, followed by hierarchical cluster analysis. Six distinct clusters were identified: four showed commensurate skill levels across domains (very low, low, mid, or high), while two exhibited discrepant profiles where speech and spoken language skills were disproportionately lower than other abilities. The findings confirmed the hypothesized discrepant profile, suggesting that some MV children have motor barriers to speech production despite stronger receptive language abilities, indicating a need for tailored interventions.</p></div>
         
-      <div class="relevance-row">
-        <span class="score-badge">75/100</span>
-        <span class="relevance-reason">This article directly addresses communication outcomes in school-age children with autism and mentions AAC devices, which are core interests in the profile, though it focuses more on assessment and profiling rather than technology-based interventions.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>BackgroundCommunication and language profiles in neurodevelopmental conditions are characterised by enormous phenotypic heterogeneity. We sought to identify subgroups of Minimally Verbal (MV) children in a school-age transdiagnostic sample. We hypothesised that a cluster with a discrepant profile (strong receptive but low speech production and expressive spoken language skills) would emerge.MethodsWe recruited MV children and their families (n = 193; mean age 7.6 years (sd: 2.5, range 4–13); 73% male). The sample varied in their adaptive skills and range of diagnoses (autism 77%, genetic syndrome 15%). Children took part in a play-based experimenter-child interaction designed to elicit communicative acts such as requesting or sharing attention. Parents completed questionnaires about their child’s developmental profile, communicative and adaptive skills. Additional in-person batteries probed children’s motor, imitative and receptive language skills. The multi-task, multi-informant communication-related variables were then entered into a pre-registered agglomerative hierarchical cluster analysis.ResultsSix distinct clusters emerged and were compared in relation to non-social autism symptoms, motor skills, adaptive skills and demographic measures. For four clusters, children’s receptive, expressive, adaptive and motor skills were fairly commensurate and could be described as very low-, low-, mid- or high-skill. Two further clusters described discrepant profiles of ability where speech and spoken language skills were disproportionately lower. Exploratory analyses revealed that children in different clusters differed in terms of their diagnostic profiles, use of Augmentative and Alternative Communication (AAC) and echolalia.LimitationsWhilst the inclusive, trait-based, transdiagnostic approach taken has high ecological validity, some measures employed were thus necessarily bespoke, adapted or non-normed and reported diagnoses did not undergo systematic validation.ConclusionThe hypothesised discrepant profile emerged whereby some MV children had stronger receptive than expressive skills, suggesting motor barriers to speech that necessitate tailored support.Supplementary InformationThe online version contains supplementary material available at 10.1186/s13229-026-00701-8.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This study aimed to identify subgroups of minimally verbal (MV) school-age children and test the hypothesis that a cluster with discrepant communication profiles (strong receptive but poor expressive skills) would emerge. Researchers used a multi-method approach with 193 children (mean age 7.6 years, 77% with autism) involving play-based interactions, parent questionnaires, and assessments of motor, imitative, and receptive language skills, followed by hierarchical cluster analysis. Six distinct clusters were identified: four showed commensurate skill levels across domains (very low, low, mid, or high), while two exhibited discrepant profiles where speech and spoken language skills were disproportionately lower than other abilities. The findings confirmed the hypothesized discrepant profile, suggesting that some MV children have motor barriers to speech production despite stronger receptive language abilities, indicating a need for tailored interventions.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>BackgroundCommunication and language profiles in neurodevelopmental conditions are characterised by enormous phenotypic heterogeneity. We sought to identify subgroups of Minimally Verbal (MV) children in a school-age transdiagnostic sample. We hypothesised that a cluster with a discrepant profile (strong receptive but low speech production and expressive spoken language skills) would emerge.MethodsWe recruited MV children and their families (n = 193; mean age 7.6 years (sd: 2.5, range 4–13); 73% male). The sample varied in their adaptive skills and range of diagnoses (autism 77%, genetic syndrome 15%). Children took part in a play-based experimenter-child interaction designed to elicit communicative acts such as requesting or sharing attention. Parents completed questionnaires about their child’s developmental profile, communicative and adaptive skills. Additional in-person batteries probed children’s motor, imitative and receptive language skills. The multi-task, multi-informant communication-related variables were then entered into a pre-registered agglomerative hierarchical cluster analysis.ResultsSix distinct clusters emerged and were compared in relation to non-social autism symptoms, motor skills, adaptive skills and demographic measures. For four clusters, children’s receptive, expressive, adaptive and motor skills were fairly commensurate and could be described as very low-, low-, mid- or high-skill. Two further clusters described discrepant profiles of ability where speech and spoken language skills were disproportionately lower. Exploratory analyses revealed that children in different clusters differed in terms of their diagnostic profiles, use of Augmentative and Alternative Communication (AAC) and echolalia.LimitationsWhilst the inclusive, trait-based, transdiagnostic approach taken has high ecological validity, some measures employed were thus necessarily bespoke, adapted or non-normed and reported diagnoses did not undergo systematic validation.ConclusionThe hypothesised discrepant profile emerged whereby some MV children had stronger receptive than expressive skills, suggesting motor barriers to speech that necessitate tailored support.Supplementary InformationThe online version contains supplementary material available at 10.1186/s13229-026-00701-8.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Methods</summary>
-            <div class="section-body"><p>We recruited MV children and their families (n = 193; mean age 7.6 years (sd: 2.5, range 4–13); 73% male). The sample varied in their adaptive skills and range of diagnoses (autism 77%, genetic syndrome 15%). Children took part in a play-based experimenter-child interaction designed to elicit communicative acts such as requesting or sharing attention. Parents completed questionnaires about their child’s developmental profile, communicative and adaptive skills. Additional in-person batteries probed children’s motor, imitative and receptive language skills. The multi-task, multi-informant communication-related variables were then entered into a pre-registered agglomerative hierarchical cluster analysis.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Results</summary>
-            <div class="section-body"><p>Six distinct clusters emerged and were compared in relation to non-social autism symptoms, motor skills, adaptive skills and demographic measures. For four clusters, children’s receptive, expressive, adaptive and motor skills were fairly commensurate and could be described as very low-, low-, mid- or high-skill. Two further clusters described discrepant profiles of ability where speech and spoken language skills were disproportionately lower. Exploratory analyses revealed that children in different clusters differed in terms of their diagnostic profiles, use of Augmentative and Alternative Communication (AAC) and echolalia.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>The hypothesised discrepant profile emerged whereby some MV children had stronger receptive than expressive skills, suggesting motor barriers to speech that necessitate tailored support.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.1186/s13229-026-00701-8" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Methods</summary>
+          <div class="section-body"><p>We recruited MV children and their families (n = 193; mean age 7.6 years (sd: 2.5, range 4–13); 73% male). The sample varied in their adaptive skills and range of diagnoses (autism 77%, genetic syndrome 15%). Children took part in a play-based experimenter-child interaction designed to elicit communicative acts such as requesting or sharing attention. Parents completed questionnaires about their child’s developmental profile, communicative and adaptive skills. Additional in-person batteries probed children’s motor, imitative and receptive language skills. The multi-task, multi-informant communication-related variables were then entered into a pre-registered agglomerative hierarchical cluster analysis.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Results</summary>
+          <div class="section-body"><p>Six distinct clusters emerged and were compared in relation to non-social autism symptoms, motor skills, adaptive skills and demographic measures. For four clusters, children’s receptive, expressive, adaptive and motor skills were fairly commensurate and could be described as very low-, low-, mid- or high-skill. Two further clusters described discrepant profiles of ability where speech and spoken language skills were disproportionately lower. Exploratory analyses revealed that children in different clusters differed in terms of their diagnostic profiles, use of Augmentative and Alternative Communication (AAC) and echolalia.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>The hypothesised discrepant profile emerged whereby some MV children had stronger receptive than expressive skills, suggesting motor barriers to speech that necessitate tailored support.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.1186/s13229-026-00701-8" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

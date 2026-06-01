@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,100 +56,84 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
@@ -164,25 +141,19 @@ footer {
         <h1 class="article-title">The Impact of Otsimo Speech Therapy on the Development of Language Skills in Children with Autism Spectrum Disorder</h1>
         <div class="article-meta"><strong>Obeidat, Khaled Ahmad, Hamed, Burhan Mahmoud, Hamadneh, Rawan Abdul Mahdi Neyef Al et al.</strong> &nbsp;·&nbsp; North American Journal of Psychology &nbsp;·&nbsp; 2026</div>
         
+        <div class="relevance-row"><span class="score-badge">85/100</span><span class="relevance-reason">This study directly evaluates an AI-based speech therapy application for language development in preschool/school-age children with autism, which closely aligns with the clinician&#x27;s interest in technology-based interventions, AI-assisted communication tools, and communication outcomes in the target age group.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This study investigated the effectiveness of Otsimo Speech Therapy, an AI-based application, in improving language skills (receptive, expressive, and pragmatic) in children with autism spectrum disorder. The researchers used a quasi-experimental design with 20 children aged 4-8 years from specialized centers in Jordan, comparing an experimental group using the application to a control group. The experimental group showed statistically significant improvements in overall language skills and all subdomains compared to the control group, with receptive skills demonstrating the largest effect size, followed by expressive and pragmatic skills. The authors attributed these positive outcomes to the application&#x27;s ability to provide intensive, personalized, and adaptive intervention with immediate feedback.</p></div>
         
-      <div class="relevance-row">
-        <span class="score-badge">85/100</span>
-        <span class="relevance-reason">This study directly evaluates an AI-based speech therapy application for language development in preschool/school-age children with autism, which closely aligns with the clinician&#x27;s interest in technology-based interventions, AI-assisted communication tools, and communication outcomes in the target age group.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>The current study aimed to evaluate the therapeutic efficacy of the AI-based Otsimo Speech Therapy application in developing language skills (receptive, expressive, and pragmatic) in children with autism spectrum disorder (ASD). The study was conducted in the Irbid Governorate of the Hashemite Kingdom of Jordan, utilizing a two-group (experimental and control) quasi-experimental design. The study sample consisted of 20 children (aged 4-8 years) with functional language impairment, who were selected via purposive sampling from four specialized centers based on the criteria of poor language performance and regular attendance of rehabilitative services. The Results indicated the presence of statistically significant differences favoring the experimental group in the overall language skills score and across all subdomains. Receptive skills demonstrated the largest effect size, followed by expressive and then pragmatic skills. These positive outcomes are attributed to the application’s capacity to provide an intensive, personalized, and adaptive intervention that dynamically adjusts to each child’s performance level and offers immediate feedback. Key recommendations include: encouraging the design and development of similar Arabic-language applications that are tailored to linguistic and cultural characteristics; incorporating training on such tools into specialist preparation programs; and conducting longitudinal studies to track the sustainability of therapeutic gains. Furthermore, the study recommends integrating these applications as supportive tools within comprehensive intervention plans, while reinforcing the role of both the family and the specialist in promoting the generalization of acquired skills to daily life.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This study investigated the effectiveness of Otsimo Speech Therapy, an AI-based application, in improving language skills (receptive, expressive, and pragmatic) in children with autism spectrum disorder. The researchers used a quasi-experimental design with 20 children aged 4-8 years from specialized centers in Jordan, comparing an experimental group using the application to a control group. The experimental group showed statistically significant improvements in overall language skills and all subdomains compared to the control group, with receptive skills demonstrating the largest effect size, followed by expressive and pragmatic skills. The authors attributed these positive outcomes to the application&#x27;s ability to provide intensive, personalized, and adaptive intervention with immediate feedback.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>The current study aimed to evaluate the therapeutic efficacy of the AI-based Otsimo Speech Therapy application in developing language skills (receptive, expressive, and pragmatic) in children with autism spectrum disorder (ASD). The study was conducted in the Irbid Governorate of the Hashemite Kingdom of Jordan, utilizing a two-group (experimental and control) quasi-experimental design. The study sample consisted of 20 children (aged 4-8 years) with functional language impairment, who were selected via purposive sampling from four specialized centers based on the criteria of poor language performance and regular attendance of rehabilitative services. The Results indicated the presence of statistically significant differences favoring the experimental group in the overall language skills score and across all subdomains. Receptive skills demonstrated the largest effect size, followed by expressive and then pragmatic skills. These positive outcomes are attributed to the application’s capacity to provide an intensive, personalized, and adaptive intervention that dynamically adjusts to each child’s performance level and offers immediate feedback. Key recommendations include: encouraging the design and development of similar Arabic-language applications that are tailored to linguistic and cultural characteristics; incorporating training on such tools into specialist preparation programs; and conducting longitudinal studies to track the sustainability of therapeutic gains. Furthermore, the study recommends integrating these applications as supportive tools within comprehensive intervention plans, while reinforcing the role of both the family and the specialist in promoting the generalization of acquired skills to daily life.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.65696/001c.162132" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+        <a href="https://doi.org/10.65696/001c.162132" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

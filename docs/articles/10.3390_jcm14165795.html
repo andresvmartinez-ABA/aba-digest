@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,100 +56,84 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
@@ -164,49 +141,43 @@ footer {
         <h1 class="article-title">Virtual Reality-Based Versus Traditional Teaching Approaches in the Oral Hygiene Education of Children with Autism Spectrum Disorder.</h1>
         <div class="article-meta"><strong>Fallea, Antonio, Costanza, Carola, L&#x27;Episcopo, Simona et al.</strong> &nbsp;·&nbsp; Journal of clinical medicine &nbsp;·&nbsp; 2025</div>
         
+        <div class="relevance-row"><span class="score-badge mid">75/100</span><span class="relevance-reason">This study directly aligns with the profile&#x27;s interest in VR programs for children with autism, demonstrating technology-based interventions that improve functional skills and could inform ABA practice, though it focuses on oral hygiene rather than communication or social skills.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This study investigated whether virtual reality (VR)-based education was more effective than traditional instruction methods for improving oral hygiene in children with autism spectrum disorder (ASD). Sixty-four children with Level 1 ASD were randomly divided into two groups: one receiving traditional oral hygiene education using mouth models and demonstrations, and another using VR headsets with an avatar demonstrating brushing and flossing techniques in a virtual bathroom environment, with both interventions lasting eight weeks. The VR group showed significantly greater improvements in oral health as measured by the Oral Health Assessment Tool (OHAT), with lower post-intervention scores compared to the traditional education group (p &lt; 0.001). The researchers concluded that VR-based education appears to be a promising approach for improving oral hygiene habits in children with ASD by providing an interactive and immersive learning experience.</p></div>
         
-      <div class="relevance-row">
-        <span class="score-badge">75/100</span>
-        <span class="relevance-reason">This study directly aligns with the profile&#x27;s interest in VR programs for children with autism, demonstrating technology-based interventions that improve functional skills and could inform ABA practice, though it focuses on oral hygiene rather than communication or social skills.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Background/Objectives: Maintaining proper oral hygiene is particularly challenging for individuals with autism spectrum disorder (ASD) due to sensory sensitivities, communication difficulties, and anxiety. Traditional oral hygiene education methods may be ineffective for this population, thereby necessitating innovative solutions. This study evaluates the effectiveness of a virtual reality (VR)-based educational program in improving home oral hygiene practices among children and adolescents with ASD. Methods: Sixty-four children with ASD (Level 1) were recruited and divided into two groups. Group 1 received traditional oral hygiene education, while Group 2 used a VR-based intervention featuring a virtual domestic bathroom with an avatar demonstrating proper brushing and flossing techniques. The intervention lasted eight weeks, with two one-hour sessions per week. The oral health assessment tool (OHAT) was used to evaluate oral hygiene status before and after the intervention. An unpaired t-test compared outcomes between groups. Results: Both groups showed improvements in oral hygiene, but the VR intervention group exhibited a significantly greater reduction in OHAT scores compared to the traditional education group (p &lt; 0.001) due to a greater improvement in oral health. The VR-based approach enhanced engagement and adherence to oral hygiene routines, particularly benefiting children with ASD who struggle with conventional methods. Conclusions: VR-based education appears to be a promising tool for improving oral hygiene habits in children with ASD by providing an interactive and immersive learning experience. Future research should explore long-term adherence and the broader application of VR in healthcare education.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This study investigated whether virtual reality (VR)-based education was more effective than traditional instruction methods for improving oral hygiene in children with autism spectrum disorder (ASD). Sixty-four children with Level 1 ASD were randomly divided into two groups: one receiving traditional oral hygiene education using mouth models and demonstrations, and another using VR headsets with an avatar demonstrating brushing and flossing techniques in a virtual bathroom environment, with both interventions lasting eight weeks. The VR group showed significantly greater improvements in oral health as measured by the Oral Health Assessment Tool (OHAT), with lower post-intervention scores compared to the traditional education group (p &lt; 0.001). The researchers concluded that VR-based education appears to be a promising approach for improving oral hygiene habits in children with ASD by providing an interactive and immersive learning experience.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>Background/Objectives: Maintaining proper oral hygiene is particularly challenging for individuals with autism spectrum disorder (ASD) due to sensory sensitivities, communication difficulties, and anxiety. Traditional oral hygiene education methods may be ineffective for this population, thereby necessitating innovative solutions. This study evaluates the effectiveness of a virtual reality (VR)-based educational program in improving home oral hygiene practices among children and adolescents with ASD. Methods: Sixty-four children with ASD (Level 1) were recruited and divided into two groups. Group 1 received traditional oral hygiene education, while Group 2 used a VR-based intervention featuring a virtual domestic bathroom with an avatar demonstrating proper brushing and flossing techniques. The intervention lasted eight weeks, with two one-hour sessions per week. The oral health assessment tool (OHAT) was used to evaluate oral hygiene status before and after the intervention. An unpaired t-test compared outcomes between groups. Results: Both groups showed improvements in oral hygiene, but the VR intervention group exhibited a significantly greater reduction in OHAT scores compared to the traditional education group (p &lt; 0.001) due to a greater improvement in oral health. The VR-based approach enhanced engagement and adherence to oral hygiene routines, particularly benefiting children with ASD who struggle with conventional methods. Conclusions: VR-based education appears to be a promising tool for improving oral hygiene habits in children with ASD by providing an interactive and immersive learning experience. Future research should explore long-term adherence and the broader application of VR in healthcare education.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>Autism spectrum disorder (ASD) is a complex neurodevelopmental condition defined by persistent deficits in social communication and interaction, alongside restricted and repetitive behaviors, interests, or activities. Its reported prevalence has risen markedly over recent decades, currently affecting approximately 1 in 44 children worldwide [1]. Many individuals with ASD also exhibit atypical sensory processing—both hypersensitivity and hyposensitivity—to tactile, auditory, olfactory, or visual stimuli. Such sensory differences can interfere with everyday self-care routines, including tooth brushing and flossing [2].</p><p>Maintaining adequate oral hygiene is essential for overall health. Yet children and adolescents with ASD face unique obstacles in developing consistent oral care habits. Sensory aversions—to the taste or texture of toothpaste, the feel of bristles, or the sound of a toothbrush motor—often provoke distress and resistance [3]. Conversely, those with sensory hyposensitivity may not perceive discomfort or recognize the need to clean their teeth, leading them to neglect daily hygiene [4].</p><p>Beyond sensory issues, behavioral rigidity, communication challenges, and executive function deficits can further impede the establishment of effective routines. Many children with ASD require substantial caregiver support and structured instruction to acquire and maintain personal hygiene skills [5,6,7]. Moreover, selective eating and diets high in carbohydrates and sugars exacerbate their risk of dental caries and periodontal disease [8]. Consequently, studies consistently report poorer oral health outcomes in individuals with ASD—higher rates of tooth decay, gingival inflammation, and unmet dental needs—compared to their typically developing peers [1,9].</p><p>Traditional oral hygiene education strategies—verbal instructions, written leaflets, or brief clinical demonstrations—often prove insufficient for children with ASD when not tailored to their needs. Instead, they benefit most from visual supports, predictable routines, task analysis approaches, and multisensory learning tools that encourage activity repetition [10,11].</p><p>In recent years, virtual reality (VR) has emerged as a promising tool in autism research. By creating immersive, interactive environments that mimic real-world contexts under controlled conditions, VR aligns well with the visual learning strengths of many individuals with ASD [12]. VR-based interventions have successfully taught social skills, promoted emotional regulation, reduced phobias, and improved daily living abilities in this population [13,14,15].</p><p>Applied to dentistry, VR has shown encouraging results in reducing anxiety and improving cooperation during dental procedures. For example, Al Kheraif et al. (2024) reported that VR exposure before and during dental treatment significantly lowered behavioral distress and enhanced compliance among children with ASD [16]. However, the use of VR as an at-home educational tool for teaching proper brushing and flossing remains largely unexplored.</p><p>A home-based VR program could simulate a familiar bathroom setting and present an avatar demonstrating precise oral care techniques [9]. Interactive feedback, repetition, and gamified rewards may boost both skill acquisition and long-term motivation, helping bridge the gap between clinical recommendations and daily behaviors [17].</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Methods</summary>
-            <div class="section-body"><p>This study was a randomized controlled trial conducted between September 2024 and November 2024 at the Oasi Research Institute–IRCCS in Troina, Italy, a research center specializing in the diagnosis, treatment, and rehabilitation of intellectual and developmental disabilities. Ethical approval was obtained from the Local Ethics Committee of the Oasi Research Institute–IRCCS (approval code: 2023/15/03/CE-IRCCS-OASI/253), and written informed consent was obtained from the parents or legal guardians of all participants before enrollment. The study adhered to the ethical principles outlined in the Declaration of Helsinki.</p><p>Participants were recruited from patients referred to the diagnostic and rehabilitation services of the Oasi Research Institute–IRCCS.</p><p>The inclusion criteria were age between 10 and 14 years, a confirmed Level 1 ASD diagnosis by expert neuropsychiatrists, following DSM-5 criteria [18], based on clinical evaluation and the use of standardized tests such as the Childhood Autism Rating Scale (CARS) [19], Autism Diagnostic Observation Schedule (ADOS-2) [20], and Autism Diagnostic Interview-Revised (ADI-R) [21]. Poor oral health was assessed using the oral health assessment tool (OHAT) [22], with a total score ranging from 3 to 16. The OHAT scale was administered by a chairside assistant specifically trained in its use, under the direct supervision of a dentist with longstanding experience in treating children with ASD. This approach was chosen to ensure a standardized and replicable assessment process. The exclusion criteria included patients with good oral health, defined as an OHAT score between 0 and 2, and the presence of psychiatric or neurological comorbidities.</p><p>Of the initial 83 patients screened, 19 were excluded due to good oral health, resulting in a final study sample of 64 participants. The demographic characteristics of the sample are summarized in Table 1.</p><p>In our study, we employed two different teaching methods for at-home oral hygiene:Traditional oral hygiene instructions for learning correct at-home oral hygiene techniques: during the oral hygiene instruction session at the Dentistry Department of the Oasi Research Institute, the chairside dental assistant (S.L. or M.B.) demonstrated proper brushing techniques using a mouth model, as well as the correct use of mouthwash and dental floss.Virtual reality (VR) “Domestic Bathroom” environment with an avatar, using VR headsets: during the oral hygiene instruction session at the Dentistry Department of the OASI MARIA SS IRCCS, the patient is asked to wear a VR headset (model: oculus meta quest 3), immersing them in a virtual domestic bathroom setting, where an avatar illustrates the correct oral hygiene maneuvers (Figure 1).</p><p>Traditional oral hygiene instructions for learning correct at-home oral hygiene techniques: during the oral hygiene instruction session at the Dentistry Department of the Oasi Research Institute, the chairside dental assistant (S.L. or M.B.) demonstrated proper brushing techniques using a mouth model, as well as the correct use of mouthwash and dental floss.</p><p>Virtual reality (VR) “Domestic Bathroom” environment with an avatar, using VR headsets: during the oral hygiene instruction session at the Dentistry Department of the OASI MARIA SS IRCCS, the patient is asked to wear a VR headset (model: oculus meta quest 3), immersing them in a virtual domestic bathroom setting, where an avatar illustrates the correct oral hygiene maneuvers (Figure 1).</p><p>The VR experience was delivered through a Meta Quest 3 headset (Meta Platforms Inc. (Menlo Park, CA, USA); per-eye resolution: 2064 × 2208 pixels; field of view: ~110°; refresh rate: up to 120 Hz), equipped with advanced environmental and motion-tracking sensors, including 2 RGB cameras and 4 infrared cameras. The virtual scenario was developed in-house using Unity (version 2021.3.23f1) and featured a 3D bathroom environment in which a humanoid avatar demonstrated correct brushing and flossing techniques. The environment was designed to be visually repetitive and observational, to reduce sensory load, and facilitate learning in ASD children. Caregivers were instructed to supervise and support their child’s oral hygiene routine at home, particularly between training sessions and after meals. Although children were encouraged to brush and floss independently, when possible, autonomy was not mandatory. No formal logbook or structured record of daily hygiene practices was collected; therefore, adherence in the home setting was monitored indirectly through caregiver feedback and post-intervention assessments.</p><p>The oral health status of the patients, before and after the two interventions, was assessed using the OHAT scale administered by the chairside dental assistant.</p><p>The same dentist, having several years of experience treating children with ASD, assessed patients’ oral health status before and after two interventions using the OHAT scale. Both approaches (traditional oral hygiene instructions and the VR “domestic bathroom” environment) were administered at the Complex Operative Unit of Special Dentistry for Developmental Age at the Oasi Research Institute–IRCCS in Troina, Italy.</p><p>Initially, the entire sample of 83 patients underwent an oral health evaluation through a dental examination and the completion of the OHAT scale for a quantitative approach. Subsequently, all patients received treatment from the same dentist who performed tartar removal and addressed any existing dental caries, bringing each patient to a good oral health condition.</p><p>At this point, the 64 patients with an oral health status higher than two according to the OHAT scale were randomly divided into two groups of 32 patients each:Group 1: Received traditional oral hygiene instructions for learning correct at-home oral hygiene techniques;Group 2: Received the VR “Domestic Bathroom” environment intervention with an avatar through VR headsets.</p><p>Group 1: Received traditional oral hygiene instructions for learning correct at-home oral hygiene techniques;</p><p>Group 2: Received the VR “Domestic Bathroom” environment intervention with an avatar through VR headsets.</p><p>The hygiene therapy sessions for both groups were conducted twice a week for eight weeks, with each session lasting about one hour. At the end of the two-month period, both groups were re-evaluated using the OHAT scale (Figure 2).</p><p>Data analysis was performed using an unpaired t-test comparing Group 1 versus Group 2 in order to analyze pre- and post-intervention outcomes. The assumption of normality was assessed with the Kolmogorov–Smirnov test. All statistical analyses were carried out with IBM SPSS Statistics version 26.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Results</summary>
-            <div class="section-body"><p>All 64 participants (32 in each group) completed the 8-week intervention period, and there were no dropouts. No significant compliance issues were reported in either group. The baseline characteristics of both groups, including age and sex distribution, were statistically comparable. The main results of the descriptive statistics are reported in Table 2.</p><p>Observational feedback indicated that participants in the VR group displayed higher levels of enthusiasm and engagement during training sessions. Caregivers of children in the VR group reported that their children were more willing to practice oral hygiene routines at home, while some caregivers in the control group had difficulties in maintaining their children’s interest in oral hygiene.</p><p>The t-test did not reveal any statistically significant differences between the two groups prior to the preventive intervention. However, following the preventive intervention, the t-test indicated a statistically significant difference between the group that received the VR-based preventive approach and the group that received the traditional preventive approach [t (62) = 10.4; p &lt; 0.001] (see Table 3). This was driven by significantly better scores on the OHAT scale, underscoring an improvement in oral hygiene (mean ± SE; 7.6 ± 1.8 vs. 3.3 ± 1.4).</p><p>The response to the different types of preventive intervention does not appear to be influenced by sex.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>The findings of this study confirm that VR-based oral hygiene education can be a valuable tool for improving oral health outcomes in children with ASD. The greater reduction in OHAT scores in the VR group suggests that immersive, interactive learning environments are more effective than traditional instruction methods in reinforcing proper oral hygiene techniques. These results align with previous research demonstrating that children with ASD often respond better to technology-assisted interventions than to conventional teaching approaches [12,13,14].</p><p>Maintaining adequate oral hygiene is often a challenge for children with ASD due to sensory sensitivities, difficulties with fine motor coordination, and resistance to changes in routine [2]. Studies have shown that children with ASD are at a higher risk for dental caries, periodontal disease, and oral trauma due to a combination of behavioral, sensory, and dietary factors [2,3]. Additionally, barriers such as difficulties in communicating pain or discomfort, anxiety toward dental visits, and reduced access to specialized care can contribute to worsening oral health over time [8].</p><p>This study reinforces the need for tailored, multisensory educational tools for children with ASD, given their specific learning styles and sensory profiles. In this context, VR technology appears to be a promising and engaging alternative to traditional didactic approaches.</p><p>Traditional educational methods, such as printed materials or verbal instructions, may be less effective for children with ASD, who often require visual, structured, and interactive learning experiences to retain new information [17]. In this context, VR-based approaches can bridge the gap, offering a predictable, engaging, and controlled environment where children can learn at their own pace.</p><p>The results of our trial confirm and extend existing evidence suggesting that virtual reality (VR) is a powerful and versatile tool in autism interventions, not only in behavioral training, social skills, and therapeutic contexts, as shown in previous studies [23], but also in promoting engagement and adherence to oral hygiene routines in children with ASD. The immersive nature of VR helps reduce external distractions while providing real-time feedback, making it a highly effective method for skill acquisition in neurodivergent populations [15].</p><p>Several studies have demonstrated that VR-based interventions can improve self-care skills, executive functioning, and adaptive behaviors in children with ASD [10,11,12]. The success of VR in teaching daily living skills suggests that its application to oral hygiene training is both logical and evidence-supported. In our study, the VR-based training program significantly improved oral hygiene habits, as reflected in the greater reduction in OHAT scores compared to traditional instruction.</p><p>These findings reinforce the idea that children with ASD may benefit from multimodal, immersive learning experiences rather than conventional didactic methods [9]. The interactive nature of VR allows children to repeatedly practice brushing and flossing techniques in a non-threatening, gamified environment, helping to establish positive behavioral patterns over time [24,25].</p><p>Beyond the measurable improvements in oral hygiene, qualitative feedback from caregivers and observations during the study suggest that children in the VR group displayed higher motivation and engagement compared to those in the control group.</p><p>Parents in the VR group reported that their children were more willing to participate in oral hygiene routines at home. Resistance to brushing decreased over time as children gained confidence through VR training.</p><p>The gamification elements and interactive feedback kept children motivated and attentive during learning sessions. This increased engagement aligns with existing research indicating that gamification and immersive learning can enhance motivation and skill retention in children with ASD [9]. Furthermore, VR exposure may help desensitize children to sensory discomfort associated with brushing, addressing one of the most common barriers to effective oral hygiene in ASD populations [14,23].</p><p>The results of this study suggest that VR-based oral hygiene education could be incorporated into broader intervention strategies for children with ASD. Given the success of VR in educational and therapeutic applications, its integration into home-based training programs could offer a practical and scalable solution for improving long-term oral health outcomes in this population [9,23,26].</p><p>Future research should explore the long-term effectiveness of VR-based oral hygiene training beyond the 8-week study period or the feasibility of remote VR training models, allowing caregivers to implement VR-based oral hygiene education at home with minimal professional supervision.</p><p>Additionally, studies should investigate the cost-effectiveness of VR-based interventions compared to traditional education methods, considering their potential to reduce long-term dental complications and associated healthcare costs.</p><p>Even if this study provides strong evidence for the efficacy of VR-based oral hygiene education, several limitations should be considered, such as the variability in sensory sensitivities among children with ASD, which may affect their receptiveness to VR training.</p><p>Another limitation is the lack of a structured monitoring system to assess the consistency of home-based oral hygiene routines. While caregivers were instructed to supervise the activities, the absence of a formal log or diary limits the objectivity of adherence measurement in the home setting. Additionally, we acknowledge that using only the OHAT scale—while advantageous for its simplicity and tolerability—may have limited the clinical specificity of our oral health assessment compared to more technical indices. Future studies may consider combining OHAT with additional objective oral hygiene measures, where feasible.</p><p>The sample size, while adequate for statistical comparisons, should be expanded in future studies to increase generalizability.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.3390/jcm14165795" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Autism spectrum disorder (ASD) is a complex neurodevelopmental condition defined by persistent deficits in social communication and interaction, alongside restricted and repetitive behaviors, interests, or activities. Its reported prevalence has risen markedly over recent decades, currently affecting approximately 1 in 44 children worldwide [1]. Many individuals with ASD also exhibit atypical sensory processing—both hypersensitivity and hyposensitivity—to tactile, auditory, olfactory, or visual stimuli. Such sensory differences can interfere with everyday self-care routines, including tooth brushing and flossing [2].</p><p>Maintaining adequate oral hygiene is essential for overall health. Yet children and adolescents with ASD face unique obstacles in developing consistent oral care habits. Sensory aversions—to the taste or texture of toothpaste, the feel of bristles, or the sound of a toothbrush motor—often provoke distress and resistance [3]. Conversely, those with sensory hyposensitivity may not perceive discomfort or recognize the need to clean their teeth, leading them to neglect daily hygiene [4].</p><p>Beyond sensory issues, behavioral rigidity, communication challenges, and executive function deficits can further impede the establishment of effective routines. Many children with ASD require substantial caregiver support and structured instruction to acquire and maintain personal hygiene skills [5,6,7]. Moreover, selective eating and diets high in carbohydrates and sugars exacerbate their risk of dental caries and periodontal disease [8]. Consequently, studies consistently report poorer oral health outcomes in individuals with ASD—higher rates of tooth decay, gingival inflammation, and unmet dental needs—compared to their typically developing peers [1,9].</p><p>Traditional oral hygiene education strategies—verbal instructions, written leaflets, or brief clinical demonstrations—often prove insufficient for children with ASD when not tailored to their needs. Instead, they benefit most from visual supports, predictable routines, task analysis approaches, and multisensory learning tools that encourage activity repetition [10,11].</p><p>In recent years, virtual reality (VR) has emerged as a promising tool in autism research. By creating immersive, interactive environments that mimic real-world contexts under controlled conditions, VR aligns well with the visual learning strengths of many individuals with ASD [12]. VR-based interventions have successfully taught social skills, promoted emotional regulation, reduced phobias, and improved daily living abilities in this population [13,14,15].</p><p>Applied to dentistry, VR has shown encouraging results in reducing anxiety and improving cooperation during dental procedures. For example, Al Kheraif et al. (2024) reported that VR exposure before and during dental treatment significantly lowered behavioral distress and enhanced compliance among children with ASD [16]. However, the use of VR as an at-home educational tool for teaching proper brushing and flossing remains largely unexplored.</p><p>A home-based VR program could simulate a familiar bathroom setting and present an avatar demonstrating precise oral care techniques [9]. Interactive feedback, repetition, and gamified rewards may boost both skill acquisition and long-term motivation, helping bridge the gap between clinical recommendations and daily behaviors [17].</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Methods</summary>
+          <div class="section-body"><p>This study was a randomized controlled trial conducted between September 2024 and November 2024 at the Oasi Research Institute–IRCCS in Troina, Italy, a research center specializing in the diagnosis, treatment, and rehabilitation of intellectual and developmental disabilities. Ethical approval was obtained from the Local Ethics Committee of the Oasi Research Institute–IRCCS (approval code: 2023/15/03/CE-IRCCS-OASI/253), and written informed consent was obtained from the parents or legal guardians of all participants before enrollment. The study adhered to the ethical principles outlined in the Declaration of Helsinki.</p><p>Participants were recruited from patients referred to the diagnostic and rehabilitation services of the Oasi Research Institute–IRCCS.</p><p>The inclusion criteria were age between 10 and 14 years, a confirmed Level 1 ASD diagnosis by expert neuropsychiatrists, following DSM-5 criteria [18], based on clinical evaluation and the use of standardized tests such as the Childhood Autism Rating Scale (CARS) [19], Autism Diagnostic Observation Schedule (ADOS-2) [20], and Autism Diagnostic Interview-Revised (ADI-R) [21]. Poor oral health was assessed using the oral health assessment tool (OHAT) [22], with a total score ranging from 3 to 16. The OHAT scale was administered by a chairside assistant specifically trained in its use, under the direct supervision of a dentist with longstanding experience in treating children with ASD. This approach was chosen to ensure a standardized and replicable assessment process. The exclusion criteria included patients with good oral health, defined as an OHAT score between 0 and 2, and the presence of psychiatric or neurological comorbidities.</p><p>Of the initial 83 patients screened, 19 were excluded due to good oral health, resulting in a final study sample of 64 participants. The demographic characteristics of the sample are summarized in Table 1.</p><p>In our study, we employed two different teaching methods for at-home oral hygiene:Traditional oral hygiene instructions for learning correct at-home oral hygiene techniques: during the oral hygiene instruction session at the Dentistry Department of the Oasi Research Institute, the chairside dental assistant (S.L. or M.B.) demonstrated proper brushing techniques using a mouth model, as well as the correct use of mouthwash and dental floss.Virtual reality (VR) “Domestic Bathroom” environment with an avatar, using VR headsets: during the oral hygiene instruction session at the Dentistry Department of the OASI MARIA SS IRCCS, the patient is asked to wear a VR headset (model: oculus meta quest 3), immersing them in a virtual domestic bathroom setting, where an avatar illustrates the correct oral hygiene maneuvers (Figure 1).</p><p>Traditional oral hygiene instructions for learning correct at-home oral hygiene techniques: during the oral hygiene instruction session at the Dentistry Department of the Oasi Research Institute, the chairside dental assistant (S.L. or M.B.) demonstrated proper brushing techniques using a mouth model, as well as the correct use of mouthwash and dental floss.</p><p>Virtual reality (VR) “Domestic Bathroom” environment with an avatar, using VR headsets: during the oral hygiene instruction session at the Dentistry Department of the OASI MARIA SS IRCCS, the patient is asked to wear a VR headset (model: oculus meta quest 3), immersing them in a virtual domestic bathroom setting, where an avatar illustrates the correct oral hygiene maneuvers (Figure 1).</p><p>The VR experience was delivered through a Meta Quest 3 headset (Meta Platforms Inc. (Menlo Park, CA, USA); per-eye resolution: 2064 × 2208 pixels; field of view: ~110°; refresh rate: up to 120 Hz), equipped with advanced environmental and motion-tracking sensors, including 2 RGB cameras and 4 infrared cameras. The virtual scenario was developed in-house using Unity (version 2021.3.23f1) and featured a 3D bathroom environment in which a humanoid avatar demonstrated correct brushing and flossing techniques. The environment was designed to be visually repetitive and observational, to reduce sensory load, and facilitate learning in ASD children. Caregivers were instructed to supervise and support their child’s oral hygiene routine at home, particularly between training sessions and after meals. Although children were encouraged to brush and floss independently, when possible, autonomy was not mandatory. No formal logbook or structured record of daily hygiene practices was collected; therefore, adherence in the home setting was monitored indirectly through caregiver feedback and post-intervention assessments.</p><p>The oral health status of the patients, before and after the two interventions, was assessed using the OHAT scale administered by the chairside dental assistant.</p><p>The same dentist, having several years of experience treating children with ASD, assessed patients’ oral health status before and after two interventions using the OHAT scale. Both approaches (traditional oral hygiene instructions and the VR “domestic bathroom” environment) were administered at the Complex Operative Unit of Special Dentistry for Developmental Age at the Oasi Research Institute–IRCCS in Troina, Italy.</p><p>Initially, the entire sample of 83 patients underwent an oral health evaluation through a dental examination and the completion of the OHAT scale for a quantitative approach. Subsequently, all patients received treatment from the same dentist who performed tartar removal and addressed any existing dental caries, bringing each patient to a good oral health condition.</p><p>At this point, the 64 patients with an oral health status higher than two according to the OHAT scale were randomly divided into two groups of 32 patients each:Group 1: Received traditional oral hygiene instructions for learning correct at-home oral hygiene techniques;Group 2: Received the VR “Domestic Bathroom” environment intervention with an avatar through VR headsets.</p><p>Group 1: Received traditional oral hygiene instructions for learning correct at-home oral hygiene techniques;</p><p>Group 2: Received the VR “Domestic Bathroom” environment intervention with an avatar through VR headsets.</p><p>The hygiene therapy sessions for both groups were conducted twice a week for eight weeks, with each session lasting about one hour. At the end of the two-month period, both groups were re-evaluated using the OHAT scale (Figure 2).</p><p>Data analysis was performed using an unpaired t-test comparing Group 1 versus Group 2 in order to analyze pre- and post-intervention outcomes. The assumption of normality was assessed with the Kolmogorov–Smirnov test. All statistical analyses were carried out with IBM SPSS Statistics version 26.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Results</summary>
+          <div class="section-body"><p>All 64 participants (32 in each group) completed the 8-week intervention period, and there were no dropouts. No significant compliance issues were reported in either group. The baseline characteristics of both groups, including age and sex distribution, were statistically comparable. The main results of the descriptive statistics are reported in Table 2.</p><p>Observational feedback indicated that participants in the VR group displayed higher levels of enthusiasm and engagement during training sessions. Caregivers of children in the VR group reported that their children were more willing to practice oral hygiene routines at home, while some caregivers in the control group had difficulties in maintaining their children’s interest in oral hygiene.</p><p>The t-test did not reveal any statistically significant differences between the two groups prior to the preventive intervention. However, following the preventive intervention, the t-test indicated a statistically significant difference between the group that received the VR-based preventive approach and the group that received the traditional preventive approach [t (62) = 10.4; p &lt; 0.001] (see Table 3). This was driven by significantly better scores on the OHAT scale, underscoring an improvement in oral hygiene (mean ± SE; 7.6 ± 1.8 vs. 3.3 ± 1.4).</p><p>The response to the different types of preventive intervention does not appear to be influenced by sex.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>The findings of this study confirm that VR-based oral hygiene education can be a valuable tool for improving oral health outcomes in children with ASD. The greater reduction in OHAT scores in the VR group suggests that immersive, interactive learning environments are more effective than traditional instruction methods in reinforcing proper oral hygiene techniques. These results align with previous research demonstrating that children with ASD often respond better to technology-assisted interventions than to conventional teaching approaches [12,13,14].</p><p>Maintaining adequate oral hygiene is often a challenge for children with ASD due to sensory sensitivities, difficulties with fine motor coordination, and resistance to changes in routine [2]. Studies have shown that children with ASD are at a higher risk for dental caries, periodontal disease, and oral trauma due to a combination of behavioral, sensory, and dietary factors [2,3]. Additionally, barriers such as difficulties in communicating pain or discomfort, anxiety toward dental visits, and reduced access to specialized care can contribute to worsening oral health over time [8].</p><p>This study reinforces the need for tailored, multisensory educational tools for children with ASD, given their specific learning styles and sensory profiles. In this context, VR technology appears to be a promising and engaging alternative to traditional didactic approaches.</p><p>Traditional educational methods, such as printed materials or verbal instructions, may be less effective for children with ASD, who often require visual, structured, and interactive learning experiences to retain new information [17]. In this context, VR-based approaches can bridge the gap, offering a predictable, engaging, and controlled environment where children can learn at their own pace.</p><p>The results of our trial confirm and extend existing evidence suggesting that virtual reality (VR) is a powerful and versatile tool in autism interventions, not only in behavioral training, social skills, and therapeutic contexts, as shown in previous studies [23], but also in promoting engagement and adherence to oral hygiene routines in children with ASD. The immersive nature of VR helps reduce external distractions while providing real-time feedback, making it a highly effective method for skill acquisition in neurodivergent populations [15].</p><p>Several studies have demonstrated that VR-based interventions can improve self-care skills, executive functioning, and adaptive behaviors in children with ASD [10,11,12]. The success of VR in teaching daily living skills suggests that its application to oral hygiene training is both logical and evidence-supported. In our study, the VR-based training program significantly improved oral hygiene habits, as reflected in the greater reduction in OHAT scores compared to traditional instruction.</p><p>These findings reinforce the idea that children with ASD may benefit from multimodal, immersive learning experiences rather than conventional didactic methods [9]. The interactive nature of VR allows children to repeatedly practice brushing and flossing techniques in a non-threatening, gamified environment, helping to establish positive behavioral patterns over time [24,25].</p><p>Beyond the measurable improvements in oral hygiene, qualitative feedback from caregivers and observations during the study suggest that children in the VR group displayed higher motivation and engagement compared to those in the control group.</p><p>Parents in the VR group reported that their children were more willing to participate in oral hygiene routines at home. Resistance to brushing decreased over time as children gained confidence through VR training.</p><p>The gamification elements and interactive feedback kept children motivated and attentive during learning sessions. This increased engagement aligns with existing research indicating that gamification and immersive learning can enhance motivation and skill retention in children with ASD [9]. Furthermore, VR exposure may help desensitize children to sensory discomfort associated with brushing, addressing one of the most common barriers to effective oral hygiene in ASD populations [14,23].</p><p>The results of this study suggest that VR-based oral hygiene education could be incorporated into broader intervention strategies for children with ASD. Given the success of VR in educational and therapeutic applications, its integration into home-based training programs could offer a practical and scalable solution for improving long-term oral health outcomes in this population [9,23,26].</p><p>Future research should explore the long-term effectiveness of VR-based oral hygiene training beyond the 8-week study period or the feasibility of remote VR training models, allowing caregivers to implement VR-based oral hygiene education at home with minimal professional supervision.</p><p>Additionally, studies should investigate the cost-effectiveness of VR-based interventions compared to traditional education methods, considering their potential to reduce long-term dental complications and associated healthcare costs.</p><p>Even if this study provides strong evidence for the efficacy of VR-based oral hygiene education, several limitations should be considered, such as the variability in sensory sensitivities among children with ASD, which may affect their receptiveness to VR training.</p><p>Another limitation is the lack of a structured monitoring system to assess the consistency of home-based oral hygiene routines. While caregivers were instructed to supervise the activities, the absence of a formal log or diary limits the objectivity of adherence measurement in the home setting. Additionally, we acknowledge that using only the OHAT scale—while advantageous for its simplicity and tolerability—may have limited the clinical specificity of our oral health assessment compared to more technical indices. Future studies may consider combining OHAT with additional objective oral hygiene measures, where feasible.</p><p>The sample size, while adequate for statistical comparisons, should be expanded in future studies to increase generalizability.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.3390/jcm14165795" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

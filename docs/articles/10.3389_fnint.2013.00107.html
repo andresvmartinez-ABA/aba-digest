@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,138 +56,116 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
       <div class="article-wrapper">
         <h1 class="article-title">Habituation of reinforcer effectiveness</h1>
         <div class="article-meta"><strong>David R. Lloyd, Douglas J. Medina, Larry W. Hawk, Whitney D. Fosco, Jerry B. Richards</strong> &nbsp;·&nbsp; Frontiers in Integrative Neuroscience &nbsp;·&nbsp; 2014</div>
+        <div class="tags"><span class="tag">ASD + ADHD</span></div>
+        <div class="relevance-row"><span class="score-badge">95/100</span><span class="relevance-reason">Manually curated paper from Research Rabbit library.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This paper proposes an integrative model examining habituation of reinforcer effectiveness (HRE), which suggests that reinforcing stimuli decrease in effectiveness through repeated presentation, contrary to traditional reinforcement models that assume stable reinforcer effectiveness. The authors present a theoretical framework linking behavioral and neural explanations of reinforcement, incorporating evidence from studies using both consumable reinforcers (food, water) and sensory reinforcers (light-onset), along with research on stimulant drugs&#x27; effects on dopamine neurotransmission and HRE. Key findings indicate that sensory reinforcers exhibit rapid habituation compared to consumable reinforcers, stimulant drugs disrupt normal HRE patterns, and abnormal HRE may underlie behavioral disorders such as obesity (associated with slow-HRE) and ADHD (potentially linked to accelerated-HRE). The authors argue that most daily reinforcing stimuli are sensory/social reinforcers with rapid-HRE characteristics, suggesting that the predominant use of consumable reinforcers in pre-clinical research may have caused researchers to overlook the importance of habituation in reinforcement processes.</p></div>
         
-        
-      <div class="relevance-row">
-        <span class="score-badge">95/100</span>
-        <span class="relevance-reason">Manually curated paper from Research Rabbit library.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>In this paper we propose an integrative model of habituation of reinforcer effectiveness (HRE) that links behavioral- and neural-based explanations of reinforcement. We argue that HRE is a fundamental property of reinforcing stimuli. Most reinforcement models implicitly suggest that the effectiveness of a reinforcer is stable across repeated presentations. In contrast, an HRE approach predicts decreased effectiveness due to repeated presentation. We argue that repeated presentation of reinforcing stimuli decreases their effectiveness and that these decreases are described by the behavioral characteristics of habituation (McSweeney and Murphy, 2009;Rankin etal., 2009). We describe a neural model that postulates a positive association between dopamine neurotransmission and HRE. We present evidence that stimulant drugs, which artificially increase dopamine neurotransmission, disrupt (slow) normally occurring HRE and also provide evidence that stimulant drugs have differential effects on operant responding maintained by reinforcers with rapid vs. slow HRE rates. We hypothesize that abnormal HRE due to genetic and/or environmental factors may underlie some behavioral disorders. For example, recent research indicates that slow-HRE is predictive of obesity. In contrast ADHD may reflect “accelerated-HRE.” Consideration of HRE is important for the development of effective reinforcement-based treatments. Finally, we point out that most of the reinforcing stimuli that regulate daily behavior are non-consumable environmental/social reinforcers which have rapid-HRE. The almost exclusive use of consumable reinforcers with slow-HRE in pre-clinical studies with animals may have caused the importance of HRE to be overlooked. Further study of reinforcing stimuli with rapid-HRE is needed in order to understand how habituation and reinforcement interact and regulate behavior.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This paper proposes an integrative model examining habituation of reinforcer effectiveness (HRE), which suggests that reinforcing stimuli decrease in effectiveness through repeated presentation, contrary to traditional reinforcement models that assume stable reinforcer effectiveness. The authors present a theoretical framework linking behavioral and neural explanations of reinforcement, incorporating evidence from studies using both consumable reinforcers (food, water) and sensory reinforcers (light-onset), along with research on stimulant drugs&#x27; effects on dopamine neurotransmission and HRE. Key findings indicate that sensory reinforcers exhibit rapid habituation compared to consumable reinforcers, stimulant drugs disrupt normal HRE patterns, and abnormal HRE may underlie behavioral disorders such as obesity (associated with slow-HRE) and ADHD (potentially linked to accelerated-HRE). The authors argue that most daily reinforcing stimuli are sensory/social reinforcers with rapid-HRE characteristics, suggesting that the predominant use of consumable reinforcers in pre-clinical research may have caused researchers to overlook the importance of habituation in reinforcement processes.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>In this paper we propose an integrative model of habituation of reinforcer effectiveness (HRE) that links behavioral- and neural-based explanations of reinforcement. We argue that HRE is a fundamental property of reinforcing stimuli. Most reinforcement models implicitly suggest that the effectiveness of a reinforcer is stable across repeated presentations. In contrast, an HRE approach predicts decreased effectiveness due to repeated presentation. We argue that repeated presentation of reinforcing stimuli decreases their effectiveness and that these decreases are described by the behavioral characteristics of habituation (McSweeney and Murphy, 2009;Rankin etal., 2009). We describe a neural model that postulates a positive association between dopamine neurotransmission and HRE. We present evidence that stimulant drugs, which artificially increase dopamine neurotransmission, disrupt (slow) normally occurring HRE and also provide evidence that stimulant drugs have differential effects on operant responding maintained by reinforcers with rapid vs. slow HRE rates. We hypothesize that abnormal HRE due to genetic and/or environmental factors may underlie some behavioral disorders. For example, recent research indicates that slow-HRE is predictive of obesity. In contrast ADHD may reflect “accelerated-HRE.” Consideration of HRE is important for the development of effective reinforcement-based treatments. Finally, we point out that most of the reinforcing stimuli that regulate daily behavior are non-consumable environmental/social reinforcers which have rapid-HRE. The almost exclusive use of consumable reinforcers with slow-HRE in pre-clinical studies with animals may have caused the importance of HRE to be overlooked. Further study of reinforcing stimuli with rapid-HRE is needed in order to understand how habituation and reinforcement interact and regulate behavior.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>The central theme of this paper is that an understanding of habituation of reinforcer effectiveness (HRE) provides important insight into the regulation of behavior by reinforcing consequences. This insight is valuable from a theoretical perspective because it provides a more accurate and parsimonious characterization of behavioral phenomena than current theories. Understanding HRE is also valuable because it can be used to improve the understanding and treatment of behavioral dysregulation including: attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder (ASD), obesity, and drug addiction.</p><p>Habituation theory and reinforcement theory make opposing predictions about the effects of reinforcing consequences on behavior. Simply stated, both frameworks describe how an organism responds to the experience of a stimulus. By definition in reinforcement, the repeated presentation of a reinforcing stimulus increases the behavior that produces it, and by definition in habituation, the repeated presentation of a stimulus decreases the behavior observed in response to the stimulus. Therefore, in reinforcement, repeated application of a stimulus is predicted toincreasea behavior, but in habituation, repeated application of a stimulus is predicted todecreasea behavior. While research with animals has consistently indicated that increasing reinforcement frequency increases response rate, a more precise description of the actual relationship between reinforcing stimuli and behavior can be achieved through incorporation of concepts from habituation theory.</p><p>Any stimulus capable of serving as a reinforcer has an inherent associated sensory component which may be subject to habituation. Placing food in your mouth, flipping a switch, looking to your left or right, reaching out a hand toward another person, or moving a pen or highlighter across a piece of paper all produce changes in your sensory environment ….sights, sounds, smells, feelings, or tastes. Some of these experiences are novel, some have been previously experienced, some are subjectively good or bad, but all of these sensory components are intrinsically associated with experienced stimuli, and are able to affect the probability of reoccurrence of the response that produced them. It seems likely that these kinds of operant responses and weak reinforcing consequences are typical of the majority of reinforcing contingencies that regulate daily behavior. It has been assumed that the regulation of behavior by weak sensory events with primary reinforcing effects parallels the regulation of behavior by strong consumable reinforcers such as food and water in restricted animals. In this paper we suggest that rapid HRE differentiates weak sensory reinforcers from stronger consumable reinforcers.</p><p>Research using powerful consumable reinforcers such as food and water has uniformly reported a positive association between response and reinforcement rate. The positive relationship between response and reinforcement rate has been called the matching law (Herrnstein, 1974;de Villiers and Herrnstein, 1976;Heyman, 1983). In contrast, using a weak sensory reinforcer (light-onset), we have reported a negative association between response and reinforcement rate (Lloyd et al., 2012a). We believe that this opposite result was obtained because the effectiveness of light-onset habituates much more rapidly than the reinforcing effectiveness of consumable reinforcers such as food and water. Our interpretation of these results is that the reinforcing effectiveness of light-onset is overpowered by rapid HRE of light-onset.</p><p>Sensory reinforcement is understudied. Because most laboratory research with animals uses strong consumable reinforcers such as food and water, sensory reinforcers may be thought of as a “special case.” We do not agree. Although weak and transient, sensory reinforcers are important because they are pervasively integrated into our daily experiences. There are an almost infinite number of sensory and social stimuli that may act as sensory reinforcers. We believe that the majority of reinforcers that regulate daily activity are sensory reinforcers. Everything from smiles and praise to flipping a light switch to a car turn signal acts as a source of sensory reinforcement. It may be that the importance of HRE has not been recognized because of the almost exclusive use of powerful consumable reinforcers in pre-clinical studies of reinforcement processes; however, HRE of sensory reinforcers has important implications for both experimental research and applied clinical work with human populations.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>We have hypothesized that HRE is a fundamental property of reinforcers, and that reinforcer effectiveness is dynamic. Pre-clinical animal research has almost exclusively focused on the study of powerful consumable reinforcers which exhibit slow-HRE. Pre-clinical researchers have largely used deprivation and other manipulations that mask the effects of habituation. It is important for pre-clinical animal research to go beyond consumable reinforcers. Although there is a large older literature about light reinforcement (for reviews see:Lockard, 1963;Kish, 1966;Berlyne, 1969;Tapp, 1969;Eisenberger, 1972), it is not currently an active area of research. Characterization of the reinforcing effectiveness of a range of repeatedly presented reinforcers, including modest but ubiquitous sensory stimuli, should be an objective of future research. Reinforcers that exhibit rapid-HRE such as light-onset are weak and transient and more difficult to study than strong consumable reinforcers such as food and water. However, it is arguable that weak and transient reinforcers such as light-onset with rapid-HRE make up the majority of reinforcers that regulate day-to-day behavior.</p><p>The 10 behavioral characteristics of habituation listed inTable1make testable predictions about operant responding, and research is needed to further test these predictions, particularly in humans. Some of these predictions are surprising. For example, increasing repetition by increasing reinforcer frequency is predicted to decrease response rate. This prediction holds for fast-HRE-reinforcers (see above), but a large body of research with slow-HRE-reinforcers indicates that increasing reinforcing frequency increases response rate. Parametric studies are needed to better understand the dynamic relationship between HRE, reinforcement frequency and response rate.</p><p>We have presented evidence that psychomotor stimulant drugs disrupt (slow) normally occurring HRE. This finding has at least two important implications. First, it provides an explanation of the reinforcing effects of stimulant drugs on behavior. The effects of abused stimulant drugs have been described as “making things more rewarding than they usually are.2” Stimulant-induced increases in the duration of the reinforcing effects of environmental and social stimuli may underlie this subjective perception. As discussed above, the primary reinforcing effects of cues play an important role in rodent drug self-administration studies, and normally occurring HRE is disrupted by stimulant drugs.</p><p>Second, it appears that stimulant drugs may have larger effects on rapid-HRE-reinforcers than slow-HRE-reinforcers. This differential effect predicts a shift in relative preference toward the rapid-HRE-reinforcers. As has been discussed this type of preference shift may underlie the anorectic effects of stimulant drugs. Studies are needed which examine the effect of stimulant drugs on concurrent responding for slow-HRE- (e.g., food or water) and rapid-HRE-reinforcers (e.g., purely sensory stimuli) in both human and non-human subjects to determine the validity of this assertion. For example, in human subjects simple experimental paradigms could measure stimulant effects on within-session decreases in both the reinforcing effectiveness and subjective liking of a reinforcing stimulus (e.g., small amount of food, picture on a computer screen) and include stimulus specificity, dishabituation, and spontaneous recovery tests.</p><p>A method for quantitatively measuring the speed of HRE was described. The HR metric is calculated so that absolute differences in response rate do not affect the estimated HR. Future research using this technique may produce estimates of the rate of habituation that are quantitatively comparable across a variety of test situations. Using this measure to index the rate of HRE across a variety of reinforcing stimuli may be particularly important in human studies and clinical settings where a large variety of reinforcers are used.</p><p>A conceptual model of HRE was described which has two components, an integrator/comparator component reflecting habituation and a DA neurotransmission component reflecting probability of response repetition. The DA component is well-described byRedgrave and Gurney (2006). In contrast, the neural basis of the integrator/comparator component (where habituation takes place) is unknown. Understanding the neural basis of the integrator/comparator component of the model is important because individual differences in this component may underlie behavioral disorders such as obesity and ADHD which may be caused by abnormal slow-HRE or abnormal rapid-HRE, respectively.</p><p>Finally, the HRE concept may provide important insights into the etiology and treatment of behavioral disorders such as obesity and ADHD. Abnormal HRE due to genetic and/or environmental factors may underlie some clinical disorders. For example, recent research indicates that slow-HRE is predictive of obesity, and manipulations that accelerate HRE for food reinforcers may be important treatment components. Conversely, ADHD may reflect accelerated HRE, leading to poor stimulus control, attention, and persistence. The HRE framework suggests specific interventions such as shorter task periods (spontaneous recovery), varying the reinforcer (stimulus specificity), and changing the background context (dishabituation) that can be put to work to slow the loss of reinforcer effectiveness and improve behavioral regulation.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.3389/FNINT.2013.00107" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>The central theme of this paper is that an understanding of habituation of reinforcer effectiveness (HRE) provides important insight into the regulation of behavior by reinforcing consequences. This insight is valuable from a theoretical perspective because it provides a more accurate and parsimonious characterization of behavioral phenomena than current theories. Understanding HRE is also valuable because it can be used to improve the understanding and treatment of behavioral dysregulation including: attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder (ASD), obesity, and drug addiction.</p><p>Habituation theory and reinforcement theory make opposing predictions about the effects of reinforcing consequences on behavior. Simply stated, both frameworks describe how an organism responds to the experience of a stimulus. By definition in reinforcement, the repeated presentation of a reinforcing stimulus increases the behavior that produces it, and by definition in habituation, the repeated presentation of a stimulus decreases the behavior observed in response to the stimulus. Therefore, in reinforcement, repeated application of a stimulus is predicted toincreasea behavior, but in habituation, repeated application of a stimulus is predicted todecreasea behavior. While research with animals has consistently indicated that increasing reinforcement frequency increases response rate, a more precise description of the actual relationship between reinforcing stimuli and behavior can be achieved through incorporation of concepts from habituation theory.</p><p>Any stimulus capable of serving as a reinforcer has an inherent associated sensory component which may be subject to habituation. Placing food in your mouth, flipping a switch, looking to your left or right, reaching out a hand toward another person, or moving a pen or highlighter across a piece of paper all produce changes in your sensory environment ….sights, sounds, smells, feelings, or tastes. Some of these experiences are novel, some have been previously experienced, some are subjectively good or bad, but all of these sensory components are intrinsically associated with experienced stimuli, and are able to affect the probability of reoccurrence of the response that produced them. It seems likely that these kinds of operant responses and weak reinforcing consequences are typical of the majority of reinforcing contingencies that regulate daily behavior. It has been assumed that the regulation of behavior by weak sensory events with primary reinforcing effects parallels the regulation of behavior by strong consumable reinforcers such as food and water in restricted animals. In this paper we suggest that rapid HRE differentiates weak sensory reinforcers from stronger consumable reinforcers.</p><p>Research using powerful consumable reinforcers such as food and water has uniformly reported a positive association between response and reinforcement rate. The positive relationship between response and reinforcement rate has been called the matching law (Herrnstein, 1974;de Villiers and Herrnstein, 1976;Heyman, 1983). In contrast, using a weak sensory reinforcer (light-onset), we have reported a negative association between response and reinforcement rate (Lloyd et al., 2012a). We believe that this opposite result was obtained because the effectiveness of light-onset habituates much more rapidly than the reinforcing effectiveness of consumable reinforcers such as food and water. Our interpretation of these results is that the reinforcing effectiveness of light-onset is overpowered by rapid HRE of light-onset.</p><p>Sensory reinforcement is understudied. Because most laboratory research with animals uses strong consumable reinforcers such as food and water, sensory reinforcers may be thought of as a “special case.” We do not agree. Although weak and transient, sensory reinforcers are important because they are pervasively integrated into our daily experiences. There are an almost infinite number of sensory and social stimuli that may act as sensory reinforcers. We believe that the majority of reinforcers that regulate daily activity are sensory reinforcers. Everything from smiles and praise to flipping a light switch to a car turn signal acts as a source of sensory reinforcement. It may be that the importance of HRE has not been recognized because of the almost exclusive use of powerful consumable reinforcers in pre-clinical studies of reinforcement processes; however, HRE of sensory reinforcers has important implications for both experimental research and applied clinical work with human populations.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>We have hypothesized that HRE is a fundamental property of reinforcers, and that reinforcer effectiveness is dynamic. Pre-clinical animal research has almost exclusively focused on the study of powerful consumable reinforcers which exhibit slow-HRE. Pre-clinical researchers have largely used deprivation and other manipulations that mask the effects of habituation. It is important for pre-clinical animal research to go beyond consumable reinforcers. Although there is a large older literature about light reinforcement (for reviews see:Lockard, 1963;Kish, 1966;Berlyne, 1969;Tapp, 1969;Eisenberger, 1972), it is not currently an active area of research. Characterization of the reinforcing effectiveness of a range of repeatedly presented reinforcers, including modest but ubiquitous sensory stimuli, should be an objective of future research. Reinforcers that exhibit rapid-HRE such as light-onset are weak and transient and more difficult to study than strong consumable reinforcers such as food and water. However, it is arguable that weak and transient reinforcers such as light-onset with rapid-HRE make up the majority of reinforcers that regulate day-to-day behavior.</p><p>The 10 behavioral characteristics of habituation listed inTable1make testable predictions about operant responding, and research is needed to further test these predictions, particularly in humans. Some of these predictions are surprising. For example, increasing repetition by increasing reinforcer frequency is predicted to decrease response rate. This prediction holds for fast-HRE-reinforcers (see above), but a large body of research with slow-HRE-reinforcers indicates that increasing reinforcing frequency increases response rate. Parametric studies are needed to better understand the dynamic relationship between HRE, reinforcement frequency and response rate.</p><p>We have presented evidence that psychomotor stimulant drugs disrupt (slow) normally occurring HRE. This finding has at least two important implications. First, it provides an explanation of the reinforcing effects of stimulant drugs on behavior. The effects of abused stimulant drugs have been described as “making things more rewarding than they usually are.2” Stimulant-induced increases in the duration of the reinforcing effects of environmental and social stimuli may underlie this subjective perception. As discussed above, the primary reinforcing effects of cues play an important role in rodent drug self-administration studies, and normally occurring HRE is disrupted by stimulant drugs.</p><p>Second, it appears that stimulant drugs may have larger effects on rapid-HRE-reinforcers than slow-HRE-reinforcers. This differential effect predicts a shift in relative preference toward the rapid-HRE-reinforcers. As has been discussed this type of preference shift may underlie the anorectic effects of stimulant drugs. Studies are needed which examine the effect of stimulant drugs on concurrent responding for slow-HRE- (e.g., food or water) and rapid-HRE-reinforcers (e.g., purely sensory stimuli) in both human and non-human subjects to determine the validity of this assertion. For example, in human subjects simple experimental paradigms could measure stimulant effects on within-session decreases in both the reinforcing effectiveness and subjective liking of a reinforcing stimulus (e.g., small amount of food, picture on a computer screen) and include stimulus specificity, dishabituation, and spontaneous recovery tests.</p><p>A method for quantitatively measuring the speed of HRE was described. The HR metric is calculated so that absolute differences in response rate do not affect the estimated HR. Future research using this technique may produce estimates of the rate of habituation that are quantitatively comparable across a variety of test situations. Using this measure to index the rate of HRE across a variety of reinforcing stimuli may be particularly important in human studies and clinical settings where a large variety of reinforcers are used.</p><p>A conceptual model of HRE was described which has two components, an integrator/comparator component reflecting habituation and a DA neurotransmission component reflecting probability of response repetition. The DA component is well-described byRedgrave and Gurney (2006). In contrast, the neural basis of the integrator/comparator component (where habituation takes place) is unknown. Understanding the neural basis of the integrator/comparator component of the model is important because individual differences in this component may underlie behavioral disorders such as obesity and ADHD which may be caused by abnormal slow-HRE or abnormal rapid-HRE, respectively.</p><p>Finally, the HRE concept may provide important insights into the etiology and treatment of behavioral disorders such as obesity and ADHD. Abnormal HRE due to genetic and/or environmental factors may underlie some clinical disorders. For example, recent research indicates that slow-HRE is predictive of obesity, and manipulations that accelerate HRE for food reinforcers may be important treatment components. Conversely, ADHD may reflect accelerated HRE, leading to poor stimulus control, attention, and persistence. The HRE framework suggests specific interventions such as shorter task periods (spontaneous recovery), varying the reinforcer (stimulus specificity), and changing the background context (dishabituation) that can be put to work to slow the loss of reinforcer effectiveness and improve behavioral regulation.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.3389/FNINT.2013.00107" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

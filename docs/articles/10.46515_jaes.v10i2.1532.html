@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,128 +56,106 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
       <div class="article-wrapper">
         <h1 class="article-title">The Effect of a Training Program Based on Assistive Technology to Reduce the Routine and Stereotypical Behaviors of Children with Autism Spectrum Disorder</h1>
         <div class="article-meta"><strong>Walaa Muhammad Ismail Al-Adwan</strong> &nbsp;·&nbsp; Jordanian Educational Journal &nbsp;·&nbsp; 2025</div>
-        
-        
-      <div class="relevance-row">
-        <span class="score-badge">95/100</span>
-        <span class="relevance-reason">Manually curated paper from Research Rabbit library.</span>
-      </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">Based on the provided abstract, there appears to be a significant disconnect between the stated title and the actual research content. The title suggests a study on assistive technology interventions for reducing routine and stereotypical behaviors in children with autism spectrum disorder. However, the abstract describes a completely different study that aimed to develop standards for sustainable development goals (SDGs) in Jordanian pre-vocational education curricula based on expert perspectives. The methodology involved analyzing international and local documents related to the 2030 Sustainable Development Goals and conducting interviews with educational experts in pre-vocational education. The study concluded with the development of standards and indicators aligned with the 17 sustainable development goals, with each standard including representative indicators.
+        <div class="tags"><span class="tag">Technology in ABA</span></div>
+        <div class="relevance-row"><span class="score-badge">95/100</span><span class="relevance-reason">Manually curated paper from Research Rabbit library.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">Based on the provided abstract, there appears to be a significant disconnect between the stated title and the actual research content. The title suggests a study on assistive technology interventions for reducing routine and stereotypical behaviors in children with autism spectrum disorder. However, the abstract describes a completely different study that aimed to develop standards for sustainable development goals (SDGs) in Jordanian pre-vocational education curricula based on expert perspectives. The methodology involved analyzing international and local documents related to the 2030 Sustainable Development Goals and conducting interviews with educational experts in pre-vocational education. The study concluded with the development of standards and indicators aligned with the 17 sustainable development goals, with each standard including representative indicators.
 
 Note: The abstract provided does not match the title regarding autism research, making it impossible to provide an accurate summary of the autism-related study referenced in the title.</p></div>
         
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>This study aims to develop standards required by the sustainable development goals (SDGs) in the Jordanian pre-vocational education curricula based on the experts’ perspectives in developing vocational education curricula. The qualitative research approach is utilized to achieve the study objectives. The methodology involves analyzing the international and local documents related to the 2030 Sustainable Development Goals, along with conducting in-depth interviews with educational experts specialized in pre-vocational education. The validity of the developed standards is ensured by specialized experts, including education-based experts, university professors in pre-vocational education curricula, and developers, alongside educational supervisors and vocational education teachers. The study concludes with standards and indicators considering the 17th sustainable development goals, as each standard included a few indicators representing it.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.46515/JAES.V10I2.1532" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>This study aims to develop standards required by the sustainable development goals (SDGs) in the Jordanian pre-vocational education curricula based on the experts’ perspectives in developing vocational education curricula. The qualitative research approach is utilized to achieve the study objectives. The methodology involves analyzing the international and local documents related to the 2030 Sustainable Development Goals, along with conducting in-depth interviews with educational experts specialized in pre-vocational education. The validity of the developed standards is ensured by specialized experts, including education-based experts, university professors in pre-vocational education curricula, and developers, alongside educational supervisors and vocational education teachers. The study concludes with standards and indicators considering the 17th sustainable development goals, as each standard included a few indicators representing it.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.46515/JAES.V10I2.1532" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

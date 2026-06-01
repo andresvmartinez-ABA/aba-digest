@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,100 +56,84 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
@@ -164,37 +141,31 @@ footer {
         <h1 class="article-title">Wearable Technologies for Clinical Assessment and Monitoring in Pediatric Neurodevelopmental Disorders : A Narrative Review.</h1>
         <div class="article-meta"><strong>Lee, Eun Jae, Kim, Woojoong</strong> &nbsp;·&nbsp; Journal of Korean Neurosurgical Society &nbsp;·&nbsp; 2026</div>
         
+        <div class="relevance-row"><span class="score-badge mid">75/100</span><span class="relevance-reason">This article directly addresses technology-based interventions for children with autism and other developmental disorders, including wearable devices that can monitor behaviors and support interventions, which aligns well with the clinician&#x27;s interest in ABA technologies and behavioral assessment tools for pediatric populations.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This narrative review examined the application of wearable technologies for clinical assessment and monitoring in pediatric neurodevelopmental disorders (NDDs), including autism spectrum disorder, ADHD, intellectual disabilities, and related conditions like cerebral palsy and epilepsy. The authors categorized wearable technologies into motion trackers, physiological monitors, wearable EEG/brain sensors, smart glasses/cameras, and textile-based wearables to identify their potential as digital biomarkers and clinical tools. Key findings demonstrated that IMU and accelerometer systems achieved 85% accuracy for posture and gait classification, 80-90% accuracy for distinguishing children with ADHD from controls, and over 90% sensitivity for detecting stereotyped behaviors in children with ASD. Wearable EEG showed high performance for ASD classification (96% accuracy, 100% sensitivity) and seizure detection (89-94% sensitivity for tonic-clonic seizures), while intervention applications included smartwatch vibrotactile stimulation reducing stereotyped behaviors and augmented reality glasses supporting social communication coaching. The review concluded that while wearables enable objective, continuous assessment across real-world environments, significant challenges remain regarding clinical workflow integration, privacy considerations, and standardization of validation protocols.</p></div>
         
-      <div class="relevance-row">
-        <span class="score-badge">75/100</span>
-        <span class="relevance-reason">This article directly addresses technology-based interventions for children with autism and other developmental disorders, including wearable devices that can monitor behaviors and support interventions, which aligns well with the clinician&#x27;s interest in ABA technologies and behavioral assessment tools for pediatric populations.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Pediatric neurodevelopmental disorders (NDDs) as defined by the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision : intellectual disabilities, communication disorders, attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder (ASD), specific learning disorder, and motor disorders together with closely associated pediatric neurological conditions such as cerebral palsy (CP) and epilepsy, present with symptom fluctuations and variable performance, making longitudinal assessment challenging. Conventional clinical scales, questionnaires, and caregiver diaries are largely subjective and offer limited temporal coverage. This review examines wearable technologies applicable to these conditions, focusing on measurable digital biomarkers and real-world clinical application. A narrative review was performed. Wearable technologies were categorized into motion trackers (accelerometers/gyroscopes, inertial measurement units [IMUs]), physiological monitors (photoplethysmography-derived heart rate and heart rate variability, and electrodermal activity), wearable electroencephalography (EEG)/brain sensors, smart glasses/cameras, and textile-based wearables. IMU and accelerometer based systems achieved posture and gait classification accuracies of approximately 85%, distinguished children with ADHD from controls with 80–90% accuracy, and detected stereotyped behaviors in children with ASD with sensitivities exceeding 90%. Wearable EEG demonstrated high performance for ASD classification (accuracy, 96%; sensitivity, 100%) and for automated sleep staging in epilepsy(accuracy, 80.8–83.5%), and also enabled seizure-related signal monitoring through detection of ictal fast activity. For tonic-clonic seizures, wearable devices achieved sensitivities of 89–94%, whereas tonic-seizure detection performance remains limited. Smartwatch vibrotactile stimulation reduced stereotyped behaviors and improved task performance, and wrist-worn biosignals enabled prediction of aggressive behavior approximately three minutes before onset. Augmented reality based smart glasses supported social-communication coaching in children with ASD. In children with CP, smart-shoe systems classified daily activities with high accuracy and quantified gait asymmetry. Wearables enable objective and continuous assessment of symptoms and behaviors in children with NDDs and related pediatric neurological conditions across real-world environments and are expanding toward personalized intervention. Remaining challenges include integration into clinical workflows (electronic medical record [EMR] linkage, clinician-friendly data summarisation, and reimbursement pathways), ethical and privacy considerations, and standardisation of validation protocols.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This narrative review examined the application of wearable technologies for clinical assessment and monitoring in pediatric neurodevelopmental disorders (NDDs), including autism spectrum disorder, ADHD, intellectual disabilities, and related conditions like cerebral palsy and epilepsy. The authors categorized wearable technologies into motion trackers, physiological monitors, wearable EEG/brain sensors, smart glasses/cameras, and textile-based wearables to identify their potential as digital biomarkers and clinical tools. Key findings demonstrated that IMU and accelerometer systems achieved 85% accuracy for posture and gait classification, 80-90% accuracy for distinguishing children with ADHD from controls, and over 90% sensitivity for detecting stereotyped behaviors in children with ASD. Wearable EEG showed high performance for ASD classification (96% accuracy, 100% sensitivity) and seizure detection (89-94% sensitivity for tonic-clonic seizures), while intervention applications included smartwatch vibrotactile stimulation reducing stereotyped behaviors and augmented reality glasses supporting social communication coaching. The review concluded that while wearables enable objective, continuous assessment across real-world environments, significant challenges remain regarding clinical workflow integration, privacy considerations, and standardization of validation protocols.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>Pediatric neurodevelopmental disorders (NDDs) as defined by the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision : intellectual disabilities, communication disorders, attention-deficit/hyperactivity disorder (ADHD), autism spectrum disorder (ASD), specific learning disorder, and motor disorders together with closely associated pediatric neurological conditions such as cerebral palsy (CP) and epilepsy, present with symptom fluctuations and variable performance, making longitudinal assessment challenging. Conventional clinical scales, questionnaires, and caregiver diaries are largely subjective and offer limited temporal coverage. This review examines wearable technologies applicable to these conditions, focusing on measurable digital biomarkers and real-world clinical application. A narrative review was performed. Wearable technologies were categorized into motion trackers (accelerometers/gyroscopes, inertial measurement units [IMUs]), physiological monitors (photoplethysmography-derived heart rate and heart rate variability, and electrodermal activity), wearable electroencephalography (EEG)/brain sensors, smart glasses/cameras, and textile-based wearables. IMU and accelerometer based systems achieved posture and gait classification accuracies of approximately 85%, distinguished children with ADHD from controls with 80–90% accuracy, and detected stereotyped behaviors in children with ASD with sensitivities exceeding 90%. Wearable EEG demonstrated high performance for ASD classification (accuracy, 96%; sensitivity, 100%) and for automated sleep staging in epilepsy(accuracy, 80.8–83.5%), and also enabled seizure-related signal monitoring through detection of ictal fast activity. For tonic-clonic seizures, wearable devices achieved sensitivities of 89–94%, whereas tonic-seizure detection performance remains limited. Smartwatch vibrotactile stimulation reduced stereotyped behaviors and improved task performance, and wrist-worn biosignals enabled prediction of aggressive behavior approximately three minutes before onset. Augmented reality based smart glasses supported social-communication coaching in children with ASD. In children with CP, smart-shoe systems classified daily activities with high accuracy and quantified gait asymmetry. Wearables enable objective and continuous assessment of symptoms and behaviors in children with NDDs and related pediatric neurological conditions across real-world environments and are expanding toward personalized intervention. Remaining challenges include integration into clinical workflows (electronic medical record [EMR] linkage, clinician-friendly data summarisation, and reimbursement pathways), ethical and privacy considerations, and standardisation of validation protocols.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>Pediatric neurodevelopmental disorders (NDDs) are a clinically relevant nosographic group that affect a child’s brain development. According to the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR), NDDs encompass intellectual disabilities, communication disorders (language disorder, speech-sound disorder, childhood-onset fluency disorder, and social communication disorder), autism spectrum disorder (ASD), attention-deficit/hyperactivity disorder (ADHD), specific learning disorder, and motor disorders (developmental coordination disorder, stereotypic movement disorder, and tic disorders) [29]. In this review we focus on these DSM-5-TR defined NDDs, while also including cerebral palsy (CP) and epilepsy two prevalent pediatric neurological conditions that, although not classified as NDDs within the DSM-5-TR framework, frequently co-occur with NDDs and share similar longitudinal-assessment challenges that are directly relevant to wearable-technology applications. Rapidly progressive conditions such as Krabbe disease, fluctuating disorders such as myasthenia gravis, and fatigue-dependent neuromuscular disorders such as spinal muscular atrophy and Duchenne muscular dystrophy are not NDDs under DSM-5-TR and are therefore outside the primary scope of this review, although they are occasionally referenced for methodological context.</p><p>NDDs interfere with typical neurodevelopment and are closely associated with motor, cognitive, and language impairments that substantially affect children’s daily functioning and quality of life. Motor impairments restrict mobility and behavior, whereas language deficits hinder the acquisition of cognitive and communication skills [11]. Management requires a multidimensional approach, and comprehensive individualized strategies are essential for both assessment and rehabilitation [12].</p><p>NDDs are chronic in nature and impose considerable burden on caregivers and society [29]. A defining challenge is accurate longitudinal assessment in the context of symptom fluctuations and performance variability [35]. Traditionally, assessment has relied on clinical rating scales, questionnaires, and caregiver diaries however, these methods are subjective, have limited reliability, and capture only a snapshot at a single time point. Repeated clinical visits to compensate for this limitation place substantial burden on children, caregivers, and healthcare providers.</p><p>Wearable sensors integrated into everyday items such as shoes, glasses, and clothing now enable non-invasive collection of physiological signals, movement patterns, and behavioral data in real-world environments [35]. These sensors offer continuous monitoring and are increasingly recognised as complementary tools to conventional clinical assessment [12,21]. This review examines the types of wearable technologies applicable to pediatric NDDs, the digital biomarkers they can measure, and the evidence for their clinical utility across key application domains. Beyond summarising technical evidence, we also address the translational gap between raw wearable outputs and routine clinical decision-making including integration into electronic medical records (EMRs), clinician-friendly data summarisation strategies, and reimbursement considerations which are essential for bringing these technologies to the bedside.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>This review examined the characteristics of wearable technologies, measurable digital biomarkers, and clinical applications in pediatric NDDs and closely associated pediatric neurological conditions (CP and epilepsy). Wearables complement the temporal and spatial limitations of traditional clinical assessments and enable objective analysis of function and symptoms in daily life [12,21].</p><p>Motion sensors and physiological wearables are valuable not only for group-level differentiation but also for tracking change within individuals over time. Accelerometer-based data distinguish children with ADHD from controls with 80–90% accuracy [22], and IMU data combined with CNN/LSTM models detect stereotyped behaviors in children with ASD with high sensitivity [25]. Physiological monitoring HR, HRV, and EDA may more reliably reflect within-individual autonomic change than fixed between-group differences [6].</p><p>Inconsistencies between hospital and home gait parameters [10] underscore that clinic-based evaluations may not represent real-world functioning. Smart shoes can classify and quantify gait and activity in children with CP [14], and asymmetry in bilateral upper-limb activity in children with unilateral CP correlates with MACS levels [5].</p><p>Wearables are expanding beyond monitoring to function as intervention tools. Smartwatch vibration reduced stereotyped behaviors and improved functional performance [28], and wrist-worn biosignals predicted aggressive behavior before onset [18]. AR smart glasses providing communication coaching and real-time detection of pre-meltdown gestures highlight the potential of integrated platforms combining observation, feedback, and training [1,31]. Closed-loop neurofeedback using wearable EEG further illustrates this expansion [34].</p><p>Sleep and seizure monitoring represent areas of particularly high clinical need. Wearable EEG measures not only sleep stages but also neurophysiological markers such as spindle density in children with ASD [15], and IMU-based posture monitoring provides clinically relevant data on nocturnal postural adjustment in children with severe CP [9]. For seizure monitoring, high sensitivity and low false-alarm rates with NightWatch support its value in home settings [32]; the limited tonic-seizure detection performance of the Plug &#x27;n Patch system highlights the need for seizure-type-specific multimodal approaches [24].</p><p>A key concern raised across the literature is how wearable-derived data can be translated into routine clinical workflows. Three complementary implementation models are emerging : 1) automated data-summarisation dashboards that translate continuous wearable outputs into clinician-interpretable metrics (e.g., daily seizure counts, weekly sleep-quality indices, behavior-frequency trends); 2) threshold-based alert systems that notify clinicians or caregivers only when biosignals exceed predefined abnormal ranges, thereby reducing information overload; and 3) structured EMR integration modules that link wearable-derived biomarkers to standardised clinical-assessment scales (e.g., Vineland Adaptive Behavior Scales, GMFCS level) to support longitudinal monitoring. Insurance and reimbursement frameworks for wearable monitoring remain underdeveloped in most healthcare systems. Some progress is visible in epilepsy monitoring: several seizure-detection wearables (e.g., Empatica Embrace2) have received FDA 510(k) clearance, establishing one regulatory pathway toward reimbursement. Broader adoption across NDD indications will require prospective evidence of clinical utility and cost-effectiveness from health-technology assessment studies.</p><p>Children with NDDs and related pediatric neurological conditions can benefit substantially from continuous, objective monitoring through wearables [12,21], supporting assessment and intervention across behavior, sleep, seizures, and motor function [1,18,28,31,32]. However, challenges remain regarding integration into clinical workflows, children’s acceptance, and ethical and privacy considerations [24,33]. Technical issues including electrode stability, signal-artifact susceptibility, battery life, and data security must be addressed. Social stigma associated with visible devices and the potential for notification-induced embarrassment are further barriers, particularly among older children and adolescents. Systematic clinical-validation studies within multidisciplinary frameworks are required before widespread adoption.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.3340/jkns.2026.0036" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Pediatric neurodevelopmental disorders (NDDs) are a clinically relevant nosographic group that affect a child’s brain development. According to the Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition, Text Revision (DSM-5-TR), NDDs encompass intellectual disabilities, communication disorders (language disorder, speech-sound disorder, childhood-onset fluency disorder, and social communication disorder), autism spectrum disorder (ASD), attention-deficit/hyperactivity disorder (ADHD), specific learning disorder, and motor disorders (developmental coordination disorder, stereotypic movement disorder, and tic disorders) [29]. In this review we focus on these DSM-5-TR defined NDDs, while also including cerebral palsy (CP) and epilepsy two prevalent pediatric neurological conditions that, although not classified as NDDs within the DSM-5-TR framework, frequently co-occur with NDDs and share similar longitudinal-assessment challenges that are directly relevant to wearable-technology applications. Rapidly progressive conditions such as Krabbe disease, fluctuating disorders such as myasthenia gravis, and fatigue-dependent neuromuscular disorders such as spinal muscular atrophy and Duchenne muscular dystrophy are not NDDs under DSM-5-TR and are therefore outside the primary scope of this review, although they are occasionally referenced for methodological context.</p><p>NDDs interfere with typical neurodevelopment and are closely associated with motor, cognitive, and language impairments that substantially affect children’s daily functioning and quality of life. Motor impairments restrict mobility and behavior, whereas language deficits hinder the acquisition of cognitive and communication skills [11]. Management requires a multidimensional approach, and comprehensive individualized strategies are essential for both assessment and rehabilitation [12].</p><p>NDDs are chronic in nature and impose considerable burden on caregivers and society [29]. A defining challenge is accurate longitudinal assessment in the context of symptom fluctuations and performance variability [35]. Traditionally, assessment has relied on clinical rating scales, questionnaires, and caregiver diaries however, these methods are subjective, have limited reliability, and capture only a snapshot at a single time point. Repeated clinical visits to compensate for this limitation place substantial burden on children, caregivers, and healthcare providers.</p><p>Wearable sensors integrated into everyday items such as shoes, glasses, and clothing now enable non-invasive collection of physiological signals, movement patterns, and behavioral data in real-world environments [35]. These sensors offer continuous monitoring and are increasingly recognised as complementary tools to conventional clinical assessment [12,21]. This review examines the types of wearable technologies applicable to pediatric NDDs, the digital biomarkers they can measure, and the evidence for their clinical utility across key application domains. Beyond summarising technical evidence, we also address the translational gap between raw wearable outputs and routine clinical decision-making including integration into electronic medical records (EMRs), clinician-friendly data summarisation strategies, and reimbursement considerations which are essential for bringing these technologies to the bedside.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>This review examined the characteristics of wearable technologies, measurable digital biomarkers, and clinical applications in pediatric NDDs and closely associated pediatric neurological conditions (CP and epilepsy). Wearables complement the temporal and spatial limitations of traditional clinical assessments and enable objective analysis of function and symptoms in daily life [12,21].</p><p>Motion sensors and physiological wearables are valuable not only for group-level differentiation but also for tracking change within individuals over time. Accelerometer-based data distinguish children with ADHD from controls with 80–90% accuracy [22], and IMU data combined with CNN/LSTM models detect stereotyped behaviors in children with ASD with high sensitivity [25]. Physiological monitoring HR, HRV, and EDA may more reliably reflect within-individual autonomic change than fixed between-group differences [6].</p><p>Inconsistencies between hospital and home gait parameters [10] underscore that clinic-based evaluations may not represent real-world functioning. Smart shoes can classify and quantify gait and activity in children with CP [14], and asymmetry in bilateral upper-limb activity in children with unilateral CP correlates with MACS levels [5].</p><p>Wearables are expanding beyond monitoring to function as intervention tools. Smartwatch vibration reduced stereotyped behaviors and improved functional performance [28], and wrist-worn biosignals predicted aggressive behavior before onset [18]. AR smart glasses providing communication coaching and real-time detection of pre-meltdown gestures highlight the potential of integrated platforms combining observation, feedback, and training [1,31]. Closed-loop neurofeedback using wearable EEG further illustrates this expansion [34].</p><p>Sleep and seizure monitoring represent areas of particularly high clinical need. Wearable EEG measures not only sleep stages but also neurophysiological markers such as spindle density in children with ASD [15], and IMU-based posture monitoring provides clinically relevant data on nocturnal postural adjustment in children with severe CP [9]. For seizure monitoring, high sensitivity and low false-alarm rates with NightWatch support its value in home settings [32]; the limited tonic-seizure detection performance of the Plug &#x27;n Patch system highlights the need for seizure-type-specific multimodal approaches [24].</p><p>A key concern raised across the literature is how wearable-derived data can be translated into routine clinical workflows. Three complementary implementation models are emerging : 1) automated data-summarisation dashboards that translate continuous wearable outputs into clinician-interpretable metrics (e.g., daily seizure counts, weekly sleep-quality indices, behavior-frequency trends); 2) threshold-based alert systems that notify clinicians or caregivers only when biosignals exceed predefined abnormal ranges, thereby reducing information overload; and 3) structured EMR integration modules that link wearable-derived biomarkers to standardised clinical-assessment scales (e.g., Vineland Adaptive Behavior Scales, GMFCS level) to support longitudinal monitoring. Insurance and reimbursement frameworks for wearable monitoring remain underdeveloped in most healthcare systems. Some progress is visible in epilepsy monitoring: several seizure-detection wearables (e.g., Empatica Embrace2) have received FDA 510(k) clearance, establishing one regulatory pathway toward reimbursement. Broader adoption across NDD indications will require prospective evidence of clinical utility and cost-effectiveness from health-technology assessment studies.</p><p>Children with NDDs and related pediatric neurological conditions can benefit substantially from continuous, objective monitoring through wearables [12,21], supporting assessment and intervention across behavior, sleep, seizures, and motor function [1,18,28,31,32]. However, challenges remain regarding integration into clinical workflows, children’s acceptance, and ethical and privacy considerations [24,33]. Technical issues including electrode stability, signal-artifact susceptibility, battery life, and data security must be addressed. Social stigma associated with visible devices and the potential for notification-induced embarrassment are further barriers, particularly among older children and adolescents. Systematic clinical-validation studies within multidisciplinary frameworks are required before widespread adoption.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.3340/jkns.2026.0036" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

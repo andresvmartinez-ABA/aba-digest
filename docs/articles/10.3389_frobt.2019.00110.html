@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,144 +56,122 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
       <div class="article-wrapper">
         <h1 class="article-title">Long-Term Personalization of an In-Home Socially Assistive Robot for Children With Autism Spectrum Disorders</h1>
         <div class="article-meta"><strong>Caitlyn Clabaugh, Kartik Mahajan, Shomik Jain, Roxanna Pakkar, David Becerra, Zhong Shi et al.</strong> &nbsp;·&nbsp; Frontiers in Robotics and AI &nbsp;·&nbsp; 2019</div>
+        <div class="tags"><span class="tag">Technology in ABA</span></div>
+        <div class="relevance-row"><span class="score-badge">95/100</span><span class="relevance-reason">Manually curated paper from Research Rabbit library.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This research investigated whether a socially assistive robot (SAR) system could effectively personalize long-term in-home interventions for children with autism spectrum disorders by adapting instruction difficulty and feedback to each child&#x27;s unique learning patterns. The researchers developed a hierarchical human robot learning (hHRL) framework with five controllers managed by a meta-controller using reinforcement learning to personalize challenge levels and feedback during mathematics instruction activities. The study deployed this autonomous SAR system in 17 homes with children aged 3-7 years with ASD over month-long interventions. Results showed that the system successfully personalized its instruction and feedback for each child after approximately 100 games, with all participants demonstrating improvements in targeted mathematical skills, high engagement levels, and positive family reports regarding the system&#x27;s usefulness and adaptability. All participants showed both immediate skill gains and long-term retention of intervention content, demonstrating the feasibility and effectiveness of autonomous personalized SAR interventions in real-world home environments.</p></div>
         
-        
-      <div class="relevance-row">
-        <span class="score-badge">95/100</span>
-        <span class="relevance-reason">Manually curated paper from Research Rabbit library.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Socially assistive robots (SAR) have shown great potential to augment the social and educational development of children with autism spectrum disorders (ASD). As SAR continues to substantiate itself as an effective enhancement to human intervention, researchers have sought to study its longitudinal impacts in real-world environments, including the home. Computational personalization stands out as a central computational challenge as it is necessary to enable SAR systems to adapt to each child&#x27;s unique and changing needs. Toward that end, we formalized personalization as a hierarchical human robot learning framework (hHRL) consisting of five controllers (disclosure, promise, instruction, feedback, and inquiry) mediated by a meta-controller that utilized reinforcement learning to personalize instruction challenge levels and robot feedback based on each user&#x27;s unique learning patterns. We instantiated and evaluated the approach in a study with 17 children with ASD, aged 3–7 years old, over month-long interventions in their homes. Our findings demonstrate that the fully autonomous SAR system was able to personalize its instruction and feedback over time to each child&#x27;s proficiency. As a result, every child participant showed improvements in targeted skills and long-term retention of intervention content. Moreover, all child users were engaged for a majority of the intervention, and their families reported the SAR system to be useful and adaptable. In summary, our results show that autonomous, personalized SAR interventions are both feasible and effective in providing long-term in-home developmental support for children with diverse learning needs.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This research investigated whether a socially assistive robot (SAR) system could effectively personalize long-term in-home interventions for children with autism spectrum disorders by adapting instruction difficulty and feedback to each child&#x27;s unique learning patterns. The researchers developed a hierarchical human robot learning (hHRL) framework with five controllers managed by a meta-controller using reinforcement learning to personalize challenge levels and feedback during mathematics instruction activities. The study deployed this autonomous SAR system in 17 homes with children aged 3-7 years with ASD over month-long interventions. Results showed that the system successfully personalized its instruction and feedback for each child after approximately 100 games, with all participants demonstrating improvements in targeted mathematical skills, high engagement levels, and positive family reports regarding the system&#x27;s usefulness and adaptability. All participants showed both immediate skill gains and long-term retention of intervention content, demonstrating the feasibility and effectiveness of autonomous personalized SAR interventions in real-world home environments.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>Socially assistive robots (SAR) have shown great potential to augment the social and educational development of children with autism spectrum disorders (ASD). As SAR continues to substantiate itself as an effective enhancement to human intervention, researchers have sought to study its longitudinal impacts in real-world environments, including the home. Computational personalization stands out as a central computational challenge as it is necessary to enable SAR systems to adapt to each child&#x27;s unique and changing needs. Toward that end, we formalized personalization as a hierarchical human robot learning framework (hHRL) consisting of five controllers (disclosure, promise, instruction, feedback, and inquiry) mediated by a meta-controller that utilized reinforcement learning to personalize instruction challenge levels and robot feedback based on each user&#x27;s unique learning patterns. We instantiated and evaluated the approach in a study with 17 children with ASD, aged 3–7 years old, over month-long interventions in their homes. Our findings demonstrate that the fully autonomous SAR system was able to personalize its instruction and feedback over time to each child&#x27;s proficiency. As a result, every child participant showed improvements in targeted skills and long-term retention of intervention content. Moreover, all child users were engaged for a majority of the intervention, and their families reported the SAR system to be useful and adaptable. In summary, our results show that autonomous, personalized SAR interventions are both feasible and effective in providing long-term in-home developmental support for children with diverse learning needs.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>Human development follows non-linear trajectories unique to each individual (Vygotsky,1978). Therefore, socially assistive interventions need to be tailored toward the specific needs and preferences of each participant over time. In a long-term setting, this means interventions must continuously and rapidly adapt toward the user&#x27;s unique personality. Given the complexity, unpredictability, and uniqueness of each user&#x27;s progress, intervention strategies must be adaptedin situvia untrained human feedback. Creating autonomous long-term personalized adaptation poses many computational and engineering challenges.</p><p>Benefits of personalization are well-established across the domains of education (Bloom,1984; Anderson et al.,2001) and healthcare (Artz and Armour-Thomas,1992; Beevers and McGeary,2012; Cesuroglu et al.,2012; Swan,2012). While personalized services are paramount, they are neither universally nor equitably affordable. This provides motivation for human-machine interaction research that seeks to develop personalized assistance via socially assistive agents, whether disembodied, virtually embodied (DeVault et al.,2014), or physically embodied (Matarić,2017).</p><p>Socially assistive robotics (SAR) combines robotics and computational methods to broaden access to personalized, socially situated, and physically co-present interventions (Feil-Seifer and Matarić,2011). A large body of work has supported the importance of physical embodiment (Deng et al.,2019), including its role in increasing compliance (Bainbridge et al.,2008), social engagement (Lee et al.,2006; Wainer et al.,2006), and cognitive learning gains (Leyzberg et al.,2012). Correspondingly, there has been a significant body of work using various types of robots for children with autism spectrum disorders (ASD) in short-term studies (Diehl et al.,2012; Scassellati et al.,2012; Begum et al.,2016), and one long-term study (Scassellati et al.,2018).</p><p>The majority of past work with SAR for ASD has been related to social skills. However, it is well-established that learning in general is impacted by social factors; this is particularly important for young learners, because their learning is most often socially mediated (Durlak,2011). Social difficulties often interfere with children&#x27;s learning; therefore embedding social contexts in learning environments presents a developmentally appropriate practice that is preferable over isolating social behaviors from cognitive activities (Zins et al.,2004). Consequently, this work addresses the social and cognitive learning domains in tandem, in an intervention that is specifically designed for such learning by children with ASD (White et al.,2007; Guadalupe,2016).</p><p>Personalizing the learning process is especially important in ASD. Given sufficient domain knowledge, personalization of SAR can be achieved through human-in-the-loop or Wizard of Oz (WoZ) frameworks, wherein intervention strategies are mapped to individualsa prioriorin situvia human input (Riek,2012). However, in practice, considering diverse individual needs and the noise of real-world environments, and the scale of need in ASD, non-autonomous personalization of SAR is infeasible. Reinforcement learning (RL) methods have been successfully applied to adapting to a user&#x27;s learning habits over time, particularly in early child development studies (Ros et al.,2011). Moreover, recent long-term SAR studies have demonstrated success in maintaining persistent co-present support for educators, students, and caregivers (Bongaarts,2004). There is therefore an opportunity to develop RL-based personalized long-term learning SAR systems, especially when teaching abstract concepts, such as mathematics (Clabaugh et al.,2015).</p><p>In this work, we propose apersonalizedSAR intervention framework that can provide accessible and effective long-term, in-home support for children with ASD. To accommodate the variable nature of ASD, our framework personalizes to each user&#x27;s individual needs. To that end, we introduce a hierarchical framework for Human Robot Learning (hHRL) that decomposes SAR interventions into computationally tractable state-action subspaces contained with a meta-controller. The meta-controller consists of disclosure, promise, instruction, feedback, and inquiry controllers that personalize instruction challenge levels and robot feedback based on each child&#x27;s unique learning patterns. The framework is implemented and evaluated in a fully autonomous SAR system deployed in homes for session-based, single-subject interventions with 17 child participants diagnosed with ASD aged 3–7 years old. Using space-themed mathematics problems, the system combined tenets of educational robotics and computational personalization to maximize each child participant&#x27;s cognitive gains. Our findings show that the SAR system successfully personalized its instruction and feedback to each participant over time. Furthermore, most families reported the SAR system to be useful and adaptable, and correspondingly, all users were engaged for a majority of the in-home intervention. As a result, all participants showed improvements in math skills and long-term retention of intervention content. These outcomes demonstrate that computational personalization methods can be successfully incorporated in long-term personalized SAR deployments to support children with diverse learning needs.</p><p>This paper is organized as follows.Backgroundoverviews SAR in the relevant contexts of learning, ASD, and personalization.Formalizing Personalization in SARdescribes the hierarchical human robot learning framework, with a focus on personalization of the challenge level and robot feedback.Personalized SAR Intervention Designdetails the study design, data collection, and outcome measures. TheResultssection details the adaptation performance of the SAR system, its influence on user engagement, participating families&#x27; perspectives, and cognitive learning gains over the long-term interaction.DiscussionandConclusionsummarize key insights and recommendations for future work.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Results</summary>
-            <div class="section-body"><p>The presented month-long in-home deployments produced a large set of results. Sections 5.1 and 5.2 describe the patterns and quantitative results, respectively, of the hHRL framework instantiation. Section 5.4 discusses how the adaptive system influenced the engagement of the child participants. Section 5.5 reports on how the adaptive SAR system influenced cognitive skills gains across all participants, as measured by the pre-post intervention assessments.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>The results of the long-term in-home deployment provide several insights for personalization in SAR.</p><p>We found that both the personalized levels of challenge (pLoC) and feedback (pLoF) converged for almost all participants. After ~100 games, the feedback and challenge curves stabilized, showing that the system adapted to an appropriate LoC for each student. Therefore, the long-term nature of the study was important for successful personalization. The participants with the longest episodes in the pLoC were P6, P16, and P11, with 715, 592, and 520 episodes (games played), respectively. In contrast, pLoF interacted most with for P10, P7, and P9, who had 353, 237, and 228 episodes (mistakes and help requests), respectively. The SAR system adapted to the participants in both cases.</p><p>Regardless of the difference in sessions, participants who yielded a consistent score by the end of the interaction in the pLoC had similar success with pLoF, and vice versa. This happened for participants who interacted with equal or above average 113.4 and 302.5 episodes for pLoF and pLoC, respectively. On the other hand, P16 illustrated the negative impact of minimal interaction, as both the pLoC and pLoF failed to standardize given only 129 total interactions both on pLoC and pLoF, reaching over 171 episodes below average for pLoC. Within the interaction, the pLoC reward for P16 fluctuated by 2.6 points between the 61st and 129th episode. For reference, the second highest fluctuation in this same interval was 1.02 points by P16, whose system ultimately converged after 592 games.</p><p>Overall, the pLoF and pLoC demonstrate the ability to adapt to each user&#x27;s preferences given their willingness to interact with the robot and provide the system opportunities to learn. The participant surveys support this conclusion and provide the user&#x27;s perspective on the SAR&#x27;s ability to adapt.</p><p>P6, P7, P9, and P11, who both the pLoC and pLoF had adapted to, reported in their post-interaction interviews an average rating of 6.25, showing a shared appreciation for the system&#x27;s adaptiveness. The only study participant who believed the system did not adapt was P17, who likely felt this way because of limited success with the feedback model; P17 had only 112 feedback episodes over 298 total games. Aside from this outlier, the survey results supported the effectiveness of pLoC and pLoFs. P9 was an ideal participant, who believed the system adapted and had above average episodes while stabilizing both pLoC and pLoF.</p><p>Usefulness questionnaire data provide additional insights into the value of creating an adaptive system. All participants reported very similar scores for usefulness and adaptiveness, implying that the usefulness of the system is related to its adaptiveness. The pre-post assessments supported this finding while providing quantitative data about the learning gains of each participant as a result of SAR personalization.</p><p>Participants whose optimal LoC was lower were less engaged, as shown inFigure 9. For example, the system converged to the lowest pLoC for P16, who also had the second lowest engagement. This is likely because P17 was presented with games of higher challenge before the system began to converge to an optimal LoC. When also considering that P16 had a below average number of episodes, it is likely the robot failed to adapt quickly ultimately discouraging the participant from interacting further.</p><p>The analysis of the objective and subjective outcome measures supports the success of the system as a whole, with all participants improving in math skills over the course of the long-term in-home interaction. Regardless of whether the system was able to adapt to an optimal LoC, all participants demonstrated cognitive gains. The participants gained an average of 7.0 points on numerical operation (NO) and 7.125 points on math reasoning (MR). Although for P16 the system was unable to adapt both in pLoF and pLoC personalization, that participant was still in the top five in both NO and MO gains, with an increase of 15 and 12 points, respectively. This is likely due to the participant&#x27;s initially low scores that allowed much room for improvement. All participants who had at or above average number of episodes (either in pLoC and pLoF) showed strong positive gains. P8 illustrated the disadvantages of insufficient interaction time, being the participant with the least episodes in both pLoF and pLoC and resulting with below average gains in both NO and MR assessments.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.3389/FROBT.2019.00110" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Human development follows non-linear trajectories unique to each individual (Vygotsky,1978). Therefore, socially assistive interventions need to be tailored toward the specific needs and preferences of each participant over time. In a long-term setting, this means interventions must continuously and rapidly adapt toward the user&#x27;s unique personality. Given the complexity, unpredictability, and uniqueness of each user&#x27;s progress, intervention strategies must be adaptedin situvia untrained human feedback. Creating autonomous long-term personalized adaptation poses many computational and engineering challenges.</p><p>Benefits of personalization are well-established across the domains of education (Bloom,1984; Anderson et al.,2001) and healthcare (Artz and Armour-Thomas,1992; Beevers and McGeary,2012; Cesuroglu et al.,2012; Swan,2012). While personalized services are paramount, they are neither universally nor equitably affordable. This provides motivation for human-machine interaction research that seeks to develop personalized assistance via socially assistive agents, whether disembodied, virtually embodied (DeVault et al.,2014), or physically embodied (Matarić,2017).</p><p>Socially assistive robotics (SAR) combines robotics and computational methods to broaden access to personalized, socially situated, and physically co-present interventions (Feil-Seifer and Matarić,2011). A large body of work has supported the importance of physical embodiment (Deng et al.,2019), including its role in increasing compliance (Bainbridge et al.,2008), social engagement (Lee et al.,2006; Wainer et al.,2006), and cognitive learning gains (Leyzberg et al.,2012). Correspondingly, there has been a significant body of work using various types of robots for children with autism spectrum disorders (ASD) in short-term studies (Diehl et al.,2012; Scassellati et al.,2012; Begum et al.,2016), and one long-term study (Scassellati et al.,2018).</p><p>The majority of past work with SAR for ASD has been related to social skills. However, it is well-established that learning in general is impacted by social factors; this is particularly important for young learners, because their learning is most often socially mediated (Durlak,2011). Social difficulties often interfere with children&#x27;s learning; therefore embedding social contexts in learning environments presents a developmentally appropriate practice that is preferable over isolating social behaviors from cognitive activities (Zins et al.,2004). Consequently, this work addresses the social and cognitive learning domains in tandem, in an intervention that is specifically designed for such learning by children with ASD (White et al.,2007; Guadalupe,2016).</p><p>Personalizing the learning process is especially important in ASD. Given sufficient domain knowledge, personalization of SAR can be achieved through human-in-the-loop or Wizard of Oz (WoZ) frameworks, wherein intervention strategies are mapped to individualsa prioriorin situvia human input (Riek,2012). However, in practice, considering diverse individual needs and the noise of real-world environments, and the scale of need in ASD, non-autonomous personalization of SAR is infeasible. Reinforcement learning (RL) methods have been successfully applied to adapting to a user&#x27;s learning habits over time, particularly in early child development studies (Ros et al.,2011). Moreover, recent long-term SAR studies have demonstrated success in maintaining persistent co-present support for educators, students, and caregivers (Bongaarts,2004). There is therefore an opportunity to develop RL-based personalized long-term learning SAR systems, especially when teaching abstract concepts, such as mathematics (Clabaugh et al.,2015).</p><p>In this work, we propose apersonalizedSAR intervention framework that can provide accessible and effective long-term, in-home support for children with ASD. To accommodate the variable nature of ASD, our framework personalizes to each user&#x27;s individual needs. To that end, we introduce a hierarchical framework for Human Robot Learning (hHRL) that decomposes SAR interventions into computationally tractable state-action subspaces contained with a meta-controller. The meta-controller consists of disclosure, promise, instruction, feedback, and inquiry controllers that personalize instruction challenge levels and robot feedback based on each child&#x27;s unique learning patterns. The framework is implemented and evaluated in a fully autonomous SAR system deployed in homes for session-based, single-subject interventions with 17 child participants diagnosed with ASD aged 3–7 years old. Using space-themed mathematics problems, the system combined tenets of educational robotics and computational personalization to maximize each child participant&#x27;s cognitive gains. Our findings show that the SAR system successfully personalized its instruction and feedback to each participant over time. Furthermore, most families reported the SAR system to be useful and adaptable, and correspondingly, all users were engaged for a majority of the in-home intervention. As a result, all participants showed improvements in math skills and long-term retention of intervention content. These outcomes demonstrate that computational personalization methods can be successfully incorporated in long-term personalized SAR deployments to support children with diverse learning needs.</p><p>This paper is organized as follows.Backgroundoverviews SAR in the relevant contexts of learning, ASD, and personalization.Formalizing Personalization in SARdescribes the hierarchical human robot learning framework, with a focus on personalization of the challenge level and robot feedback.Personalized SAR Intervention Designdetails the study design, data collection, and outcome measures. TheResultssection details the adaptation performance of the SAR system, its influence on user engagement, participating families&#x27; perspectives, and cognitive learning gains over the long-term interaction.DiscussionandConclusionsummarize key insights and recommendations for future work.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Results</summary>
+          <div class="section-body"><p>The presented month-long in-home deployments produced a large set of results. Sections 5.1 and 5.2 describe the patterns and quantitative results, respectively, of the hHRL framework instantiation. Section 5.4 discusses how the adaptive system influenced the engagement of the child participants. Section 5.5 reports on how the adaptive SAR system influenced cognitive skills gains across all participants, as measured by the pre-post intervention assessments.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>The results of the long-term in-home deployment provide several insights for personalization in SAR.</p><p>We found that both the personalized levels of challenge (pLoC) and feedback (pLoF) converged for almost all participants. After ~100 games, the feedback and challenge curves stabilized, showing that the system adapted to an appropriate LoC for each student. Therefore, the long-term nature of the study was important for successful personalization. The participants with the longest episodes in the pLoC were P6, P16, and P11, with 715, 592, and 520 episodes (games played), respectively. In contrast, pLoF interacted most with for P10, P7, and P9, who had 353, 237, and 228 episodes (mistakes and help requests), respectively. The SAR system adapted to the participants in both cases.</p><p>Regardless of the difference in sessions, participants who yielded a consistent score by the end of the interaction in the pLoC had similar success with pLoF, and vice versa. This happened for participants who interacted with equal or above average 113.4 and 302.5 episodes for pLoF and pLoC, respectively. On the other hand, P16 illustrated the negative impact of minimal interaction, as both the pLoC and pLoF failed to standardize given only 129 total interactions both on pLoC and pLoF, reaching over 171 episodes below average for pLoC. Within the interaction, the pLoC reward for P16 fluctuated by 2.6 points between the 61st and 129th episode. For reference, the second highest fluctuation in this same interval was 1.02 points by P16, whose system ultimately converged after 592 games.</p><p>Overall, the pLoF and pLoC demonstrate the ability to adapt to each user&#x27;s preferences given their willingness to interact with the robot and provide the system opportunities to learn. The participant surveys support this conclusion and provide the user&#x27;s perspective on the SAR&#x27;s ability to adapt.</p><p>P6, P7, P9, and P11, who both the pLoC and pLoF had adapted to, reported in their post-interaction interviews an average rating of 6.25, showing a shared appreciation for the system&#x27;s adaptiveness. The only study participant who believed the system did not adapt was P17, who likely felt this way because of limited success with the feedback model; P17 had only 112 feedback episodes over 298 total games. Aside from this outlier, the survey results supported the effectiveness of pLoC and pLoFs. P9 was an ideal participant, who believed the system adapted and had above average episodes while stabilizing both pLoC and pLoF.</p><p>Usefulness questionnaire data provide additional insights into the value of creating an adaptive system. All participants reported very similar scores for usefulness and adaptiveness, implying that the usefulness of the system is related to its adaptiveness. The pre-post assessments supported this finding while providing quantitative data about the learning gains of each participant as a result of SAR personalization.</p><p>Participants whose optimal LoC was lower were less engaged, as shown inFigure 9. For example, the system converged to the lowest pLoC for P16, who also had the second lowest engagement. This is likely because P17 was presented with games of higher challenge before the system began to converge to an optimal LoC. When also considering that P16 had a below average number of episodes, it is likely the robot failed to adapt quickly ultimately discouraging the participant from interacting further.</p><p>The analysis of the objective and subjective outcome measures supports the success of the system as a whole, with all participants improving in math skills over the course of the long-term in-home interaction. Regardless of whether the system was able to adapt to an optimal LoC, all participants demonstrated cognitive gains. The participants gained an average of 7.0 points on numerical operation (NO) and 7.125 points on math reasoning (MR). Although for P16 the system was unable to adapt both in pLoF and pLoC personalization, that participant was still in the top five in both NO and MO gains, with an increase of 15 and 12 points, respectively. This is likely due to the participant&#x27;s initially low scores that allowed much room for improvement. All participants who had at or above average number of episodes (either in pLoC and pLoF) showed strong positive gains. P8 illustrated the disadvantages of insufficient interaction time, being the participant with the least episodes in both pLoF and pLoC and resulting with below average gains in both NO and MR assessments.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.3389/FROBT.2019.00110" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

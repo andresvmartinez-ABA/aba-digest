@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,100 +56,84 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
@@ -164,37 +141,31 @@ footer {
         <h1 class="article-title">Effectiveness of Digital Health Technologies in the Management of Autism Spectrum Disorder in Children and Adolescents: A Systematic Review.</h1>
         <div class="article-meta"><strong>Hamid, Shahmeer, Ul Hoque, Tazim, Bahaj, Badr et al.</strong> &nbsp;·&nbsp; Cureus &nbsp;·&nbsp; 2026</div>
         
+        <div class="relevance-row"><span class="score-badge">85/100</span><span class="relevance-reason">This systematic review directly aligns with the clinician&#x27;s interests by evaluating digital health technologies including tablet/computer applications, augmented reality systems, and behavioural interventions for children and adolescents with autism, focusing on communication and functional outcomes rather than medical interventions.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This systematic review examined the effectiveness of digital health interventions for managing autism spectrum disorder symptoms in children and adolescents through analysis of randomized controlled trials. The researchers conducted a systematic search of three databases in March 2023, identifying 12 randomized controlled trials with 622 participants that evaluated various digital technologies including tablet/computer applications, web-delivered video-modeling programs, mobile health interventions, and wearable augmented-reality systems. While results for core social communication deficits were mixed with several null findings, consistent positive effects were observed for functional outcomes, particularly in receptive language, emotional comprehension, and adolescent vocational skills when interventions were grounded in established behavioral principles. The overall quality of evidence was limited by small sample sizes, short intervention durations, and moderate to high risk of bias, with few studies directly comparing digital interventions to active face-to-face therapies. The authors concluded that digital health interventions show promise as adjunctive tools but require larger, longer-term trials to establish their effectiveness and role alongside conventional ASD services.</p></div>
         
-      <div class="relevance-row">
-        <span class="score-badge">85/100</span>
-        <span class="relevance-reason">This systematic review directly aligns with the clinician&#x27;s interests by evaluating digital health technologies including tablet/computer applications, augmented reality systems, and behavioural interventions for children and adolescents with autism, focusing on communication and functional outcomes rather than medical interventions.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Limited access to specialist services, driven by workforce shortages and increasing demand, has constrained timely face-to-face management of autism spectrum disorder (ASD). Children and adolescents with ASD frequently engage with digital technologies, prompting growing interest in digital health interventions as potential adjuncts to traditional care; however, their effectiveness remains uncertain. This systematic review aimed to evaluate the evidence from randomised controlled trials assessing digital health interventions for the management of ASD-related symptoms in children and adolescents. Embase, MEDLINE, and Web of Science were searched in March 2023, and findings were synthesised narratively. Twelve randomised controlled trials comprising 622 participants met inclusion criteria, evaluating heterogeneous interventions including tablet- and computer-based applications, web-delivered video-modelling programmes, mobile health interventions, and wearable augmented-reality systems. While results for primary outcomes were mixed, with several trials reporting null findings for core social communication deficits, consistent positive effects were observed for functional and additional outcomes. Specifically, interventions grounded in established behavioural principles demonstrated benefits for receptive language, emotional comprehension, and adolescent vocational skills (e.g. employment interview performance and conflict negotiation). However, few studies directly compared digital interventions with active face-to-face therapies, and the overall risk of bias was mixed largely due to concerns regarding the randomisation process and high risk of bias in outcome measurement stemming from the use of unblinded, subjective parent-reported measures. Digital health interventions, therefore, show promise as adjunctive tools for supporting ASD management in children and adolescents, but larger, longer-term randomised trials across more diverse populations are required to establish their effectiveness, durability, and role alongside conventional ASD services.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This systematic review examined the effectiveness of digital health interventions for managing autism spectrum disorder symptoms in children and adolescents through analysis of randomized controlled trials. The researchers conducted a systematic search of three databases in March 2023, identifying 12 randomized controlled trials with 622 participants that evaluated various digital technologies including tablet/computer applications, web-delivered video-modeling programs, mobile health interventions, and wearable augmented-reality systems. While results for core social communication deficits were mixed with several null findings, consistent positive effects were observed for functional outcomes, particularly in receptive language, emotional comprehension, and adolescent vocational skills when interventions were grounded in established behavioral principles. The overall quality of evidence was limited by small sample sizes, short intervention durations, and moderate to high risk of bias, with few studies directly comparing digital interventions to active face-to-face therapies. The authors concluded that digital health interventions show promise as adjunctive tools but require larger, longer-term trials to establish their effectiveness and role alongside conventional ASD services.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>Limited access to specialist services, driven by workforce shortages and increasing demand, has constrained timely face-to-face management of autism spectrum disorder (ASD). Children and adolescents with ASD frequently engage with digital technologies, prompting growing interest in digital health interventions as potential adjuncts to traditional care; however, their effectiveness remains uncertain. This systematic review aimed to evaluate the evidence from randomised controlled trials assessing digital health interventions for the management of ASD-related symptoms in children and adolescents. Embase, MEDLINE, and Web of Science were searched in March 2023, and findings were synthesised narratively. Twelve randomised controlled trials comprising 622 participants met inclusion criteria, evaluating heterogeneous interventions including tablet- and computer-based applications, web-delivered video-modelling programmes, mobile health interventions, and wearable augmented-reality systems. While results for primary outcomes were mixed, with several trials reporting null findings for core social communication deficits, consistent positive effects were observed for functional and additional outcomes. Specifically, interventions grounded in established behavioural principles demonstrated benefits for receptive language, emotional comprehension, and adolescent vocational skills (e.g. employment interview performance and conflict negotiation). However, few studies directly compared digital interventions with active face-to-face therapies, and the overall risk of bias was mixed largely due to concerns regarding the randomisation process and high risk of bias in outcome measurement stemming from the use of unblinded, subjective parent-reported measures. Digital health interventions, therefore, show promise as adjunctive tools for supporting ASD management in children and adolescents, but larger, longer-term randomised trials across more diverse populations are required to establish their effectiveness, durability, and role alongside conventional ASD services.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>Autism spectrum disorder (ASD) is defined as a neurobiological disorder characterised by an impaired ability to socially interact and communicate with others, alongside a pattern of repetitive behaviours and a narrow range of interests [1]. Current estimates from the National Health Service (NHS) suggest that approximately 1% of children in the UK are affected with ASD [2]; however, only 10% of children suspected to have autism are actively seeking treatment [3]. Scarcity in the number of specialists trained to deliver ASD interventions has led to a consistent backlog of patients waiting to seek treatment, particularly in underserved regions [4]. To compound this problem further, many families struggle due to the time and cost implications associated with accessing treatment services [5]. Issues regarding access to traditional in-person ASD therapies were only worsened during the recent COVID-19 pandemic due to lockdown restrictions implemented by various governments across the globe [6,7]. Due to the inherent limitations associated with accessing in-person therapies for children with ASD and a global shift towards accessing services remotely, traditional in-person ASD therapies require online adoption to address issues surrounding accessibility, excessive wait times, and physician burden.</p><p>Digital health technology (also referred to as &#x27;telehealth&#x27;, &#x27;telemedicine&#x27;, or &#x27;telepractice&#x27;) refers to the &#x27;practice of medicine via a remote electronic interface&#x27; [8]. Digital health technologies have already been adopted by physicians, belonging to a vast array of medical specialities, for the delivery of interventions via the internet in a remote manner [9,10]. The advent of the internet in the modern age has enabled remote communication to flourish amongst individuals; the use of such interaction within society has only been exacerbated further by the recent COVID-19 pandemic, leading to a sharp uptake in digital health services provided by healthcare providers in many clinics [11]. Therefore, the use of digital health technology as a mechanism for treatment delivery will continue to increase and spread throughout different healthcare settings.</p><p>The suitability of digital health interventions for managing ASD has been borne out in the literature, as studies have highlighted that children with ASD are inclined to digital technology [12,13]. There are a multitude of characteristics of digital technology that appeal to children, such as the asynchronous aspects and slower pace of digital user interfaces [14,15] and the ability of digital interventions to provide a consistent and customisable learning environment tailored to the child’s personal needs [16]. Furthermore, children with ASD exhibit particular traits highlighting their unique compatibility with digital technology when compared to neurotypical children, such as an avoidance of in-person interactions with individuals that is less prevalent when viewing individuals via video, their narrow range of focus that can make &#x27;anchoring in&#x27; on screens more desirable, an affinity for engaging with visual stimuli, and a greater willingness to process visual information in comparison to verbal information [17]. The literature also suggests that children with ASD, particularly high-functioning ASD (HFASD), have a specific interest in digital technology [18,19], thus supporting the idea of mutual compatibility between children with ASD and digital technology. However, despite its benefits, digital technologies may worsen existing issues in children with ASD such as a reduction in the number of interactions a child with ASD may have with their intervention implementer (e.g. parents, caregivers, teachers, therapists, or physicians), increased social seclusion due to a reduction in the number of opportunities to practise their social engagement with others, and an increased probability of developing behaviours of an obsessive-compulsive nature when using such technologies [20].</p><p>Despite the current literature supporting the use of digital technology in children with ASD, more evidence is required to assess the efficacy of using such technologies as methods of intervention for managing symptoms of ASD. Previous systematic reviews primarily focused on pilot studies, case studies, and single-case designs with little emphasis on randomised controlled trials (RCTs) [21-24]. The reason for this was due to a lack of RCTs comparing different technological interventions for the management of ASD symptoms in children at the time when these reviews were first conducted. This systematic review aims to collate and evaluate all the existing RCTs that evaluated the efficacy of implementing digital interventions for the management of ASD symptoms to gain a better understanding and critique the potential role of digital health technologies in this field of medicine.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>This systematic review indicates that digital health interventions can produce modest but meaningful improvements in communication, social, and functional outcomes for children and adolescents with ASD, particularly when grounded in established evidence-based practices such as ABA and video modelling. Benefits were most consistently observed in receptive language, social communication, emotional understanding, and ecologically valid adolescent skills, including employment interview performance and conflict resolution. However, the strength of the evidence is limited by small sample sizes, short intervention durations, heterogeneous outcome measures, and a moderate to high risk of bias, with few studies comparing digital interventions to active face-to-face therapies or addressing disparities in access to care. Overall, current evidence supports the use of digital interventions primarily as adjuncts rather than replacements for conventional therapy. Given the lack of non-inferiority trials comparing digital tools directly against face-to-face standards, further large-scale, methodologically rigorous trials are required to clarify their long-term effectiveness, comparative value, and role in equitable autism care.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.7759/cureus.102030" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Autism spectrum disorder (ASD) is defined as a neurobiological disorder characterised by an impaired ability to socially interact and communicate with others, alongside a pattern of repetitive behaviours and a narrow range of interests [1]. Current estimates from the National Health Service (NHS) suggest that approximately 1% of children in the UK are affected with ASD [2]; however, only 10% of children suspected to have autism are actively seeking treatment [3]. Scarcity in the number of specialists trained to deliver ASD interventions has led to a consistent backlog of patients waiting to seek treatment, particularly in underserved regions [4]. To compound this problem further, many families struggle due to the time and cost implications associated with accessing treatment services [5]. Issues regarding access to traditional in-person ASD therapies were only worsened during the recent COVID-19 pandemic due to lockdown restrictions implemented by various governments across the globe [6,7]. Due to the inherent limitations associated with accessing in-person therapies for children with ASD and a global shift towards accessing services remotely, traditional in-person ASD therapies require online adoption to address issues surrounding accessibility, excessive wait times, and physician burden.</p><p>Digital health technology (also referred to as &#x27;telehealth&#x27;, &#x27;telemedicine&#x27;, or &#x27;telepractice&#x27;) refers to the &#x27;practice of medicine via a remote electronic interface&#x27; [8]. Digital health technologies have already been adopted by physicians, belonging to a vast array of medical specialities, for the delivery of interventions via the internet in a remote manner [9,10]. The advent of the internet in the modern age has enabled remote communication to flourish amongst individuals; the use of such interaction within society has only been exacerbated further by the recent COVID-19 pandemic, leading to a sharp uptake in digital health services provided by healthcare providers in many clinics [11]. Therefore, the use of digital health technology as a mechanism for treatment delivery will continue to increase and spread throughout different healthcare settings.</p><p>The suitability of digital health interventions for managing ASD has been borne out in the literature, as studies have highlighted that children with ASD are inclined to digital technology [12,13]. There are a multitude of characteristics of digital technology that appeal to children, such as the asynchronous aspects and slower pace of digital user interfaces [14,15] and the ability of digital interventions to provide a consistent and customisable learning environment tailored to the child’s personal needs [16]. Furthermore, children with ASD exhibit particular traits highlighting their unique compatibility with digital technology when compared to neurotypical children, such as an avoidance of in-person interactions with individuals that is less prevalent when viewing individuals via video, their narrow range of focus that can make &#x27;anchoring in&#x27; on screens more desirable, an affinity for engaging with visual stimuli, and a greater willingness to process visual information in comparison to verbal information [17]. The literature also suggests that children with ASD, particularly high-functioning ASD (HFASD), have a specific interest in digital technology [18,19], thus supporting the idea of mutual compatibility between children with ASD and digital technology. However, despite its benefits, digital technologies may worsen existing issues in children with ASD such as a reduction in the number of interactions a child with ASD may have with their intervention implementer (e.g. parents, caregivers, teachers, therapists, or physicians), increased social seclusion due to a reduction in the number of opportunities to practise their social engagement with others, and an increased probability of developing behaviours of an obsessive-compulsive nature when using such technologies [20].</p><p>Despite the current literature supporting the use of digital technology in children with ASD, more evidence is required to assess the efficacy of using such technologies as methods of intervention for managing symptoms of ASD. Previous systematic reviews primarily focused on pilot studies, case studies, and single-case designs with little emphasis on randomised controlled trials (RCTs) [21-24]. The reason for this was due to a lack of RCTs comparing different technological interventions for the management of ASD symptoms in children at the time when these reviews were first conducted. This systematic review aims to collate and evaluate all the existing RCTs that evaluated the efficacy of implementing digital interventions for the management of ASD symptoms to gain a better understanding and critique the potential role of digital health technologies in this field of medicine.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>This systematic review indicates that digital health interventions can produce modest but meaningful improvements in communication, social, and functional outcomes for children and adolescents with ASD, particularly when grounded in established evidence-based practices such as ABA and video modelling. Benefits were most consistently observed in receptive language, social communication, emotional understanding, and ecologically valid adolescent skills, including employment interview performance and conflict resolution. However, the strength of the evidence is limited by small sample sizes, short intervention durations, heterogeneous outcome measures, and a moderate to high risk of bias, with few studies comparing digital interventions to active face-to-face therapies or addressing disparities in access to care. Overall, current evidence supports the use of digital interventions primarily as adjuncts rather than replacements for conventional therapy. Given the lack of non-inferiority trials comparing digital tools directly against face-to-face standards, further large-scale, methodologically rigorous trials are required to clarify their long-term effectiveness, comparative value, and role in equitable autism care.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.7759/cureus.102030" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

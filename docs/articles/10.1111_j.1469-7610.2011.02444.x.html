@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,126 +56,104 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
       <div class="article-wrapper">
         <h1 class="article-title">Editorial: ADHD as a reinforcement disorder - moving from general effects to identifying (six) specific models to test.</h1>
         <div class="article-meta"><strong>Edmund Sonuga‐Barke</strong> &nbsp;·&nbsp; Journal of child psychology and psychiatry, and allied disciplines &nbsp;·&nbsp; 2011</div>
+        <div class="tags"><span class="tag">ASD + ADHD</span></div>
+        <div class="relevance-row"><span class="score-badge">95/100</span><span class="relevance-reason">Manually curated paper from Research Rabbit library.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This editorial examines the theoretical framework of ADHD as a reinforcement learning disorder, building on Terje Sagvolden&#x27;s foundational work proposing that ADHD results from altered reinforcement learning processes rather than deficient executive control. The authors outline six specific models of reinforcement dysfunction that could explain ADHD symptoms, ranging from generalized deficits in brain response to reinforcing stimuli to differences in what individuals with ADHD find reinforcing. The editorial highlights research by van Meel and colleagues using electrophysiological methods, which found that children with ADHD showed absent feedback-related negativity responses and altered emotional responses to monetary consequences, suggesting reduced sensitivity to punishment and enhanced sensitivity to reward. The authors emphasize the need for conceptual clarity and appropriate experimental tools to isolate specific reinforcement learning differences in ADHD.</p></div>
         
-        
-      <div class="relevance-row">
-        <span class="score-badge">95/100</span>
-        <span class="relevance-reason">Manually curated paper from Research Rabbit library.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>The basic capacity to learn from experience is a fundamental characteristic of humans and animals alike. Given the generally flawed state of the human will, there is a quite normal variation in the extent to which this capacity is actualised in a given state or at a particular time. More fundamental, trait-like, “learning from experience” deficits are a more serious matter altogether. They will invariably undermine daily functioning and limit the opportunity for a happy and fulfilled life. Given this, the recently renewed interest in learning deficit models of psychiatric conditions is very welcome (Maia &amp; Frank, 2011). In the most straight-forward and mundane sense, we can be said to have learnt from experience when we have adjusted our actions in the light of their past consequences to maximize positive and minimize negative outcomes. In everyday parlance we might say: “In a similar past situation to the one I find myself in now when I didA,Xhappened and when I didB, Yhappened.Xwas good andYbad. So now that I have another chance, I’ll doAagain.” More technically, learning theorists, removing the volitional element in the definition of learning, turn causal relations around and talk about the reinforcing effects of environmental stimuli on actions. When an event, contingent on an action of mine, increases the likelihood that I will make that action again in the future, it is called a positive reinforcer. When an event reduces the likelihood of the reoccurrence of said action, we call it a punisher (or more properly a negative reinforcer). The notion that attention deficit/hyperactivity disorder (ADHD) is the result of fundamental alterations in basic reinforcement learning processes is a provocative and bold idea that represents a theoretical, “bottom-up” counterweight to the dominant “top down” view in the field – the view that ADHD is a disorder of deficient higher-order executive control. Brave scientists propose big ideas. In this case the field owes an enormous debt of gratitude to Terje Sagvolden, the pioneering researcher, whose recent premature death was such a shock. Over a period of 25 years, Terje single-mindedly pursued, through theory integration and development and their empirical test, an understanding of the nature of reinforcement learning alterations in ADHD (Sagvolden et al., 2005). Building on his profound knowledge of neurobiology, his basic thesis was that ADHD children have a diminished neurochemical (e.g. dopamine) signal, in the so called reward centres of the brain, to environmental reinforcement. This in turn reduced the extent to which those signals controlled attention, suppressed inappropriate actions and motivated responding to valuable rewards available in the future. The emergence of this thesis changed the way we look at ADHD and inspired a generation of researchers to study reinforcement processes in ADHD. Identifying that there is something unusual about the way reinforcement operates in general in ADHD, or any other condition, is one thing; identifying the specific processes involved, and the best model of that involvement, is far more challenging. Even a process as apparently straight-forward as reinforcement learning can be “lesioned” in a myriad of different ways – each in principle providing a testable hypothesis about the causes of ADHD. Six basic models of reinforcement disorder can be distinguished (for a review, see Luman et al., 2011). First, there is what might be classed as a true reinforcement deficit model. This postulates that ADHD is due to a generalized deficit in the brain’s response to extrinsic reinforcing stimuli. This model could encompass both a cue processing deficit– a deficient response to environmental cues predicting reinforcement – and an outcome processing deficit– diminished response to delivered reinforcement. Second, if these basic processing skills are in tact there may still be deficits in the ability to develop a coherent representation of individual cue–response–outcome contingencies as an integrated reinforcement history –a specific problem with learning per se. Third, while stimulus processing and learning from reinforcement history may be intact, individuals may have deficits in decision making about different reinforcement alternatives (Wilson et al., 2011). Fourth, even where there is no general deficit in reinforcement learning in these terms, there may still be an imbalance in response to differently valenced outcomes –Are individuals with ADHD insensitive to punishment or hypersensitive to reward? Fifth, leaving aside these deficiencies in response to extrinsic reinforcement, there may still be a problem with intrinsic reinforcement. If this were the case, ADHD children may do poorly on academic tasks without extrinsic reinforcement not because they have an executive skills deficit but rather because they simply don’t find them intrinsically motivating, don’t care about the outcomes and don’t put the effort in to perform well. Sixth, and perhaps most radically, individuals with ADHD might have deviant rather than deficient reinforcement processes. It is not that they have problems with reinforcement cue or outcome processing, learning from experience or decision making, but rather that they differ from their peers in terms of the outcomes they find reinforcing – in this sense they may have a different hierarchy of value. One strength of the reinforcement concept for psychological model building is that it unhitches the notion of value from both an individual’s emotion-based assessments and objective transcendent notions of “good” and “bad”– rather, defining the valence of an outcome purely in terms of its effects on an individual’s behaviour (and brain). Because it adopts an essentially circular and tautological definition of value, reinforcement theory can tell us nothing about the ultimate value of an action (i.e., what a person ought to do) – it does highlight, however, the importance of understanding individual differences in what is and is not reinforcing. In terms of existing ADHD models, this framework provides the conceptual foundation for the theory that delay escape is an especially potent reinforcer for individuals with ADHD (i.e., delay aversion; Marco et al., 2009). Our ability to isolate ADHD-related reinforcement learning deficits (or differences) depends on both conceptual clarity and the development of appropriate experimental tools. An article in the current issue provides a really good example of how this second aim might be fulfilled. van Meel and colleagues (2011) uses electrophysiological methods to explore the brain’s responses to presumed positive (i.e. monetary gain) and presumed negative (i.e., monetary loss) reinforcement in a simple laboratory paradigm. Previous research had shown that a characteristic response of the brain evoked by feedback signaling performance failure (the so called “feedback related negativity” (FRN)) which is thought to be a very early neural signal that outcomes are not as one expected or at least hoped for) is altered in ADHD. This study extended this analysis to test whether this characteristic ADHD-related deficit was modulated by attaching that feedback to positive and negative monetary consequences (which they compare with a feedback only neutral condition). Their results are fascinating. First, they found that when their was no monetary loss or gain but only feedback about performance, children with ADHD seem insensitive to the failed delivery of expected or hoped for outcomes – as shown in previous studies (i.e., the FRN was absent in ADHD compared to controls). Second, they show that this FRN pattern was not affected by adding reinforcements or punishments. Third, there was a difference between individuals with ADHD and controls in terms of the brain’s “emotional response” (i.e., the late positive potential), suggesting a reduced sensitivity to punishment and an enhanced sensitivity to reward. They argue that in general these findings disconfirm one of the core predictions of the reinforcement deficit model (model 1) while it seems to provide some support for the differential sensitivity hypothesis (model 4). Applying more intense reinforcement (money, rather than just feedback, in this case) did not improve performance while their seemed to be an emotional hypersensitivity to money. At the heart of the mission of the Journal of Child Psychology and Psychiatry is the goal to provide a bridge between cutting-edge science and best practice to promote evidence-based clinical improvements and therapeutic innovation. In this regard, studies of reinforcement learning disorder in ADHD represent a compelling target for translational research. While more or less effective pharmacological treatments exist for individuals with ADHD, the extent to which these are acceptable to clinicians, patients and parents varies greatly because of doubts about side-effects and long-term efficacy. We urgently need to find effective non-pharmacological treatments. There is now growing, though not yet conclusive evidence, that altered reinforcement mechanisms are implicated in ADHD. Understanding the specific nature of those deficits could provide a platform for innovative environmentally-mediated therapies for ADHD.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This editorial examines the theoretical framework of ADHD as a reinforcement learning disorder, building on Terje Sagvolden&#x27;s foundational work proposing that ADHD results from altered reinforcement learning processes rather than deficient executive control. The authors outline six specific models of reinforcement dysfunction that could explain ADHD symptoms, ranging from generalized deficits in brain response to reinforcing stimuli to differences in what individuals with ADHD find reinforcing. The editorial highlights research by van Meel and colleagues using electrophysiological methods, which found that children with ADHD showed absent feedback-related negativity responses and altered emotional responses to monetary consequences, suggesting reduced sensitivity to punishment and enhanced sensitivity to reward. The authors emphasize the need for conceptual clarity and appropriate experimental tools to isolate specific reinforcement learning differences in ADHD.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>The basic capacity to learn from experience is a fundamental characteristic of humans and animals alike. Given the generally flawed state of the human will, there is a quite normal variation in the extent to which this capacity is actualised in a given state or at a particular time. More fundamental, trait-like, “learning from experience” deficits are a more serious matter altogether. They will invariably undermine daily functioning and limit the opportunity for a happy and fulfilled life. Given this, the recently renewed interest in learning deficit models of psychiatric conditions is very welcome (Maia &amp; Frank, 2011). In the most straight-forward and mundane sense, we can be said to have learnt from experience when we have adjusted our actions in the light of their past consequences to maximize positive and minimize negative outcomes. In everyday parlance we might say: “In a similar past situation to the one I find myself in now when I didA,Xhappened and when I didB, Yhappened.Xwas good andYbad. So now that I have another chance, I’ll doAagain.” More technically, learning theorists, removing the volitional element in the definition of learning, turn causal relations around and talk about the reinforcing effects of environmental stimuli on actions. When an event, contingent on an action of mine, increases the likelihood that I will make that action again in the future, it is called a positive reinforcer. When an event reduces the likelihood of the reoccurrence of said action, we call it a punisher (or more properly a negative reinforcer). The notion that attention deficit/hyperactivity disorder (ADHD) is the result of fundamental alterations in basic reinforcement learning processes is a provocative and bold idea that represents a theoretical, “bottom-up” counterweight to the dominant “top down” view in the field – the view that ADHD is a disorder of deficient higher-order executive control. Brave scientists propose big ideas. In this case the field owes an enormous debt of gratitude to Terje Sagvolden, the pioneering researcher, whose recent premature death was such a shock. Over a period of 25 years, Terje single-mindedly pursued, through theory integration and development and their empirical test, an understanding of the nature of reinforcement learning alterations in ADHD (Sagvolden et al., 2005). Building on his profound knowledge of neurobiology, his basic thesis was that ADHD children have a diminished neurochemical (e.g. dopamine) signal, in the so called reward centres of the brain, to environmental reinforcement. This in turn reduced the extent to which those signals controlled attention, suppressed inappropriate actions and motivated responding to valuable rewards available in the future. The emergence of this thesis changed the way we look at ADHD and inspired a generation of researchers to study reinforcement processes in ADHD. Identifying that there is something unusual about the way reinforcement operates in general in ADHD, or any other condition, is one thing; identifying the specific processes involved, and the best model of that involvement, is far more challenging. Even a process as apparently straight-forward as reinforcement learning can be “lesioned” in a myriad of different ways – each in principle providing a testable hypothesis about the causes of ADHD. Six basic models of reinforcement disorder can be distinguished (for a review, see Luman et al., 2011). First, there is what might be classed as a true reinforcement deficit model. This postulates that ADHD is due to a generalized deficit in the brain’s response to extrinsic reinforcing stimuli. This model could encompass both a cue processing deficit– a deficient response to environmental cues predicting reinforcement – and an outcome processing deficit– diminished response to delivered reinforcement. Second, if these basic processing skills are in tact there may still be deficits in the ability to develop a coherent representation of individual cue–response–outcome contingencies as an integrated reinforcement history –a specific problem with learning per se. Third, while stimulus processing and learning from reinforcement history may be intact, individuals may have deficits in decision making about different reinforcement alternatives (Wilson et al., 2011). Fourth, even where there is no general deficit in reinforcement learning in these terms, there may still be an imbalance in response to differently valenced outcomes –Are individuals with ADHD insensitive to punishment or hypersensitive to reward? Fifth, leaving aside these deficiencies in response to extrinsic reinforcement, there may still be a problem with intrinsic reinforcement. If this were the case, ADHD children may do poorly on academic tasks without extrinsic reinforcement not because they have an executive skills deficit but rather because they simply don’t find them intrinsically motivating, don’t care about the outcomes and don’t put the effort in to perform well. Sixth, and perhaps most radically, individuals with ADHD might have deviant rather than deficient reinforcement processes. It is not that they have problems with reinforcement cue or outcome processing, learning from experience or decision making, but rather that they differ from their peers in terms of the outcomes they find reinforcing – in this sense they may have a different hierarchy of value. One strength of the reinforcement concept for psychological model building is that it unhitches the notion of value from both an individual’s emotion-based assessments and objective transcendent notions of “good” and “bad”– rather, defining the valence of an outcome purely in terms of its effects on an individual’s behaviour (and brain). Because it adopts an essentially circular and tautological definition of value, reinforcement theory can tell us nothing about the ultimate value of an action (i.e., what a person ought to do) – it does highlight, however, the importance of understanding individual differences in what is and is not reinforcing. In terms of existing ADHD models, this framework provides the conceptual foundation for the theory that delay escape is an especially potent reinforcer for individuals with ADHD (i.e., delay aversion; Marco et al., 2009). Our ability to isolate ADHD-related reinforcement learning deficits (or differences) depends on both conceptual clarity and the development of appropriate experimental tools. An article in the current issue provides a really good example of how this second aim might be fulfilled. van Meel and colleagues (2011) uses electrophysiological methods to explore the brain’s responses to presumed positive (i.e. monetary gain) and presumed negative (i.e., monetary loss) reinforcement in a simple laboratory paradigm. Previous research had shown that a characteristic response of the brain evoked by feedback signaling performance failure (the so called “feedback related negativity” (FRN)) which is thought to be a very early neural signal that outcomes are not as one expected or at least hoped for) is altered in ADHD. This study extended this analysis to test whether this characteristic ADHD-related deficit was modulated by attaching that feedback to positive and negative monetary consequences (which they compare with a feedback only neutral condition). Their results are fascinating. First, they found that when their was no monetary loss or gain but only feedback about performance, children with ADHD seem insensitive to the failed delivery of expected or hoped for outcomes – as shown in previous studies (i.e., the FRN was absent in ADHD compared to controls). Second, they show that this FRN pattern was not affected by adding reinforcements or punishments. Third, there was a difference between individuals with ADHD and controls in terms of the brain’s “emotional response” (i.e., the late positive potential), suggesting a reduced sensitivity to punishment and an enhanced sensitivity to reward. They argue that in general these findings disconfirm one of the core predictions of the reinforcement deficit model (model 1) while it seems to provide some support for the differential sensitivity hypothesis (model 4). Applying more intense reinforcement (money, rather than just feedback, in this case) did not improve performance while their seemed to be an emotional hypersensitivity to money. At the heart of the mission of the Journal of Child Psychology and Psychiatry is the goal to provide a bridge between cutting-edge science and best practice to promote evidence-based clinical improvements and therapeutic innovation. In this regard, studies of reinforcement learning disorder in ADHD represent a compelling target for translational research. While more or less effective pharmacological treatments exist for individuals with ADHD, the extent to which these are acceptable to clinicians, patients and parents varies greatly because of doubts about side-effects and long-term efficacy. We urgently need to find effective non-pharmacological treatments. There is now growing, though not yet conclusive evidence, that altered reinforcement mechanisms are implicated in ADHD. Understanding the specific nature of those deficits could provide a platform for innovative environmentally-mediated therapies for ADHD.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.1111/J.1469-7610.2011.02444.X" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+        <a href="https://doi.org/10.1111/J.1469-7610.2011.02444.X" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

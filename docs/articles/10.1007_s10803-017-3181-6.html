@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,138 +56,116 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
       <div class="article-wrapper">
         <h1 class="article-title">Physiological Arousal and Emotion Regulation Strategies in Young Children with Autism Spectrum Disorders</h1>
         <div class="article-meta"><strong>Gemma Zantinge, Sophie van Rijn, Lex Stockmann, Hanna Swaab</strong> &nbsp;·&nbsp; Journal of Autism and Developmental Disorders &nbsp;·&nbsp; 2017</div>
+        <div class="tags"><span class="tag">Automatic Negative Reinforcement</span></div>
+        <div class="relevance-row"><span class="score-badge">95/100</span><span class="relevance-reason">Manually curated paper from Research Rabbit library.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This study investigated physiological arousal and emotion regulation strategies in 29 children with ASD and 45 typically developing children (ages 41-81 months) during a frustrating locked-box task. Researchers continuously measured heart rate while coding behavioral emotion regulation strategies to assess both physiological and behavioral responses to frustration. The findings revealed that children with ASD showed identical heart rate patterns to typically developing children, with both groups experiencing increased arousal during frustration followed by recovery. However, children with ASD deployed significantly fewer constructive emotion regulation strategies and more venting and avoidance behaviors, with these differences linked to language impairments rather than abnormal emotional arousal levels. The study concludes that the primary emotional difficulty in young children with ASD may be behavioral regulation and expression of emotions rather than atypical physiological arousal responses.</p></div>
         
-        
-      <div class="relevance-row">
-        <span class="score-badge">95/100</span>
-        <span class="relevance-reason">Manually curated paper from Research Rabbit library.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>This study aimed to assess physiological arousal and behavioral regulation of emotion in the context of frustration in 29 children with Autism Spectrum Disorders (ASD) and 45 typically developing children (41–81 months). Heart rate was continuously measured and emotion strategies were coded, during a locked-box task. Results revealed increases in arousal followed by a decline during recovery, significant for both groups indicating that heart rate patterns between groups were identical. The ASD group deployed less constructive and more venting and avoidance strategies, which was related to language impairments. We conclude that rather than abnormal levels of emotional arousal, a key impairment in young children with ASD may be difficulties in behaviorally regulating and expressing experienced emotions to others.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This study investigated physiological arousal and emotion regulation strategies in 29 children with ASD and 45 typically developing children (ages 41-81 months) during a frustrating locked-box task. Researchers continuously measured heart rate while coding behavioral emotion regulation strategies to assess both physiological and behavioral responses to frustration. The findings revealed that children with ASD showed identical heart rate patterns to typically developing children, with both groups experiencing increased arousal during frustration followed by recovery. However, children with ASD deployed significantly fewer constructive emotion regulation strategies and more venting and avoidance behaviors, with these differences linked to language impairments rather than abnormal emotional arousal levels. The study concludes that the primary emotional difficulty in young children with ASD may be behavioral regulation and expression of emotions rather than atypical physiological arousal responses.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>This study aimed to assess physiological arousal and behavioral regulation of emotion in the context of frustration in 29 children with Autism Spectrum Disorders (ASD) and 45 typically developing children (41–81 months). Heart rate was continuously measured and emotion strategies were coded, during a locked-box task. Results revealed increases in arousal followed by a decline during recovery, significant for both groups indicating that heart rate patterns between groups were identical. The ASD group deployed less constructive and more venting and avoidance strategies, which was related to language impairments. We conclude that rather than abnormal levels of emotional arousal, a key impairment in young children with ASD may be difficulties in behaviorally regulating and expressing experienced emotions to others.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>Problematic emotional behavior as expressed in tantrums, irritability, aggression, self-injury, anxiety, and impulsivity is often reported by parents of children with Autism Spectrum Disorders (ASD) and professionals (Geller2005; Lecavalier et al.2006). These emotional behavior problems could be the consequence of compromised experience or expression of emotion. Abnormal levels of emotional arousal, deficient emotional control or a failure to adequately cope with emotions might help explain such emotional behavior problems.</p><p>Broadly defined, an emotion can be considered a complex psychological state involving a physiological response, a subjective feeling, and a behavioral response (Hockenbury and Hockenbury2010). In typical development, adaptively coping with emotions can be helpful for decision making, motivation, and communication (Izard1971,2013) but emotions can also be hindering when the timing is off, when they are directed towards irrelevant aspects, or when the emotional intensity levels are not adapted to the situation (Lazarus1991; Parrott2001).</p><p>Problematic emotional behavior however, is not a diagnostic criterion for ASD, it is not exclusive to ASD, and over the past decades there has been little attention on emotion processing problems related to ASD in comparison to other domains such as social cognition. This has changed in recent years with an increased recognition that studying emotions may contribute substantially to the understanding of observed emotional and behavioral problems in ASD (Mazefsky et al.2013). The majority of studies however, have focused on the ability of individuals with ASD to recognize emotions in others, rather than the experience and management of own emotions (Mazefsky et al.2012). Also, studies have largely relied on behavioral observations and survey reports (Mazefsky et al.2012) of emotional behavior. In addition to such behavioral measures of emotions, it is important to also include more sensitive and objective measures of the experienced emotions, such as physiological emotional arousal responses. The present study was designed to provide this.</p><p>Emotional arousal originates from the Autonomic Nervous System (ANS). The ANS consists of the parasympathetic nervous system (PNS; promoting calm, vegetative activities) and the sympathetic nervous system (SNS; involved in stress and activity), and is believed to be involved in affective, cognitive and behavioral responses of individuals (Benevides and Lane2015). Heart rate is a commonly used measure of autonomic arousal, it varies due to influence and interaction between both the sympathetic (preparing the body for action) and parasympathetic activity (rest and digest) of the ANS (Benevides and Lane2015). Arousal is crucial for steering and tuning our emotions and behavior in social situations in order to adapt and meet social goals (Chambers et al.2009).</p><p>Research on arousal in children with ASD yielded mixed results (Benevides and Lane2015). There seems to be evidence for normative baseline arousal, but deviating arousal levels in response to a variety of tasks and emotions of others (Benevides and Lane2015; Rogers and Ozonoff2005). However, caution should be taken because of the great variety in child characteristics and task design (Benevides and Lane2015; Kreibig2010). In addition, there is much less known about how young children with ASD experience emotions.</p><p>One way to study experienced emotions in young children is to elicit frustration (Kreibig2010), which is a negative affect related to interruption of ongoing tasks or goal blocking (Rothbart2007). Especially at this young age, blocking personal goals will inevitably trigger emotional arousal that is not only evident in a physiological response but also expressed in emotional behavior. Previous behavioral studies on emotion regulation in young children with ASD have shown that children with ASD deploy different coping strategies compared to typically developing children in the context of frustration (Jahromi et al.2012; Samson et al.2015). Children with ASD used significantly less constructive strategies (such as goal-directed behaviors, social support orienting, and verbal assistance seeking) but more venting (i.e. vocal and physical venting and self-speech) and avoidance (i.e. avoidance, distraction, and alternative behavior) strategies. However, there were no observed differences in facial or bodily negativity. The question is whether these expressed emotional behaviors originate from an inadequate arousal response. In other words, it is important to study both arousal and emotion regulation strategies, as these may be differentially affected in young children with ASD.</p><p>This study aims to integrate subjective, objective, and sensitive measures to investigate arousal and regulation of emotion in a sample of very young children with ASD in order to identify and understand possible differential mechanisms. Including physiological arousal measures (i.e. heart rate) in addition to behavioral measures could benefit the current need for knowledge about underlying mechanisms of daily life socio-emotional problems, which could be targeted in early intervention, and accompanying the advances in early detection of ASD (Bradshaw et al.2015). The relevance of early intervention is further stressed by several studies showing that a vulnerability in emotional behavior has been associated with negative outcomes with respect to social functioning, depression, and anxiety later in life (Mazefsky2015; Mazefsky et al.2014; Nader-Grosbois and Mazzone2014; Swain et al.2015).</p><p>We hypothesize that children with ASD have more difficulties deploying adequate emotion coping strategies and show more venting and/or avoidance strategies. Given the previous literature on physiological arousal in children with ASD we expect a different arousal pattern in response to frustration. We also focus on characteristics of children with ASD, i.e. IQ, language skills, inhibitory control, mental flexibility, and self-control. This is done based on the “Emotion dysregulation in ASD model” by Mazefsky et al. (2013), which highlights ASD related cognitive characteristics that are likely to be of influence on emotion regulation and may contribute to management of emotions (Mazefsky et al.2013).</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>In this study we investigated emotional arousal and emotion regulation strategies in young children with Autism Spectrum Disorders (ASD). We assessed if children with ASD become under-aroused or over-aroused in response to frustration, and how they cope with these emotions in terms of regulation strategies. Core to the study was the inclusion of physiological, i.e. heart rate measures, in parallel to structured behavior observations, which may provide insight in the responsivity of the arousal system in addition to how emotions are regulated.</p><p>Measures of emotional arousal revealed that the pattern of emotional responding in children with ASD was similar to that of typically developing children. There was no difference in the arousal response across groups. For both groups separately, there was an increase in arousal from baseline in response to frustration. In addition, both groups showed that heart rate decreased during recovery of frustration, to similar degrees. In other words, children with ASD did not differ in emotional response (from point to point) in the context of frustration as compared to typically developing children.</p><p>In contrast, structured behavioral observations of emotion regulation strategies, which were scored parallel to the arousal measures, showed that children with ASD deployed different strategies, specifically increased use of venting and avoidance behavior compared to typically developing children. Children with ASD showed less constructive (i.e. goal directed) strategies compared to typically developing children. These results are in line with other studies using similar groups and measures, i.e. Jahromi et al. (2012). In this study, children with ASD also showed more self-control problems in the daily life school setting as reported by teachers. This is in line with the observed patterns of emotion coping strategies, as self-control plays an important role in order to be able to regulate emotions in daily life, as also shown in this study. Taken together, our data suggest that while children with ASD show similar intensity of emotional arousal responses, they may have difficulties in behavioral regulation of these emotions. In other words, their coping strategies seem different in contrast to an intact emotional response in the context of frustration. This may point to the role of emotion regulation as a mediating factor in this relationship. Behavior, expression, and experience are all part of emotion regulation (Gross and Thompson2007), and hence may be differentially affected. Our results suggest dysregulation of behavior in children with ASD (with lowered IQ and language skills) and a lack of self-control in how experienced emotions are expressed to others.</p><p>To further investigate the seeming discrepancy between intact emotional responses and the use of different regulation strategies, hypothesized mechanisms that could be of influence on this dysregulation were investigated. These results revealed that being able to deploy constructive strategies, i.e. show goal-directed behaviors, was best explained by one single factor, which was intelligence. In contrast, increased use of less constructive strategies to cope with emotions, i.e. avoidance behavior, was best explained by language ability. Language skills were impaired in children with ASD compared to the typically developing group. Interventions targeting these language impairments should for example include teaching appropriate replacement communicative utterances in particular if a child exhibits excessive tantrums (Koegel et al.2014). Interestingly, executive functioning (inhibition and cognitive flexibility) was not related to any of the emotion coping strategies. It could be that that null findings regarding executive functioning in (high functioning) individuals with ASD can be explained by a lack in difference between individuals with ASD and typically developing peers (Brady et al.2017). Results in the current study however do not support this hypothesis, showing more problems in inhibitory control and cognitive flexibility in children with ASD as compared to typically developing children. For future research concerning executive functioning it is important to study this preschool phase of development, because it is hypothesized that executive functioning during this phase has not yet become fully on-line to support regulation strategies (Best and Miller2010), and that regulation strategies are more dependent on language skills. Thus, language impairments at this point may better explain the use of non-constructive emotion coping behavior in children with ASD. However, because of the prolonged development of executive functioning (Best and Miller2010), we cannot exclude that these cognitive functions may become increasingly more important for managing experienced emotions over the course of development. Research has shown that executive functions, in particular inhibition, show a first leap in development around age 4 or 5 and continue to improve significantly through the age of 8 years (Best and Miller2010; Diamond2013). For future research we recommend taking into account these possible age effects which due to the sample size was not part of this study.</p><p>This study has limitations that should be addressed. The recovery in arousal was similar between the control group and ASD group, even though coping strategies were different between the groups. This might be explained however by the manipulation that the experimental locked-box task was unsolvable and children eventually all received the correct key in order to open the locked box, after which they were all allowed to play with the favored toy. Thus, recovery in arousal likely resulted from this manipulation, rather than from type of emotion coping strategy. In future research it would be interesting to investigate the effect of different regulation strategies on the levels of emotional arousal and vice versa, how arousal and coping strategies could influence ASD children’s negative emotion expressions. Since arousal can be considered not only as the cause, but also as the consequence of emotion regulation, these mechanisms are interacting in a dynamic fashion, and are mutually co-dependent on each other. In order to learn more about this dynamic relationship we recommend the use of temporal analyses. The behavioral measures (behavior observations) that were used in the current study are too coarse for this approach and are not suited to follow the quick pace of the arousal in such detail which is necessary for temporal analyses in combination with for example measures such as electromyography. With regard to measures of arousal, the current study included a single heart rate measure as indicator of ANS activity. It is recommended for future research to include a larger repertoire such as heart rate variability and skin conductance level (Mauss and Robinson2009). Furthermore, even though IQ cannot be separated from the effects of the condition (Dennis et al.2009), IQ was significantly lower in children with ASD and the current results would be strengthened if this study was replicated in a sample of children without ASD and with matched IQ. Finally, nine children with ASD were excluded due to motion artifacts in the heart rate analyses which could not be filtered from the data. Even though the excluded children did not differ from the other children with ASD on intelligence and symptom severity, the exclusion can be considered a limitation of the study. For future research we recommend the use of wireless heart rate analysis techniques to prevent children to get distracted by the wires that are connected to the electrodes.</p><p>In sum, the results of this study show that when it comes to situations that trigger intense/ strong emotions, children with ASD do show emotional arousal responses, but they may rely on less efficient strategies to regulation these emotions (i.e. avoidance), in part driven by lower language abilities. In daily life however, emotional responses are often much less strong. We therefore cannot exclude that an ‘atypical’ arousal response might be found in children with ASD when situations are more subtle and/ or ambiguous. Another factor that may differentially impact the arousal system is the presence of social elements in triggering arousal. A recent study with the same samples of children presented evidence that when it comes to emotional arousal in response to others (so in a social context), that the arousal response of children with ASD is significantly diminished in comparison to typically developing children (Zantinge et al.2017). Together, this indicates that the emotional arousal response of children with ASD is intact when it comes to their own emotions (although children may have difficulties behaviorally regulating these emotions), however that emotional arousal responses are deviant when it comes to responding to emotions of others. This hypothesis is further supported by a pilot study from Levine and colleagues (2012) who reported equal ANS activity and no increase in salivary cortisol between children with high functioning autism and a comparison group in response to a social stressor (Trier Social Stress Test). These results highlight the importance of integrating objective and sensitive measures of emotional arousal in addition to the behavior that is observed on the outside or reported/observed by parents and professionals. Such deficiencies may significantly impact social functioning. Being able to adequately deal with emotions is important for adaptive social responding (Gross1999). The preschool phase presents a unique window of development and related opportunities, as strategies to cope with emotions are generally still pre-cognitive at this stage and negative scripts are not yet automated (Greenspan and Shanker2004). This allows and advocates for early intervention targeted at the earliest stages of behavioral control during emotionally arousing situations, in which stimulation of language development may play an important role in the prevention of avoidance strategies as suggested by our findings (Koegel et al.2014; Zwaigenbaum et al.2015).</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.1007/S10803-017-3181-6" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Problematic emotional behavior as expressed in tantrums, irritability, aggression, self-injury, anxiety, and impulsivity is often reported by parents of children with Autism Spectrum Disorders (ASD) and professionals (Geller2005; Lecavalier et al.2006). These emotional behavior problems could be the consequence of compromised experience or expression of emotion. Abnormal levels of emotional arousal, deficient emotional control or a failure to adequately cope with emotions might help explain such emotional behavior problems.</p><p>Broadly defined, an emotion can be considered a complex psychological state involving a physiological response, a subjective feeling, and a behavioral response (Hockenbury and Hockenbury2010). In typical development, adaptively coping with emotions can be helpful for decision making, motivation, and communication (Izard1971,2013) but emotions can also be hindering when the timing is off, when they are directed towards irrelevant aspects, or when the emotional intensity levels are not adapted to the situation (Lazarus1991; Parrott2001).</p><p>Problematic emotional behavior however, is not a diagnostic criterion for ASD, it is not exclusive to ASD, and over the past decades there has been little attention on emotion processing problems related to ASD in comparison to other domains such as social cognition. This has changed in recent years with an increased recognition that studying emotions may contribute substantially to the understanding of observed emotional and behavioral problems in ASD (Mazefsky et al.2013). The majority of studies however, have focused on the ability of individuals with ASD to recognize emotions in others, rather than the experience and management of own emotions (Mazefsky et al.2012). Also, studies have largely relied on behavioral observations and survey reports (Mazefsky et al.2012) of emotional behavior. In addition to such behavioral measures of emotions, it is important to also include more sensitive and objective measures of the experienced emotions, such as physiological emotional arousal responses. The present study was designed to provide this.</p><p>Emotional arousal originates from the Autonomic Nervous System (ANS). The ANS consists of the parasympathetic nervous system (PNS; promoting calm, vegetative activities) and the sympathetic nervous system (SNS; involved in stress and activity), and is believed to be involved in affective, cognitive and behavioral responses of individuals (Benevides and Lane2015). Heart rate is a commonly used measure of autonomic arousal, it varies due to influence and interaction between both the sympathetic (preparing the body for action) and parasympathetic activity (rest and digest) of the ANS (Benevides and Lane2015). Arousal is crucial for steering and tuning our emotions and behavior in social situations in order to adapt and meet social goals (Chambers et al.2009).</p><p>Research on arousal in children with ASD yielded mixed results (Benevides and Lane2015). There seems to be evidence for normative baseline arousal, but deviating arousal levels in response to a variety of tasks and emotions of others (Benevides and Lane2015; Rogers and Ozonoff2005). However, caution should be taken because of the great variety in child characteristics and task design (Benevides and Lane2015; Kreibig2010). In addition, there is much less known about how young children with ASD experience emotions.</p><p>One way to study experienced emotions in young children is to elicit frustration (Kreibig2010), which is a negative affect related to interruption of ongoing tasks or goal blocking (Rothbart2007). Especially at this young age, blocking personal goals will inevitably trigger emotional arousal that is not only evident in a physiological response but also expressed in emotional behavior. Previous behavioral studies on emotion regulation in young children with ASD have shown that children with ASD deploy different coping strategies compared to typically developing children in the context of frustration (Jahromi et al.2012; Samson et al.2015). Children with ASD used significantly less constructive strategies (such as goal-directed behaviors, social support orienting, and verbal assistance seeking) but more venting (i.e. vocal and physical venting and self-speech) and avoidance (i.e. avoidance, distraction, and alternative behavior) strategies. However, there were no observed differences in facial or bodily negativity. The question is whether these expressed emotional behaviors originate from an inadequate arousal response. In other words, it is important to study both arousal and emotion regulation strategies, as these may be differentially affected in young children with ASD.</p><p>This study aims to integrate subjective, objective, and sensitive measures to investigate arousal and regulation of emotion in a sample of very young children with ASD in order to identify and understand possible differential mechanisms. Including physiological arousal measures (i.e. heart rate) in addition to behavioral measures could benefit the current need for knowledge about underlying mechanisms of daily life socio-emotional problems, which could be targeted in early intervention, and accompanying the advances in early detection of ASD (Bradshaw et al.2015). The relevance of early intervention is further stressed by several studies showing that a vulnerability in emotional behavior has been associated with negative outcomes with respect to social functioning, depression, and anxiety later in life (Mazefsky2015; Mazefsky et al.2014; Nader-Grosbois and Mazzone2014; Swain et al.2015).</p><p>We hypothesize that children with ASD have more difficulties deploying adequate emotion coping strategies and show more venting and/or avoidance strategies. Given the previous literature on physiological arousal in children with ASD we expect a different arousal pattern in response to frustration. We also focus on characteristics of children with ASD, i.e. IQ, language skills, inhibitory control, mental flexibility, and self-control. This is done based on the “Emotion dysregulation in ASD model” by Mazefsky et al. (2013), which highlights ASD related cognitive characteristics that are likely to be of influence on emotion regulation and may contribute to management of emotions (Mazefsky et al.2013).</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>In this study we investigated emotional arousal and emotion regulation strategies in young children with Autism Spectrum Disorders (ASD). We assessed if children with ASD become under-aroused or over-aroused in response to frustration, and how they cope with these emotions in terms of regulation strategies. Core to the study was the inclusion of physiological, i.e. heart rate measures, in parallel to structured behavior observations, which may provide insight in the responsivity of the arousal system in addition to how emotions are regulated.</p><p>Measures of emotional arousal revealed that the pattern of emotional responding in children with ASD was similar to that of typically developing children. There was no difference in the arousal response across groups. For both groups separately, there was an increase in arousal from baseline in response to frustration. In addition, both groups showed that heart rate decreased during recovery of frustration, to similar degrees. In other words, children with ASD did not differ in emotional response (from point to point) in the context of frustration as compared to typically developing children.</p><p>In contrast, structured behavioral observations of emotion regulation strategies, which were scored parallel to the arousal measures, showed that children with ASD deployed different strategies, specifically increased use of venting and avoidance behavior compared to typically developing children. Children with ASD showed less constructive (i.e. goal directed) strategies compared to typically developing children. These results are in line with other studies using similar groups and measures, i.e. Jahromi et al. (2012). In this study, children with ASD also showed more self-control problems in the daily life school setting as reported by teachers. This is in line with the observed patterns of emotion coping strategies, as self-control plays an important role in order to be able to regulate emotions in daily life, as also shown in this study. Taken together, our data suggest that while children with ASD show similar intensity of emotional arousal responses, they may have difficulties in behavioral regulation of these emotions. In other words, their coping strategies seem different in contrast to an intact emotional response in the context of frustration. This may point to the role of emotion regulation as a mediating factor in this relationship. Behavior, expression, and experience are all part of emotion regulation (Gross and Thompson2007), and hence may be differentially affected. Our results suggest dysregulation of behavior in children with ASD (with lowered IQ and language skills) and a lack of self-control in how experienced emotions are expressed to others.</p><p>To further investigate the seeming discrepancy between intact emotional responses and the use of different regulation strategies, hypothesized mechanisms that could be of influence on this dysregulation were investigated. These results revealed that being able to deploy constructive strategies, i.e. show goal-directed behaviors, was best explained by one single factor, which was intelligence. In contrast, increased use of less constructive strategies to cope with emotions, i.e. avoidance behavior, was best explained by language ability. Language skills were impaired in children with ASD compared to the typically developing group. Interventions targeting these language impairments should for example include teaching appropriate replacement communicative utterances in particular if a child exhibits excessive tantrums (Koegel et al.2014). Interestingly, executive functioning (inhibition and cognitive flexibility) was not related to any of the emotion coping strategies. It could be that that null findings regarding executive functioning in (high functioning) individuals with ASD can be explained by a lack in difference between individuals with ASD and typically developing peers (Brady et al.2017). Results in the current study however do not support this hypothesis, showing more problems in inhibitory control and cognitive flexibility in children with ASD as compared to typically developing children. For future research concerning executive functioning it is important to study this preschool phase of development, because it is hypothesized that executive functioning during this phase has not yet become fully on-line to support regulation strategies (Best and Miller2010), and that regulation strategies are more dependent on language skills. Thus, language impairments at this point may better explain the use of non-constructive emotion coping behavior in children with ASD. However, because of the prolonged development of executive functioning (Best and Miller2010), we cannot exclude that these cognitive functions may become increasingly more important for managing experienced emotions over the course of development. Research has shown that executive functions, in particular inhibition, show a first leap in development around age 4 or 5 and continue to improve significantly through the age of 8 years (Best and Miller2010; Diamond2013). For future research we recommend taking into account these possible age effects which due to the sample size was not part of this study.</p><p>This study has limitations that should be addressed. The recovery in arousal was similar between the control group and ASD group, even though coping strategies were different between the groups. This might be explained however by the manipulation that the experimental locked-box task was unsolvable and children eventually all received the correct key in order to open the locked box, after which they were all allowed to play with the favored toy. Thus, recovery in arousal likely resulted from this manipulation, rather than from type of emotion coping strategy. In future research it would be interesting to investigate the effect of different regulation strategies on the levels of emotional arousal and vice versa, how arousal and coping strategies could influence ASD children’s negative emotion expressions. Since arousal can be considered not only as the cause, but also as the consequence of emotion regulation, these mechanisms are interacting in a dynamic fashion, and are mutually co-dependent on each other. In order to learn more about this dynamic relationship we recommend the use of temporal analyses. The behavioral measures (behavior observations) that were used in the current study are too coarse for this approach and are not suited to follow the quick pace of the arousal in such detail which is necessary for temporal analyses in combination with for example measures such as electromyography. With regard to measures of arousal, the current study included a single heart rate measure as indicator of ANS activity. It is recommended for future research to include a larger repertoire such as heart rate variability and skin conductance level (Mauss and Robinson2009). Furthermore, even though IQ cannot be separated from the effects of the condition (Dennis et al.2009), IQ was significantly lower in children with ASD and the current results would be strengthened if this study was replicated in a sample of children without ASD and with matched IQ. Finally, nine children with ASD were excluded due to motion artifacts in the heart rate analyses which could not be filtered from the data. Even though the excluded children did not differ from the other children with ASD on intelligence and symptom severity, the exclusion can be considered a limitation of the study. For future research we recommend the use of wireless heart rate analysis techniques to prevent children to get distracted by the wires that are connected to the electrodes.</p><p>In sum, the results of this study show that when it comes to situations that trigger intense/ strong emotions, children with ASD do show emotional arousal responses, but they may rely on less efficient strategies to regulation these emotions (i.e. avoidance), in part driven by lower language abilities. In daily life however, emotional responses are often much less strong. We therefore cannot exclude that an ‘atypical’ arousal response might be found in children with ASD when situations are more subtle and/ or ambiguous. Another factor that may differentially impact the arousal system is the presence of social elements in triggering arousal. A recent study with the same samples of children presented evidence that when it comes to emotional arousal in response to others (so in a social context), that the arousal response of children with ASD is significantly diminished in comparison to typically developing children (Zantinge et al.2017). Together, this indicates that the emotional arousal response of children with ASD is intact when it comes to their own emotions (although children may have difficulties behaviorally regulating these emotions), however that emotional arousal responses are deviant when it comes to responding to emotions of others. This hypothesis is further supported by a pilot study from Levine and colleagues (2012) who reported equal ANS activity and no increase in salivary cortisol between children with high functioning autism and a comparison group in response to a social stressor (Trier Social Stress Test). These results highlight the importance of integrating objective and sensitive measures of emotional arousal in addition to the behavior that is observed on the outside or reported/observed by parents and professionals. Such deficiencies may significantly impact social functioning. Being able to adequately deal with emotions is important for adaptive social responding (Gross1999). The preschool phase presents a unique window of development and related opportunities, as strategies to cope with emotions are generally still pre-cognitive at this stage and negative scripts are not yet automated (Greenspan and Shanker2004). This allows and advocates for early intervention targeted at the earliest stages of behavioral control during emotionally arousing situations, in which stimulation of language development may play an important role in the prevention of avoidance strategies as suggested by our findings (Koegel et al.2014; Zwaigenbaum et al.2015).</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.1007/S10803-017-3181-6" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

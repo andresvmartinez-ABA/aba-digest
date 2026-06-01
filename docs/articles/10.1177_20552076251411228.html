@@ -10,52 +10,45 @@ html { font-size: 16px; }
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
   line-height: 1.65;
-  color: #1c1c1e;
-  background: #f2f2f7;
+  color: #111827;
+  background: #f0f4f8;
   -webkit-font-smoothing: antialiased;
 }
-a { color: #2563eb; }
-.container { max-width: 700px; margin: 0 auto; padding: 0 20px; }
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
 
-/* Nav */
-.top-nav {
-  background: #1e40af;
-  padding: 14px 0;
-}
+.top-nav { background: #1e3a8a; padding: 14px 0; }
 .top-nav a {
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.85);
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
 }
-.top-nav a:hover { color: #fff; }
+.top-nav a:hover { color: white; }
 
-/* Main */
 main { padding: 32px 0 56px; }
 .article-wrapper {
-  background: #fff;
+  background: white;
   border-radius: 14px;
-  border: 1px solid #e5e7eb;
+  border: 1px solid #e2e8f0;
   padding: 32px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
 }
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
 
-/* Title + meta */
 h1.article-title {
-  font-size: clamp(19px, 4vw, 25px);
+  font-size: clamp(20px, 4vw, 26px);
   font-weight: 800;
   line-height: 1.3;
   letter-spacing: -0.3px;
   margin-bottom: 14px;
-  color: #111827;
+  color: #0f172a;
 }
-.article-meta { font-size: 14px; color: #6b7280; margin-bottom: 16px; line-height: 1.5; }
-.article-meta strong { color: #374151; }
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
 
-/* Tags */
-.tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
 .tag {
-  display: inline-block;
   background: #dbeafe;
   color: #1e40af;
   font-size: 12px;
@@ -63,100 +56,84 @@ h1.article-title {
   padding: 4px 10px;
   border-radius: 20px;
 }
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
 
-/* Summary */
-.summary-section { margin-bottom: 28px; }
-.section-title {
-  font-size: 13px;
+.section-label {
+  font-size: 11px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: #6b7280;
-  margin-bottom: 12px;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
 }
-.summary-text { font-size: 16px; line-height: 1.7; color: #1f2937; }
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
 
-/* Relevance */
 .relevance-row {
   display: flex;
-  align-items: center;
-  gap: 12px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
   border-radius: 10px;
   padding: 14px 18px;
   margin-bottom: 28px;
 }
-.score-badge {
-  flex-shrink: 0;
-  font-size: 18px;
-  font-weight: 800;
-  color: #059669;
-}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
 .score-badge.mid { color: #d97706; }
 .score-badge.low { color: #dc2626; }
-.relevance-reason { font-size: 14px; color: #4b5563; line-height: 1.5; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
 
-/* Expandable sections */
-.expand-section { margin-bottom: 12px; }
-details {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  overflow: hidden;
-}
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
 details summary {
-  padding: 14px 18px;
+  padding: 13px 18px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
-  background: #f9fafb;
-  color: #374151;
-  user-select: none;
+  background: #f8fafc;
+  color: #334155;
   list-style: none;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
 }
 details summary::-webkit-details-marker { display: none; }
-details summary::after { content: "＋"; font-size: 16px; color: #9ca3af; }
-details[open] summary::after { content: "－"; }
-details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #dbeafe; }
-.section-body { padding: 18px; font-size: 15px; line-height: 1.7; color: #374151; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
 .section-body p + p { margin-top: 12px; }
 
-/* CTA button */
 .view-paper-btn {
   display: inline-block;
   margin-top: 28px;
-  background: #2563eb;
+  background: #1d4ed8;
   color: white;
   text-decoration: none;
-  padding: 14px 24px;
+  padding: 14px 26px;
   border-radius: 10px;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: 0.2px;
 }
-.view-paper-btn:hover { background: #1d4ed8; }
+.view-paper-btn:hover { background: #1e40af; }
 
-/* Footer */
 footer {
   text-align: center;
   padding: 28px 20px;
   font-size: 12px;
-  color: #9ca3af;
+  color: #94a3b8;
 }
 
-@media (max-width: 480px) {
-  .article-wrapper { padding: 20px; border-radius: 10px; }
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
 }
 </style>
 </head>
 <body>
   <nav class="top-nav">
-    <div class="container">
-      <a href="../index.html">&#x2190; Back to digest</a>
-    </div>
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
   </nav>
   <main>
     <div class="container">
@@ -164,49 +141,43 @@ footer {
         <h1 class="article-title">A qualitative study investigating caregiver perspectives of an artificial intelligence assistive device to support daily activities in families with children with autism spectrum disorder</h1>
         <div class="article-meta"><strong>Perry, Nina, Boulton, Kelsie A, Hankin, Lorna et al.</strong> &nbsp;·&nbsp; Digital Health &nbsp;·&nbsp; 2026</div>
         
+        <div class="relevance-row"><span class="score-badge mid">75/100</span><span class="relevance-reason">This article directly aligns with the profile&#x27;s interest in AI-assisted communication tools and technology-based interventions for children with autism, focusing on practical applications and caregiver perspectives rather than theoretical frameworks.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text">This qualitative study investigated caregiver perspectives on how artificial intelligence (AI) assistive technology could support adaptive functioning in families with children diagnosed with autism spectrum disorder. The researchers used criterion purposive sampling to recruit 10 caregivers and conducted two focus groups to discuss the potential of an AI-assistive device called the Pixi Home-Hub to support their children and families. Content analysis was employed to interpret the data, with independent coding and peer review to ensure rigor. Three key themes emerged: caregiver experiences of their child&#x27;s adaptive functioning challenges and growth areas, experiences of balancing their child&#x27;s support needs with their own needs, and access and barriers to integrating AI technology into daily life. Caregivers expressed belief that AI technology could support their families&#x27; adaptive functioning and suggested using AI-assistive devices as digital support navigators to improve access to health and government services.</p></div>
         
-      <div class="relevance-row">
-        <span class="score-badge">75/100</span>
-        <span class="relevance-reason">This article directly aligns with the profile&#x27;s interest in AI-assisted communication tools and technology-based interventions for children with autism, focusing on practical applications and caregiver perspectives rather than theoretical frameworks.</span>
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Children with autism spectrum disorder (ASD) and their families report diverse challenges in adaptive functioning. Artificial intelligence (AI)-assistive devices can offer innovative solutions to support adaptive functioning by offering real time assistance and capacity to adapt to heterogenous needs.ObjectiveThis qualitative study utilised an AI-assistive device, the Pixi Home-Hub, to explore caregiver perspectives, experiences and needs related to the broader potential of AI to support adaptive functioning in their daily lives.MethodsCriterion purposive sampling recruited 10 caregivers of children with ASD. Two focus groups were conducted to discuss how an AI-assistive device, the Pixi Home-Hub, could support their child and families adaptive functioning. Content analysis was utilised to interpret the data. Independent coding by a second reviewer, analytical memos and peer review were employed to promote rigour.ResultsThree key themes emerged from the data: (1) Caregiver experiences of their child&#x27;s adaptive functioning in daily activities and areas for growth, (2) Caregiver experiences of balancing their child&#x27;s support needs with their own, and (3) Access and barriers to integrating AI technology into everyday use.ConclusionCaregivers believed that AI-technology can play a role in supporting their family&#x27;s adaptive functioning activities and proposed using AI-assistive devices as a digital support navigator to facilitate greater access to health and government supports.</p></div>
+        </details>
       </div>
-        <div class="summary-section"><div class="section-title">Summary</div><p class="summary-text">This qualitative study investigated caregiver perspectives on how artificial intelligence (AI) assistive technology could support adaptive functioning in families with children diagnosed with autism spectrum disorder. The researchers used criterion purposive sampling to recruit 10 caregivers and conducted two focus groups to discuss the potential of an AI-assistive device called the Pixi Home-Hub to support their children and families. Content analysis was employed to interpret the data, with independent coding and peer review to ensure rigor. Three key themes emerged: caregiver experiences of their child&#x27;s adaptive functioning challenges and growth areas, experiences of balancing their child&#x27;s support needs with their own needs, and access and barriers to integrating AI technology into daily life. Caregivers expressed belief that AI technology could support their families&#x27; adaptive functioning and suggested using AI-assistive devices as digital support navigators to improve access to health and government services.</p></div>
-        
-        <div class="expand-section">
-          <details>
-            <summary>Abstract</summary>
-            <div class="section-body"><p>Children with autism spectrum disorder (ASD) and their families report diverse challenges in adaptive functioning. Artificial intelligence (AI)-assistive devices can offer innovative solutions to support adaptive functioning by offering real time assistance and capacity to adapt to heterogenous needs.ObjectiveThis qualitative study utilised an AI-assistive device, the Pixi Home-Hub, to explore caregiver perspectives, experiences and needs related to the broader potential of AI to support adaptive functioning in their daily lives.MethodsCriterion purposive sampling recruited 10 caregivers of children with ASD. Two focus groups were conducted to discuss how an AI-assistive device, the Pixi Home-Hub, could support their child and families adaptive functioning. Content analysis was utilised to interpret the data. Independent coding by a second reviewer, analytical memos and peer review were employed to promote rigour.ResultsThree key themes emerged from the data: (1) Caregiver experiences of their child&#x27;s adaptive functioning in daily activities and areas for growth, (2) Caregiver experiences of balancing their child&#x27;s support needs with their own, and (3) Access and barriers to integrating AI technology into everyday use.ConclusionCaregivers believed that AI-technology can play a role in supporting their family&#x27;s adaptive functioning activities and proposed using AI-assistive devices as a digital support navigator to facilitate greater access to health and government supports.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Introduction</summary>
-            <div class="section-body"><p>Autism spectrum disorder (ASD) is a neurodevelopmental condition (NDC) typically characterised by deficits in social communication skills and repetitive behaviours. 1  Recent studies have revealed a growing prevalence of ASD,2,3 and it is estimated that 1 in 100 children will meet criteria for autism worldwide. 4  This increase has been partially attributed to heightened global awareness and advocacy efforts.5,6 However, as demand for services and support has increased, it has become increasingly evident that many children and families affected by ASD share significant challenges in adaptive functioning. As a result, global organisations have increasingly drawn attention to the need for digital support strategies to assist both children and their caregivers in managing everyday tasks and participating fully in daily life. Moreover, there is growing recognition for assessments and supports that can cut across the diverse presentations of ASD in diagnostic settings, 7  to break down service siloes that often exist (education, mental health and disability support needs) and to better address the diverse and complex support needs of people with ASD and their families. 8</p><p>Adaptive functioning, now to be referred to simply as functioning, is defined as the skills necessary for an individual to navigate the demands of everyday life and to live independently.9,10 Functioning is a critical concept in assessing support needs for individuals with disabilities. 9  In Australia, the National Disability Insurance Agency (NDIA) is the primary federal agency responsible for funding services for people with disabilities, with the objective to support functioning and enhance participation in everyday activities. 11  In 2023, the NDIA cost the Australian Government nearly $30 billion, making it one of the country&#x27;s largest expenses. 12  However, approximately 84% of support in functioning activities has been found to be primarily provided by informal carers, such as parents and family members. 13</p><p>Many caregivers report barriers to accessing care, with specialised services being in high demand with long waitlists. 14  Families with autistic children often experience various challenges when it comes to navigating their child&#x27;s functioning needs. These can include difficulty managing social, communication and learning needs,15,16 challenges with self-care activities, such as feeding, sleeping or dressing17,18 and obstacles when it comes to organising and managing competing responsibilities, such as work, school pick-ups, and the care of other children. 19  Unfortunately, many of these challenges can be exacerbated by caregiver burden and stress, which has been found to be common in parents of children with complex needs,20,21 and often leads to diminished quality of life for both the child and the entire family. 15  Concerns about the lack of access to specialist support and government funding, 14  along with social stigma and isolation, place significant pressures on families. 22  Further, high levels of financial stress associated with therapy, assessment, and school, as well as a lack of awareness from society of the challenges of having a child with autism, calls for a need for more supportive interventions to enhance quality of life and wellbeing for parents and their children. 22  Given this, there is a pressing need to capture the experiences of caregivers to better understand how novel technologies can support their functioning needs in everyday situations.</p><p>These challenges in functioning serve as crucial benchmarks to address, and new technologies, such as artificial intelligence (AI)-assistive tools, may offer an innovative solution to target these. By using adaptive, data-driven approaches, AI-assistive technology may support the prioritisation of functioning and wellbeing needs of individuals with autism and their families by offering personalised support in real-time. AI is being used by people every day, but it has only recently emerged as a leading smart technology with the potential to improve health and wellbeing across medical disciplines.23,24 There has been increasing interest in utilising AI to improve the wellbeing of individuals with various health conditions and support needs, 25  particularly as smart technology is increasingly utilised in homes. 26  Due to the relatively recent developments in AI-assistive technologies, there is limited information on implementing these types of interventions, particularly for children and families living with autism. Previous studies have utilised social robots equipped with AI to initiate social communication behaviours in children with autism.27,28 Other studies involving children with autism have implemented interactive virtual reality systems and wearable devices to target social initiation behaviours.29,30 Griffen, Lorah 31  and Bimbrahw, Boger and Mihailidis 32  revealed increased daily living skills and independence in activities such as handwashing skills using tablet devices equipped with AI.31,32 Although the results emerging from these studies are promising, they should be interpreted with caution. A recent systematic review found that the majority of studies investigating AI technology to support functioning in NDCs have used small samples to test the feasibility of these technologies and have generally not included feedback from caregivers. 33  In light of this, there has been increasing recognition that AI technologies need to be co-developed in collaboration with the community, to ensure that assistive devices are fit for purpose and provide maximum benefit to the child and family. 34  By identifying and supporting adaptive functioning needs, there is the goal that AI technology can contribute to more streamlined delivery of services (e.g. eligibility, monitoring, and service delivery) and appropriate access to government funds.</p><p>This growing interest in AI creates new opportunities to align technological innovations with policy objectives aimed at improving the quality of life for people with disabilities. This has motivated multiple countries, including the United States, 35  Denmark, 36  Norway 37  and the United Kingdom, 38  to adopt frameworks that incorporate AI into their national disability strategies that aim to enhance accessibility and support for individuals with disabilities. In Australia, the NDIA delivers this structured support through the National Disability Insurance Scheme (NDIS). The NDIS provides a framework consisting of six core domains that aim to improve a person&#x27;s functioning status, which includes mobility, communication, social interaction, self-management, learning and self-care. 39  AI-assistive devices, such as apps, smartphones, tablets and interactive software, have been identified by the agency as a source of potential support, and major strides are being made to facilitate the growth of innovative assistive tools within future support schemes.40–42 This has culminated in the new NDIS framework to promote the development of AI-assistive devices, both to support a person&#x27;s independence and help guide the development of new technologies. 43  Notably, AI assistive technologies that currently exist do not comply with frameworks such as these as they do not possess the full range of functions that correspond to each of the framework&#x27;s domains. Improving compliance between AI technologies and the NDIS framework could enhance funding access and break down barriers to support services, resulting in better outcomes for NDIS participants.43,44 Therefore, endorsement for assistive tools to align with these benchmarks is growing, with the goal that AI-assistive devices could serve a dual role by detecting functioning needs to more swiftly guide the delivery of supports provided by government services.</p><p>To harness these opportunities, qualitative feedback from the community is the first step to actively involve caregivers in designing technology that aligns with the NDIS framework for developing AI supports. This preliminary step in the co-design process allows for the design and implementation of AI-assistive devices to better meet the local needs of end-users whilst exploring potential issues that can be resolved before a device goes on the market. 34  Furthermore, partnerships with industry ensures that AI-devices are developed and optimised in a rigorous manner and are aligned with real-world applications. The development of secure and high-performing AI technology relies on these collaborations but there is yet to be comprehensive research done in this area. In particular, there remains a gap in how researchers and industry can develop AI-assistive technology to meet the diverse needs of people living with autism. To ground this exploration, this study utilised a specific AI-assistive device, the Pixi Home-Hub, as a tangible probe to elicit caregiver perspectives, experiences and needs related to the broader potential of AI in their daily lives. We have chosen the Pixi Home-Hub specifically as it can provide support across all six areas of the NDIS functioning framework, although its impact is more substantial in areas of communication, social interaction, self-management and self-care, and comparably less pronounced in mobility and learning. For example, the calendar can be used to prompt planning of activities, goals can motivate self-care and the checklist can facilitate self-management. The device may also offer indirect support to less aligned domains through providing reminders for mobility-related exercises prescribed by therapists or help break down complex information into more manageable steps, assisting users to learn new skills or routines. The AI component of the Pixi Home-Hub provides predictive prompts in audio and visual formats to support the user&#x27;s daily activities. These aspects of the Pixi Home-Hub can help caregivers by promoting consistency in routines and supporting functioning goals specifically for children with autism, thereby reducing caregiver stress and fostering greater independence in their children. Qualitative feedback offers a way to better understand the unmet needs that families may be experiencing, how technology equipped with AI can meet these needs, and what strategies, such as the NDIS, can be more effective through using these technologies. The collection of high-quality qualitative data is a crucial step towards successful integration of AI-assistive tools into everyday settings.</p><p>The aim of this study was to use focus groups to explore caregiver perspectives, experiences and needs related to the broader potential of AI to support adaptive functioning in their daily lives. In addition, this research aims to investigate the usability (e.g. ease of use, user satisfaction) of an AI-assistive device known as the Pixi Home-Hub to support functioning as reported by family members of children with autism. Partnering with industry to co-design a tool equipped with AI can also assist in better understanding how this kind of technology can create real positive impact for families. Through this collaboration, the future delivery of AI-assistive technologies can be better refined, and co-design engagement will better inform on the needs of the community.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Methods</summary>
-            <div class="section-body"><p>Criterion purposive sampling recruited 10 caregivers of children with ASD. Two focus groups were conducted to discuss how an AI-assistive device, the Pixi Home-Hub, could support their child and families adaptive functioning. Content analysis was utilised to interpret the data. Independent coding by a second reviewer, analytical memos and peer review were employed to promote rigour.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Results</summary>
-            <div class="section-body"><p>Three key themes emerged from the data: (1) Caregiver experiences of their child&#x27;s adaptive functioning in daily activities and areas for growth, (2) Caregiver experiences of balancing their child&#x27;s support needs with their own, and (3) Access and barriers to integrating AI technology into everyday use.</p></div>
-          </details>
-        </div>
-        <div class="expand-section">
-          <details>
-            <summary>Discussion</summary>
-            <div class="section-body"><p>Caregivers believed that AI-technology can play a role in supporting their family&#x27;s adaptive functioning activities and proposed using AI-assistive devices as a digital support navigator to facilitate greater access to health and government supports.</p></div>
-          </details>
-        </div>
-        <a href="https://doi.org/10.1177/20552076251411228" class="view-paper-btn" target="_blank" rel="noopener">View original paper &#x2197;</a>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Autism spectrum disorder (ASD) is a neurodevelopmental condition (NDC) typically characterised by deficits in social communication skills and repetitive behaviours. 1  Recent studies have revealed a growing prevalence of ASD,2,3 and it is estimated that 1 in 100 children will meet criteria for autism worldwide. 4  This increase has been partially attributed to heightened global awareness and advocacy efforts.5,6 However, as demand for services and support has increased, it has become increasingly evident that many children and families affected by ASD share significant challenges in adaptive functioning. As a result, global organisations have increasingly drawn attention to the need for digital support strategies to assist both children and their caregivers in managing everyday tasks and participating fully in daily life. Moreover, there is growing recognition for assessments and supports that can cut across the diverse presentations of ASD in diagnostic settings, 7  to break down service siloes that often exist (education, mental health and disability support needs) and to better address the diverse and complex support needs of people with ASD and their families. 8</p><p>Adaptive functioning, now to be referred to simply as functioning, is defined as the skills necessary for an individual to navigate the demands of everyday life and to live independently.9,10 Functioning is a critical concept in assessing support needs for individuals with disabilities. 9  In Australia, the National Disability Insurance Agency (NDIA) is the primary federal agency responsible for funding services for people with disabilities, with the objective to support functioning and enhance participation in everyday activities. 11  In 2023, the NDIA cost the Australian Government nearly $30 billion, making it one of the country&#x27;s largest expenses. 12  However, approximately 84% of support in functioning activities has been found to be primarily provided by informal carers, such as parents and family members. 13</p><p>Many caregivers report barriers to accessing care, with specialised services being in high demand with long waitlists. 14  Families with autistic children often experience various challenges when it comes to navigating their child&#x27;s functioning needs. These can include difficulty managing social, communication and learning needs,15,16 challenges with self-care activities, such as feeding, sleeping or dressing17,18 and obstacles when it comes to organising and managing competing responsibilities, such as work, school pick-ups, and the care of other children. 19  Unfortunately, many of these challenges can be exacerbated by caregiver burden and stress, which has been found to be common in parents of children with complex needs,20,21 and often leads to diminished quality of life for both the child and the entire family. 15  Concerns about the lack of access to specialist support and government funding, 14  along with social stigma and isolation, place significant pressures on families. 22  Further, high levels of financial stress associated with therapy, assessment, and school, as well as a lack of awareness from society of the challenges of having a child with autism, calls for a need for more supportive interventions to enhance quality of life and wellbeing for parents and their children. 22  Given this, there is a pressing need to capture the experiences of caregivers to better understand how novel technologies can support their functioning needs in everyday situations.</p><p>These challenges in functioning serve as crucial benchmarks to address, and new technologies, such as artificial intelligence (AI)-assistive tools, may offer an innovative solution to target these. By using adaptive, data-driven approaches, AI-assistive technology may support the prioritisation of functioning and wellbeing needs of individuals with autism and their families by offering personalised support in real-time. AI is being used by people every day, but it has only recently emerged as a leading smart technology with the potential to improve health and wellbeing across medical disciplines.23,24 There has been increasing interest in utilising AI to improve the wellbeing of individuals with various health conditions and support needs, 25  particularly as smart technology is increasingly utilised in homes. 26  Due to the relatively recent developments in AI-assistive technologies, there is limited information on implementing these types of interventions, particularly for children and families living with autism. Previous studies have utilised social robots equipped with AI to initiate social communication behaviours in children with autism.27,28 Other studies involving children with autism have implemented interactive virtual reality systems and wearable devices to target social initiation behaviours.29,30 Griffen, Lorah 31  and Bimbrahw, Boger and Mihailidis 32  revealed increased daily living skills and independence in activities such as handwashing skills using tablet devices equipped with AI.31,32 Although the results emerging from these studies are promising, they should be interpreted with caution. A recent systematic review found that the majority of studies investigating AI technology to support functioning in NDCs have used small samples to test the feasibility of these technologies and have generally not included feedback from caregivers. 33  In light of this, there has been increasing recognition that AI technologies need to be co-developed in collaboration with the community, to ensure that assistive devices are fit for purpose and provide maximum benefit to the child and family. 34  By identifying and supporting adaptive functioning needs, there is the goal that AI technology can contribute to more streamlined delivery of services (e.g. eligibility, monitoring, and service delivery) and appropriate access to government funds.</p><p>This growing interest in AI creates new opportunities to align technological innovations with policy objectives aimed at improving the quality of life for people with disabilities. This has motivated multiple countries, including the United States, 35  Denmark, 36  Norway 37  and the United Kingdom, 38  to adopt frameworks that incorporate AI into their national disability strategies that aim to enhance accessibility and support for individuals with disabilities. In Australia, the NDIA delivers this structured support through the National Disability Insurance Scheme (NDIS). The NDIS provides a framework consisting of six core domains that aim to improve a person&#x27;s functioning status, which includes mobility, communication, social interaction, self-management, learning and self-care. 39  AI-assistive devices, such as apps, smartphones, tablets and interactive software, have been identified by the agency as a source of potential support, and major strides are being made to facilitate the growth of innovative assistive tools within future support schemes.40–42 This has culminated in the new NDIS framework to promote the development of AI-assistive devices, both to support a person&#x27;s independence and help guide the development of new technologies. 43  Notably, AI assistive technologies that currently exist do not comply with frameworks such as these as they do not possess the full range of functions that correspond to each of the framework&#x27;s domains. Improving compliance between AI technologies and the NDIS framework could enhance funding access and break down barriers to support services, resulting in better outcomes for NDIS participants.43,44 Therefore, endorsement for assistive tools to align with these benchmarks is growing, with the goal that AI-assistive devices could serve a dual role by detecting functioning needs to more swiftly guide the delivery of supports provided by government services.</p><p>To harness these opportunities, qualitative feedback from the community is the first step to actively involve caregivers in designing technology that aligns with the NDIS framework for developing AI supports. This preliminary step in the co-design process allows for the design and implementation of AI-assistive devices to better meet the local needs of end-users whilst exploring potential issues that can be resolved before a device goes on the market. 34  Furthermore, partnerships with industry ensures that AI-devices are developed and optimised in a rigorous manner and are aligned with real-world applications. The development of secure and high-performing AI technology relies on these collaborations but there is yet to be comprehensive research done in this area. In particular, there remains a gap in how researchers and industry can develop AI-assistive technology to meet the diverse needs of people living with autism. To ground this exploration, this study utilised a specific AI-assistive device, the Pixi Home-Hub, as a tangible probe to elicit caregiver perspectives, experiences and needs related to the broader potential of AI in their daily lives. We have chosen the Pixi Home-Hub specifically as it can provide support across all six areas of the NDIS functioning framework, although its impact is more substantial in areas of communication, social interaction, self-management and self-care, and comparably less pronounced in mobility and learning. For example, the calendar can be used to prompt planning of activities, goals can motivate self-care and the checklist can facilitate self-management. The device may also offer indirect support to less aligned domains through providing reminders for mobility-related exercises prescribed by therapists or help break down complex information into more manageable steps, assisting users to learn new skills or routines. The AI component of the Pixi Home-Hub provides predictive prompts in audio and visual formats to support the user&#x27;s daily activities. These aspects of the Pixi Home-Hub can help caregivers by promoting consistency in routines and supporting functioning goals specifically for children with autism, thereby reducing caregiver stress and fostering greater independence in their children. Qualitative feedback offers a way to better understand the unmet needs that families may be experiencing, how technology equipped with AI can meet these needs, and what strategies, such as the NDIS, can be more effective through using these technologies. The collection of high-quality qualitative data is a crucial step towards successful integration of AI-assistive tools into everyday settings.</p><p>The aim of this study was to use focus groups to explore caregiver perspectives, experiences and needs related to the broader potential of AI to support adaptive functioning in their daily lives. In addition, this research aims to investigate the usability (e.g. ease of use, user satisfaction) of an AI-assistive device known as the Pixi Home-Hub to support functioning as reported by family members of children with autism. Partnering with industry to co-design a tool equipped with AI can also assist in better understanding how this kind of technology can create real positive impact for families. Through this collaboration, the future delivery of AI-assistive technologies can be better refined, and co-design engagement will better inform on the needs of the community.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Methods</summary>
+          <div class="section-body"><p>Criterion purposive sampling recruited 10 caregivers of children with ASD. Two focus groups were conducted to discuss how an AI-assistive device, the Pixi Home-Hub, could support their child and families adaptive functioning. Content analysis was utilised to interpret the data. Independent coding by a second reviewer, analytical memos and peer review were employed to promote rigour.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Results</summary>
+          <div class="section-body"><p>Three key themes emerged from the data: (1) Caregiver experiences of their child&#x27;s adaptive functioning in daily activities and areas for growth, (2) Caregiver experiences of balancing their child&#x27;s support needs with their own, and (3) Access and barriers to integrating AI technology into everyday use.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>Caregivers believed that AI-technology can play a role in supporting their family&#x27;s adaptive functioning activities and proposed using AI-assistive devices as a digital support navigator to facilitate greater access to health and government supports.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.1177/20552076251411228" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
       </div>
     </div>
   </main>
-  <footer>
-    <p><a href="../index.html">&#x2190; Back to digest</a></p>
-  </footer>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
 </body>
 </html>

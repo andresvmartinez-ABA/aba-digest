@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QAMQOR: a benchmark dataset for engagement recognition in robot-assisted autism therapy</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #111827;
+  background: #f0f4f8;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+.top-nav { background: #1e3a8a; padding: 14px 0; }
+.top-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.top-nav a:hover { color: white; }
+
+main { padding: 32px 0 56px; }
+.article-wrapper {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
+
+h1.article-title {
+  font-size: clamp(20px, 4vw, 26px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
+.tag {
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
+
+.relevance-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
+.score-badge.mid { color: #d97706; }
+.score-badge.low { color: #dc2626; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
+
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+details summary {
+  padding: 13px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #f8fafc;
+  color: #334155;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
+.section-body p + p { margin-top: 12px; }
+
+.view-paper-btn {
+  display: inline-block;
+  margin-top: 28px;
+  background: #1d4ed8;
+  color: white;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.view-paper-btn:hover { background: #1e40af; }
+
+footer {
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
+}
+</style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="article-wrapper">
+        <h1 class="article-title">QAMQOR: a benchmark dataset for engagement recognition in robot-assisted autism therapy</h1>
+        <div class="article-meta"><strong>Nazerke Rakhymbayeva, Aida Tungatarova, Zhansaule Telisheva, Anara Sandygulova</strong> &nbsp;·&nbsp; Frontiers in Robotics and AI &nbsp;·&nbsp; 2026</div>
+        <div class="tags"><span class="tag">Tech + PECS/SGD</span></div>
+        <div class="relevance-row"><span class="score-badge mid">72/100</span><span class="relevance-reason">This article directly addresses technology and autism (socially assistive robots) with a school-age population and provides clinically relevant benchmarks for engagement recognition in robot-assisted therapy, though it lacks direct behavioral assessment/intervention content or discussion of social skills/communication outcomes.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text"># Summary: QAMQOR: A Benchmark Dataset for Engagement Recognition in Robot-Assisted Autism Therapy
+
+The primary objective was to address the scarcity of publicly available, rigorously evaluated benchmark datasets for engagement recognition in robot-assisted autism therapy (RAAT) by developing a dataset that accounts for data leakage issues common in existing studies.
+
+The researchers collected visual engagement annotations and pose-estimation features from 187 therapy sessions with 34 children with ASD (ages 3–12), establishing four evaluation protocols (Random, Child-Independent, Session-Independent, and Activity-Independent) to assess model generalization and comparing classical machine learning classifiers, temporal models (LSTM), and Temporal Convolutional Networks (TCN) under matched conditions.
+
+Key findings showed that evaluation protocol choice influenced reported performance substantially more than classifier selection in multi-class tasks (0.12 macro-F1 variance across protocols versus 0.07 across classifiers), with Child-Independent splits proving significantly more challenging than Random splits; deep sequence baselines (LSTM, TCN) did not outperform classical baselines under these conditions, and temporal structure in engagement was captured only by Temporal XGBoost under generalization protocols.
+
+For BCBAs and autism practitioners, these results demonstrate that engagement recognition models evaluated using random train-test splits report inflated performance and may not generalize to new children, sessions, or activities in clinical RAAT settings, highlighting the need for child-independent and session-independent validation when implementing or evaluating automated engagement monitoring systems.
+
+The QAMQOR dataset provides a standardized, reproducible benchmarking framework that enables fair comparison of future engagement recognition methods and supports the development of robust, deployable engagement detection models for adaptive robot-assisted interventions.</p></div>
+        
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Reliable engagement recognition is important for adaptive robot-assisted autism therapy (RAAT). However, progress remains constrained by the scarcity of publicly available benchmarks evaluated under realistic deployment conditions. Existing studies commonly adopt random train–test splits, which can inflate reported performance because recordings from the same child or therapy session may appear in both the training and test sets. To address this gap, we introduce QAMQOR, a benchmark dataset for engagement recognition collected during RAAT sessions with 34 children with Autism Spectrum Disorder (ASD), agedyears. The dataset includes visual engagement annotations derived from therapy session videos and feature representations extracted using two pose-estimation frameworks. The QAMQOR dataset defines four clinically relevant evaluation protocols based on Random, Child-Independent, Session-Independent, and Activity-Independent splits. These evaluation protocols assess model generalization to unseen children, therapy sessions and activity tasks. We benchmark classical machine learning classifiers together with temporal and sequence-learning baselines for both binary and multi-class engagement recognition. Experimental results show that the evaluation protocol influenced reported performance to a degree comparable to, and for fine-grained engagement classification exceeding, the influence of classifier selection: mean macro-F1 varied by 0.12 across the four protocols in the multi-class task, against 0.07 across discriminative classifiers. The Child-Independent split proved substantially more challenging than the Random split. Under the same conditions (windows, protocols, training schedule and untuned hyperparameters) a Temporal Convolutional Network (TCN) did not outperform the classical baselines. Applying identical imbalance handling to every model improved all imbalance-sensitive metrics but left this ordering unchanged, indicating that the result is not an artifact of missing class weights. Across the models evaluated, reported performance was shifted more by evaluation design and by imbalance handling than by architectural choice. Therefore, QAMQOR serves as a reproducible reference point for this task. It also shows why fair evaluation matters: keeping the same child or session out of both the training and test sets is needed to compare future methods on equal terms and to build engagement models that transfer to new children, sessions and activities in RAAT systems.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Introduction</summary>
+          <div class="section-body"><p>Engaging children with Autism Spectrum Disorder (ASD) in learning and social activities is vital but challenging. In this work, engagement refers to sustained attention, active involvement and appropriate responsiveness during interaction, which are important for social, cognitive and learning skill development (Kishida and Kemp, 2009;Salam et al., 2017;Sidner et al., 2005). However, many autistic children experience challenges in sustaining attention, responding to social cues, and participating in learning activities (Baron-Cohen, 1995;McWilliam and BaileyJr, 1995). As a result, interaction with peers, parents, teachers, and therapists plays a crucial role in supporting their developmental progress (Keen, 2009).</p><p>Social robots are becoming valuable tools in autism interventions because they can provide predictable, repetitive, and motivating interactions, which help maintain children’s attention (Lalmas et al., 2014;Ricks et al., 2010;Scassellati et al., 2012). Reliable engagement recognition is important for Robot-Assisted Autism Therapy (RAAT) because it enables robots to adapt their behavior.Drejing et al. (2015)further expanded on engagement, defining it through observable behaviors and their intensity. Recent studies have explored engagement recognition in children with ASD during robot interactions.Al-Nafjan et al. (2023)used facial feature detection with Convolutional Neural Network (CNN) models but noted challenges with subtle reactions. Rudovic et al. (Rudovic et al., 2018) demonstrated that deep learning models can effectively estimate engagement intensity from facial images collected during robot-assisted autism therapy.Kim et al. (2023)proposed a deep learning framework for joint engagement classification that leverages RGB video and skeleton-based representations, demonstrating improved performance through video augmentation and highlighting its potential for real-time human–robot interaction, whileVaufreydaz et al. (2016)demonstrated improved reliability by integrating multimodal data. Despite these advances, these methods are difficult to compare directly because they are evaluated on different cohorts, feature representations, and data splits, and several limitations persist in the field: i) few publicly available datasets containing data of children with ASD; ii) small cohorts and task-specific recordings; iii) evaluation protocols dominated by random splits, under which per-child and per-session information leaks between the training and testing sets and inflates reported accuracy.</p><p>To address these limitations, this paper introduces QAMQOR, a benchmark dataset collected during real RAAT sessions with 34 children with ASD. The dataset contains frame-level engagement annotations and heterogeneous visual representations: face, body and hand pose features. All features were extracted fromhours of video data collected across 187 therapy sessions. This scale supports realistic, deployment-oriented evaluation of engagement recognition in RAAT, while remaining representative of the data volumes achievable in clinical settings, where recruiting children with ASD is inherently constrained. The main contributions of this work are: i) introducing QAMQOR, a publicly available dataset for engagement recognition during RAAT; ii) defining four evaluation protocols based on Random, Child-Independent, Session-Independent, and Activity-Independent splits for realistic assessment of model generalization; iii) providing reproducible baseline results for binary and multi-class engagement classification using representative classical, temporal and sequence-learning models, including a recent Temporal Convolutional Network (TCN), each evaluated under the same windows, protocols and untuned hyperparameters so that models are compared under matched rather than individually optimized conditions; and iv) demonstrating empirically that the choice of evaluation protocol affects reported performance to a degree comparable to, and for fine-grained engagement classification approximately twice as large as, the choice of classifier among discriminative models, which underscores the need to evaluate engagement recognition under realistic deployment scenarios. Rather than introducing a novel classification algorithm, this work contributes a reproducible benchmarking framework for engagement recognition under standardized, leakage-controlled evaluation protocols, enabling fair comparison of future methods on equal terms.</p></div>
+        </details>
+      </div>
+      <div class="expand-section">
+        <details>
+          <summary>Discussion</summary>
+          <div class="section-body"><p>Accurate engagement recognition is crucial for adaptive RAAT, since robots must interpret the child’s behavior in order to personalize interaction. This study introduced QAMQOR, a publicly available dataset for engagement recognition in RAAT and established a standardized evaluation framework to assess model generalization. Unlike existing datasets, which typically report performance on a single train-test set, QAMQOR defines four benchmark evaluation protocols (Random, Child-Independent, Session-Independent and Activity-Independent). These allow us to assess model robustness under realistic deployment conditions.</p><p>The main finding is that the evaluation protocol influences reported performance at least as much as classifier selection. The classifier effect was statistically strong and consistent in rank order, but modest in magnitude once the two deep sequence baselines are set aside. It separated the weakest from the strongest discriminative model by 0.07 macro-F1 in both tasks. The protocol effect was comparable in the binary task (0.07) and about twice as large in the multi-class task (0.12). Classifier choice is reliably detectable but has limited practical consequence. Protocol choice can shift the reported result by more than the full span of the classifier comparison. High performance under the Random split should therefore not be read as evidence of generalization. It mixes each child’s and each session’s frames across both sets and is best interpreted as a leakage-inflated upper bound. Releasing standardized protocols is a prerequisite for fair, cumulative progress.</p><p>The Child-Independent split was among the hardest protocols. Engagement is expressed through child-specific behavioral cues, such as gaze, gross-motor responses and hand movements that differ across children. This variability is amplified by the clinical heterogeneity of ASD across a wide developmental range (ages 3–12). The mapping from pose features to engagement is therefore non-stationary across individuals. The gap between Random and Child-Independent splits also quantifies the potential value of per-child calibration, motivating personalization in RAAT.</p><p>Both deep sequence baselines, the LSTM and more recent TCN, collapsed to majority-class prediction under the Random split across six modalities, recovering only weak discrimination under the generalization protocols. The TCN behaved identically to the LSTM under the same configuration. Therefore, the behavior is not specific to one architecture. Neither model was tuned, so this shows only that added temporal capacity gave no advantage under these matched conditions. It does not show that such capacity is unusable here. Possible explanations are the small number of independent participants, the class imbalance, the 1 fps sampling and the behavioral heterogeneity of the cohort. The balancing experiment rules out class imbalance as the sole cause. Separating the remaining explanations would require larger cohorts or per-architecture tuning, both of which are left to future work. In contrast, Temporal XGBoost yielded small but consistent improvements under the Child-Independent, Session-Independent and Activity-Independent protocols, with no advantage on the Random split. Engagement therefore exhibits a short-term temporal structure that individual frames cannot capture, and that is most valuable when the model must generalize.</p><p>A natural objection is that deep models underperformed simply because they were not given class weights. Applying the same imbalance handling to every model tested this objection directly. Balancing improved all models on the imbalance-aware metrics, but it preserved their ordering. The deep sequence models remained at or below the balanced tree ensembles. Therefore, the absence of class weighting does not account for this near-baseline behavior.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.3389/frobt.2026.1868211" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
+      </div>
+    </div>
+  </main>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
+</body>
+</html>

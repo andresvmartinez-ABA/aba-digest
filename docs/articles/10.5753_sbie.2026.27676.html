@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALAN: An Adaptive Social Robot for Teaching Emotional Skills to Children with Autism Spectrum Disorder</title>
+  <style>
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { font-size: 16px; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  line-height: 1.65;
+  color: #111827;
+  background: #f0f4f8;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: #1d4ed8; }
+.container { max-width: 680px; margin: 0 auto; padding: 0 20px; }
+
+.top-nav { background: #1e3a8a; padding: 14px 0; }
+.top-nav a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+.top-nav a:hover { color: white; }
+
+main { padding: 32px 0 56px; }
+.article-wrapper {
+  background: white;
+  border-radius: 14px;
+  border: 1px solid #e2e8f0;
+  padding: 32px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+.article-wrapper.is-ftf { border-top: 3px solid #16a34a; }
+
+h1.article-title {
+  font-size: clamp(20px, 4vw, 26px);
+  font-weight: 800;
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin-bottom: 14px;
+  color: #0f172a;
+}
+.article-meta { font-size: 14px; color: #64748b; margin-bottom: 16px; line-height: 1.5; }
+.article-meta strong { color: #334155; }
+
+.tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 24px; }
+.tag {
+  background: #dbeafe;
+  color: #1e40af;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+.tag.ftf-tag { background: #dcfce7; color: #15803d; }
+
+.section-label {
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  color: #94a3b8;
+  margin-bottom: 10px;
+}
+.summary-section { margin-bottom: 28px; }
+.summary-text { font-size: 16px; line-height: 1.75; color: #1e293b; }
+
+.relevance-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin-bottom: 28px;
+}
+.score-badge { font-size: 20px; font-weight: 800; color: #059669; flex-shrink: 0; }
+.score-badge.mid { color: #d97706; }
+.score-badge.low { color: #dc2626; }
+.relevance-reason { font-size: 14px; color: #475569; line-height: 1.55; padding-top: 2px; }
+
+.expand-section { margin-bottom: 10px; }
+details { border: 1px solid #e2e8f0; border-radius: 10px; overflow: hidden; }
+details summary {
+  padding: 13px 18px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: #f8fafc;
+  color: #334155;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; font-size: 18px; color: #94a3b8; font-weight: 400; }
+details[open] summary { background: #eff6ff; color: #1e40af; border-bottom: 1px solid #bfdbfe; }
+details[open] summary::after { content: "−"; }
+.section-body { padding: 18px; font-size: 15px; line-height: 1.75; color: #334155; }
+.section-body p + p { margin-top: 12px; }
+
+.view-paper-btn {
+  display: inline-block;
+  margin-top: 28px;
+  background: #1d4ed8;
+  color: white;
+  text-decoration: none;
+  padding: 14px 26px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 700;
+}
+.view-paper-btn:hover { background: #1e40af; }
+
+footer {
+  text-align: center;
+  padding: 28px 20px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+@media (max-width: 500px) {
+  .article-wrapper { padding: 20px 18px; }
+}
+</style>
+</head>
+<body>
+  <nav class="top-nav">
+    <div class="container"><a href="../index.html">← Back to digest</a></div>
+  </nav>
+  <main>
+    <div class="container">
+      <div class="article-wrapper">
+        <h1 class="article-title">ALAN: An Adaptive Social Robot for Teaching Emotional Skills to Children with Autism Spectrum Disorder</h1>
+        <div class="article-meta"><strong>Cassio Diniz, Sara L. Melo, Claudiney R. Tinoco</strong> &nbsp;·&nbsp; Anais do XXXVII Simpósio Brasileiro de Informática na Educação (SBIE 2026) &nbsp;·&nbsp; 2026</div>
+        <div class="tags"><span class="tag">Tech + PECS/SGD</span></div>
+        <div class="relevance-row"><span class="score-badge mid">72/100</span><span class="relevance-reason">Directly relevant as it addresses socially assistive robots and technology for teaching social/emotional skills to school-age children with ASD, matching core interests in robotics and social outcomes, though it lacks specific behavior analytic methodology details.</span></div>
+        <div class="summary-section"><div class="section-label">Summary</div><p class="summary-text"># Summary: ALAN—An Adaptive Social Robot for Teaching Emotional Skills to Children with Autism Spectrum Disorder
+
+The study aimed to develop a robotic platform capable of teaching emotional skills to children with Autism Spectrum Disorder while addressing existing limitations in robot-based interventions, such as natural emotion expression, social interaction stimulation, and individualized instruction. The researchers designed ALAN, an adaptive social robot with a friendly appearance that expresses emotions and sounds, conducts educational activities and games focused on emotional recognition, and collects interaction data to personalize the teaching process according to each child&#x27;s progress and difficulties. The abstract does not report specific quantitative results, effect sizes, or participant outcome data; it presents the robot&#x27;s design features and intended capabilities rather than empirical findings from a clinical trial. For BCBAs and autism practitioners, this platform represents a potential adjunctive tool for delivering individualized, interactive emotional skills training in a controlled therapeutic environment, though effectiveness would require evaluation through controlled research comparing outcomes to standard behavioral interventions. Further investigation would be necessary to determine the extent to which ALAN meaningfully enhances emotional skill acquisition or social engagement relative to established ABA-based teaching strategies.</p></div>
+        
+      <div class="expand-section">
+        <details>
+          <summary>Abstract</summary>
+          <div class="section-body"><p>Autism Spectrum Disorder (ASD) is a neurodevelopmental condition that affects skills related to communication, social interaction, and behaviour from early childhood, with a significant increase in diagnoses observed over the last decade. In this context, early intervention plays a fundamental role in the development of the affected abilities. Several therapeutic approaches have been employed to stimulate cognitive, social, and emotional skills in children with ASD. Among these approaches, robotics has shown promising results in supporting therapies aimed at autistic children. However, challenges still remain regarding the ability of robots to express emotions naturally, stimulate social interactions such as eye contact and physical interaction, and adapt teaching strategies to the specific needs of each child. Therefore, this work proposes a robotic platform for teaching emotional skills to children diagnosed with ASD. The robot has an appearance designed to be friendly, being capable of expressing emotions and sounds, as well as conducting educational activities and games focused on emotional recognition and learning. In addition, the platform collects data during interactions, enabling the adaptation of the teaching process according to the progress and difficulties observed in each individual. Thus, the proposed platform seeks to contribute to the development of emotional skills in children with ASD by providing a therapeutic environment that can be perceived as more welcoming, interactive, and personalized.</p></div>
+        </details>
+      </div>
+        <a href="https://doi.org/10.5753/sbie.2026.27676" class="view-paper-btn" target="_blank" rel="noopener">View original paper ↗</a>
+      </div>
+    </div>
+  </main>
+  <footer><p><a href="../index.html">← Back to digest</a></p></footer>
+</body>
+</html>
